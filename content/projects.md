@@ -55,12 +55,15 @@ These are libraries and tools that I am no longer maintaining.
 | [elm-querystring][querystring]   | A library for working with querystrings in Elm.       |
 | [elm-route][route]               | A type-safe routing library for Elm.                  |
 | [elm-time][time]                 | A pure Elm date and time library.                     |
+| [ff][ff]                         | A fuzzy-finder for the terminal.                      |
 | [ido-clever-match][icm]          | An alternative matcher for Emacs ido-mode.            |
 | [modviz][modviz]                 | A module dependency graph visualizer for Python.      |
 | [mold][mold]                     | A fast templating engine for Python.                  |
 | [multiprom][multiprom]           | A multiprocess-friendly Prometheus client for Python. |
 | [pico][pico]                     | A minimal lisp interpreter written in Python.         |
 | [quicksilver][quicksilver]       | A fast file finder for VIM.                           |
+| [tcopy][tcopy]                   | A tail-call optimizing decorator for Python.          |
+| [trio-redis][trio-redis]         | A trio-based Redis client for Python.                 |
 | [yes.py][yes]                    | A fast implementation of `yes` in Python.             |
 | [zed][zed]                       | A toy text editor.                                    |
 
@@ -77,6 +80,7 @@ These are libraries and tools that I am no longer maintaining.
 [datepicker]: https://github.com/Bogdanp/elm-datepicker
 [dramatiq]: https://dramatiq.io
 [elmmode]: https://github.com/jcollard/elm-mode
+[ff]: https://github.com/Bogdanp/ff
 [generate]: https://github.com/Bogdanp/elm-generate
 [h2p]: https://github.com/Bogdanp/h2p
 [hugs]: https://github.com/Bogdanp/hugs
@@ -93,7 +97,9 @@ These are libraries and tools that I am no longer maintaining.
 [rbrepl]: https://github.com/Bogdanp/rbrepl.vim
 [repos]: https://github.com/Bogdanp/repositories
 [route]: https://github.com/Bogdanp/elm-route
+[tcopy]: https://github.com/Bogdanp/tcopy
 [time]: https://github.com/Bogdanp/elm-time
+[trio-redis]: https://github.com/Bogdanp/trio-redis
 [valueadded]: https://github.com/valueadded/valueadded-python
 [yes]: https://github.com/Bogdanp/yes.py
-[zed]: https://github.com/Bogdnap/zed
+[zed]: https://github.com/Bogdanp/zed
