@@ -1,0 +1,47 @@
+baseURL = "https://defn.io/"
+languageCode = "en-us"
+title = "defn.io"
+theme = "ghostwriter"
+copyright = "Bogdan Popa"
+googleAnalytics = "UA-54541558-2"
+
+[Author]
+    name = "Bogdan Popa"
+
+[Taxonomies]
+    tag = "tags"
+
+[Params]
+    intro = false
+    headline = "My headline"
+    description = "My description"
+    github = "https://github.com/Bogdanp"
+    linkedin = "https://linkedin.com/in/popabogdanp/"
+    twitter = "https://twitter.com/Bogdanp"
+    email = "bogdan@defn.io"
+    opengraph = true
+    shareTwitter = true
+    shareFacebook = true
+    shareGooglePlus = true
+    shareLinkedIn = false
+    dateFormat = "Mon, Jan 2, 2006"
+    highlightJsUrl = ""
+    highlightJsLocalUrl = ""
+
+[Permalinks]
+    post = "/:year/:month/:day/:filename/"
+
+[[menu.main]]
+    name = "Posts"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
