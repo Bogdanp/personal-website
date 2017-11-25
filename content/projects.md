@@ -22,15 +22,17 @@ These are some of the web applications I've built in my spare time.
 
 This is the stuff I'm currently working on in the open.
 
-| Project                    | Description                                             |
-| :---                       | :---                                                    |
-| [anom][anom-py]            | An object mapper for Cloud Datastore for Python 3.6+.   |
-| [dramatiq][dramatiq]       | A distributed task processing library for Python 3.6+.  |
-| [h2p][h2p]                 | A Python interface to libwkhtmltox.                     |
-| [hugs][hugs]               | A library that maps SQL expressions to Python fuctions. |
-| [markii][markii]           | A development-mode error handler for Python web apps.   |
-| [py-test.el][pytest]       | A Python test runner for Emacs.                         |
-| [valueadded][valueadded]   | A Python library for computing VAT.                     |
+| Project                    | Description                                                           |
+| :---                       | :---                                                                  |
+| [anom][anom-py]            | An object mapper for Cloud Datastore for Python 3.6+.                 |
+| [apistar_prometheus]       | Prometheus metrics for API Star apps.                                 |
+| [dramatiq]                 | A distributed task processing library for Python 3.6+.                |
+| [firechannel]              | An almost-dropin replacement for the GAE channels API using Firebase. |
+| [h2p][h2p]                 | A Python interface to libwkhtmltox.                                   |
+| [hugs][hugs]               | A library that maps SQL expressions to Python fuctions.               |
+| [markii][markii]           | A development-mode error handler for Python web apps.                 |
+| [py-test.el][pytest]       | A Python test runner for Emacs.                                       |
+| [valueadded][valueadded]   | A Python library for computing VAT.                                   |
 
 
 ## Inactive libraries and tools
@@ -70,6 +72,7 @@ These are libraries and tools that I am no longer maintaining.
 
 [anom-py]: https://anom.defn.io
 [anom]: https://github.com/Bogdanp/anom
+[apistar_prometheus]: https://github.com/Bogdanp/apistar_prometheus
 [ast]: https://github.com/Bogdanp/elm-ast
 [bc]: https://github.com/Bogdanp/browser-connect.vim
 [cedar-mode]: https://github.com/Bogdanp/cedar-mode
@@ -80,6 +83,7 @@ These are libraries and tools that I am no longer maintaining.
 [datepicker]: https://github.com/Bogdanp/elm-datepicker
 [dramatiq]: https://dramatiq.io
 [elmmode]: https://github.com/jcollard/elm-mode
+[firechannel]: https://github.com/LeadPages/firechannel
 [ff]: https://github.com/Bogdanp/ff
 [generate]: https://github.com/Bogdanp/elm-generate
 [h2p]: https://github.com/Bogdanp/h2p
