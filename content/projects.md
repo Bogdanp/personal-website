@@ -28,7 +28,6 @@ This is the stuff I'm currently working on in the open.
 | [apistar_prometheus]       | Prometheus metrics for API Star apps.                                 |
 | [dramatiq]                 | A distributed task processing library for Python 3.6+.                |
 | [firechannel]              | An almost-dropin replacement for the GAE channels API using Firebase. |
-| [h2p][h2p]                 | A Python interface to libwkhtmltox.                                   |
 | [hugs][hugs]               | A library that maps SQL expressions to Python fuctions.               |
 | [markii][markii]           | A development-mode error handler for Python web apps.                 |
 | [py-test.el][pytest]       | A Python test runner for Emacs.                                       |
@@ -58,6 +57,7 @@ These are libraries and tools that I am no longer maintaining.
 | [elm-route][route]               | A type-safe routing library for Elm.                  |
 | [elm-time][time]                 | A pure Elm date and time library.                     |
 | [ff][ff]                         | A fuzzy-finder for the terminal.                      |
+| [h2p][h2p]                       | A Python interface to libwkhtmltox.                   |
 | [ido-clever-match][icm]          | An alternative matcher for Emacs ido-mode.            |
 | [modviz][modviz]                 | A module dependency graph visualizer for Python.      |
 | [mold][mold]                     | A fast templating engine for Python.                  |
