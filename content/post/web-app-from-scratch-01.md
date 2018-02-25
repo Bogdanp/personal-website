@@ -172,7 +172,7 @@ with socket.socket() as server_sock:
     client_sock, client_addr = server_sock.accept()
     print(f"New connection from {client_addr}.")
     with client_sock:
-        client_sock.send(RESPONSE)
+        client_sock.sendall(RESPONSE)
 ```
 
 If you run the code now and then visit http://127.0.0.1:9000 in your
@@ -198,7 +198,7 @@ with socket.socket() as server_sock:
         client_sock, client_addr = server_sock.accept()
         print(f"New connection from {client_addr}.")
         with client_sock:
-            client_sock.send(RESPONSE)
+            client_sock.sendall(RESPONSE)
 ```
 
 At this point we have a web server that can serve a simple HTML web
@@ -269,7 +269,7 @@ with socket.socket() as server_sock:
             for request_line in iter_lines(client_sock):
                 print(line)
 
-            client_sock.send(RESPONSE)
+            client_sock.sendall(RESPONSE)
 ```
 
 If you run the server now and visit http://127.0.0.1:9000 now, you
