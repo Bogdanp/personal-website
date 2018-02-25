@@ -1,7 +1,7 @@
 baseURL = "https://defn.io/"
-languageCode = "en-us"
 title = "defn.io"
 theme = "ghostwriter"
+languageCode = "en-us"
 copyright = "Bogdan Popa"
 googleAnalytics = "UA-54541558-2"
 
@@ -23,7 +23,7 @@ googleAnalytics = "UA-54541558-2"
     shareTwitter = true
     shareFacebook = true
     shareGooglePlus = true
-    shareLinkedIn = false
+    shareLinkedIn = true
     dateFormat = "Mon, Jan 2, 2006"
     highlightJsUrl = ""
     highlightJsLocalUrl = ""
@@ -38,10 +38,10 @@ googleAnalytics = "UA-54541558-2"
 
 [[menu.main]]
     name = "Projects"
-    url = "/projects/"
+    url = "/page/projects/"
     weight = 2
 
 [[menu.main]]
     name = "About"
-    url = "/about/"
+    url = "/page/about/"
     weight = 3
