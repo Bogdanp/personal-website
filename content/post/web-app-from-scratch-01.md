@@ -484,12 +484,12 @@ with socket.socket() as server_sock:
                 client_sock.sendall(BAD_REQUEST_RESPONSE)
 ```
 
-Additionally, let's add a "403 Method Not Allowed" response.  We're
+Additionally, let's add a "405 Method Not Allowed" response.  We're
 going to need it for when we get anything other than a `GET` request.
 
 ``` python
 METHOD_NOT_ALLOWED_RESPONSE = b"""\
-HTTP/1.1 403 Method Not Allowed
+HTTP/1.1 405 Method Not Allowed
 Content-type: text/plain
 Content-length: 17
 
