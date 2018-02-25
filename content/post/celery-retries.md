@@ -3,6 +3,7 @@ title: "Automatic retries with Celery"
 slug: "celery-retries"
 date: 2018-02-25
 tags: ["python", "celery", "retries"]
+weight: 2
 ---
 
 One of the things that I think Celery could be doing better out of the
