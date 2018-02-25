@@ -1,5 +1,5 @@
 ---
-title: "Dramatiq Cron with APScheduler"
+title: "Dramatiq cron with APScheduler"
 slug: "dramatiq-cron"
 date: 2018-01-11
 tags: ["python", "cron", "dramatiq", "apscheduler"]
