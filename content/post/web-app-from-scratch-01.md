@@ -127,10 +127,10 @@ with socket.socket() as server_sock:
     # This tells the socket what address to bind to.
     server_sock.bind((HOST, PORT))
 
-    # 1 is the number of pending connections the socket may have before
+    # 0 is the number of pending connections the socket may have before
     # new connections are refused.  Since this server is going to process
     # one connection at a time, we want to refuse any additional connections.
-    server_sock.listen(1)
+    server_sock.listen(0)
     print(f"Listening on {HOST}:{PORT}...")
 ```
 
@@ -144,7 +144,7 @@ to our server.
 with socket.socket() as server_sock:
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_sock.bind((HOST, PORT))
-    server_sock.listen(1)
+    server_sock.listen(0)
     print(f"Listening on {HOST}:{PORT}...")
 
     client_sock, client_addr = server_sock.accept()
@@ -166,7 +166,7 @@ Content-length: 15
 with socket.socket() as server_sock:
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_sock.bind((HOST, PORT))
-    server_sock.listen(1)
+    server_sock.listen(0)
     print(f"Listening on {HOST}:{PORT}...")
 
     client_sock, client_addr = server_sock.accept()
