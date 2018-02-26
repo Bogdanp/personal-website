@@ -22,5 +22,5 @@ to the [Atom][feed] feed or follow me on [Twitter][twitter].
 [gh]: https://github.com/Bogdanp
 [em]: mailto:bogdan@defn.io
 [kb]: https://keybase.io/bogdanp
-[feed]: http://defn.io/atom.xml
+[feed]: http://defn.io/index.xml
 [twitter]: https://twitter.com/bogdanp
