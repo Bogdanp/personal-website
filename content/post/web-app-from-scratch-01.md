@@ -15,7 +15,7 @@ Without further ado, let's get to it!
 
 # The web server
 
-To being with, we're going to write the HTTP server that will power
+To begin with, we're going to write the HTTP server that will power
 our web app.  But first, we need to spend a little time looking into
 how the HTTP protocol works.
 
