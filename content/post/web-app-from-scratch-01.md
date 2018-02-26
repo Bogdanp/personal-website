@@ -11,7 +11,7 @@ from scratch in Python.  For the purposes of this series, I'm going to
 solely rely on the Python standard library and I'm going to ignore the
 WSGI standard.
 
-Without any further ado, let's get to it!
+Without further ado, let's get to it!
 
 # The web server
 
@@ -272,8 +272,8 @@ with socket.socket() as server_sock:
             client_sock.sendall(RESPONSE)
 ```
 
-If you run the server now and visit http://127.0.0.1:9000 now, you
-should see something like this in your console:
+If you run the server now and visit http://127.0.0.1:9000, you should
+see something like this in your console:
 
 ``` shell
 Received connection from ('127.0.0.1', 62086)...
