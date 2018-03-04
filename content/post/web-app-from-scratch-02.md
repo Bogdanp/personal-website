@@ -244,9 +244,9 @@ whole thing to standard out.  Cool!
 We're done with the `Request` data structure for now.  We'll come back
 to it later when we add query string parameter parsing but, for now,
 let's move it, `BodyReader` and `iter_lines` into a module called
-`request.py`.  Additionally, we'll move `Headers` into its own module
-called `headers.py` since the `Response` class is also going to use
-the `Headers` data structure.
+`request.py`.  We'll also move `Headers` into its own module called
+`headers.py` since the `Response` class is also going to use the
+`Headers` data structure.
 
 `headers.py`:
 
