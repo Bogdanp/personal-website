@@ -468,6 +468,8 @@ class Response:
             self.body = io.BytesIO(content.encode(encoding))
         elif body is None:
             self.body = io.BytesIO()
+        else:
+            self.body = body
 
     def send(self, sock: socket.socket) -> None:
         """Write this response to a socket.
