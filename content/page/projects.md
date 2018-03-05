@@ -10,11 +10,9 @@ These are some of the web applications I've built in my spare time.
 | Project                       | Description                                  |
 | :---                          | :---                                         |
 | [Free Invoice Generator][fig] | Free invoicing software.                     |
-| [SMS 😸 Facts][smscatfacts]  | Cat facts prank as a service.                |
 | [ValueAdded][valueadded.io]   | A VAT API for companies operating in the EU. |
 
 [fig]: https://free-invoice-generator.com
-[smscatfacts]: https://smscatfacts.com
 [valueadded.io]: https://valueadded.io
 
 
