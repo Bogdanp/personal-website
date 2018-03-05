@@ -579,13 +579,9 @@ class Headers:
             return default
 
     def __iter__(self) -> HeadersGenerator:
-        return iter_headers(self._headers)
-
-
-def iter_headers(headers: HeadersDict) -> HeadersGenerator:
-    for name, values in headers.items():
-        for value in values:
-            yield name, value
+        for name, values in self._headers.items():
+            for value in values:
+                yield name, value
 ```
 
 With this in place, we can now write `Response.send`:
