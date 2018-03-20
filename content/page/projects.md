@@ -23,12 +23,17 @@ This is the stuff I'm currently working on in the open.
 | Project                    | Description                                                           |
 | :---                       | :---                                                                  |
 | [anom][anom-py]            | An object mapper for Cloud Datastore for Python 3.6+.                 |
+| [apistar_cookiecutter]     | A cookiecutter for API Star apps.                                     |
+| [apistar_cors]             | CORS support for API Star apps.                                       |
 | [apistar_prometheus]       | Prometheus metrics for API Star apps.                                 |
+| [apistar_sentry]           | Sentry support for API Star apps.                                     |
 | [dramatiq]                 | A distributed task processing library for Python 3.6+.                |
+| [falcon_sugar]             | A little sugar for Falcon applications.                               |
 | [firechannel]              | An almost-dropin replacement for the GAE channels API using Firebase. |
 | [hugs][hugs]               | A library that maps SQL expressions to Python fuctions.               |
 | [markii][markii]           | A development-mode error handler for Python web apps.                 |
 | [py-test.el][pytest]       | A Python test runner for Emacs.                                       |
+| [resource_pool]            | A generic thread-safe resource pool for Python.                       |
 | [valueadded][valueadded]   | A Python library for computing VAT.                                   |
 
 
@@ -70,7 +75,10 @@ These are libraries and tools that I am no longer maintaining.
 
 [anom-py]: https://anom.defn.io
 [anom]: https://github.com/Bogdanp/anom
+[apistar_cookiecutter]: https://github.com/Bogdanp/apistar_cookiecutter
+[apistar_cors]: https://github.com/Bogdanp/apistar_cors
 [apistar_prometheus]: https://github.com/Bogdanp/apistar_prometheus
+[apistar_sentry]: https://github.com/Leadpages/apistar_sentry
 [ast]: https://github.com/Bogdanp/elm-ast
 [bc]: https://github.com/Bogdanp/browser-connect.vim
 [cedar-mode]: https://github.com/Bogdanp/cedar-mode
@@ -81,6 +89,7 @@ These are libraries and tools that I am no longer maintaining.
 [datepicker]: https://github.com/Bogdanp/elm-datepicker
 [dramatiq]: https://dramatiq.io
 [elmmode]: https://github.com/jcollard/elm-mode
+[falcon_sugar]: https://github.com/LeadPages/falcon_sugar
 [firechannel]: https://github.com/LeadPages/firechannel
 [ff]: https://github.com/Bogdanp/ff
 [generate]: https://github.com/Bogdanp/elm-generate
@@ -98,6 +107,7 @@ These are libraries and tools that I am no longer maintaining.
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
 [rbrepl]: https://github.com/Bogdanp/rbrepl.vim
 [repos]: https://github.com/Bogdanp/repositories
+[resource_pool]: https://github.com/Bogdanp/resource_pool
 [route]: https://github.com/Bogdanp/elm-route
 [tcopy]: https://github.com/Bogdanp/tcopy
 [time]: https://github.com/Bogdanp/elm-time
