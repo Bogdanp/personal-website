@@ -895,9 +895,9 @@ server implemented in pure Python!
 
 Whew!  That was a lot of stuff to cover in one post.  I didn't think
 you'd make it, but here you are!  That's it for part 2.  In part 3
-we're going to cover request routing, handlers and middleware.  If
-you'd like to check out the full source code and follow along, you can
-find it [here][source].
+we're going to cover request handlers and middleware.  If you'd like
+to check out the full source code and follow along, you can find it
+[here][source].
 
 See ya next time!
 
