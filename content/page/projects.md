@@ -89,7 +89,7 @@ These are libraries and tools that I am no longer maintaining.
 [datepicker]: https://github.com/Bogdanp/elm-datepicker
 [dramatiq]: https://dramatiq.io
 [elmmode]: https://github.com/jcollard/elm-mode
-[falcon_sugar]: https://github.com/LeadPages/falcon_sugar
+[falcon_sugar]: https://github.com/Bogdanp/falcon_sugar
 [firechannel]: https://github.com/LeadPages/firechannel
 [ff]: https://github.com/Bogdanp/ff
 [generate]: https://github.com/Bogdanp/elm-generate
