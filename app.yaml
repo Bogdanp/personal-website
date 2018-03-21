@@ -19,10 +19,10 @@ handlers:
    secure: always
 
 skip_files:
-- ^(.*/)?#.*#$
-- ^(.*/)?.*~$
-- ^(.*/)?.*\.py[co]$
-- ^(.*/)?.*/RCS/.*$
 - ^(.*/)?\..*$
-- ^(.*/)?\.bak$
-- ^(.*/)?(?!public)/.*$
+- archetypes/
+- content/
+- data/
+- themes/
+- layouts/
+- static/
