@@ -28,6 +28,7 @@ This is the stuff I'm currently working on in the open.
 | [apistar_prometheus]       | Prometheus metrics for API Star apps.                                 |
 | [apistar_sentry]           | Sentry support for API Star apps.                                     |
 | [dramatiq]                 | A distributed task processing library for Python 3.6+.                |
+| [dramatiq_sqs]             | An Amazon SQS broker for Dramatiq.                                    |
 | [falcon_sugar]             | A little sugar for Falcon applications.                               |
 | [firechannel]              | An almost-dropin replacement for the GAE channels API using Firebase. |
 | [hugs][hugs]               | A library that maps SQL expressions to Python fuctions.               |
@@ -88,6 +89,7 @@ These are libraries and tools that I am no longer maintaining.
 [crontab]: https://github.com/Bogdanp/crontab
 [datepicker]: https://github.com/Bogdanp/elm-datepicker
 [dramatiq]: https://dramatiq.io
+[dramatiq_sqs]: https://github.com/Bogdanp/dramatiq_sqs
 [elmmode]: https://github.com/jcollard/elm-mode
 [falcon_sugar]: https://github.com/Bogdanp/falcon_sugar
 [firechannel]: https://github.com/LeadPages/firechannel

@@ -1,8 +1,7 @@
 ---
 title: "Web application from scratch, Part I"
-date: 2018-02-25
+date: 2018-02-25T01:00:00
 tags: ["python", "web", "application", "web-app-from-scratch"]
-weight: 1
 ---
 
 This is the first in a series of posts in which I'm going to go

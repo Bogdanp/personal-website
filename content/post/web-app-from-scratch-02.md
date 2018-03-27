@@ -2,7 +2,6 @@
 title: "Web application from scratch, Part II"
 date: 2018-03-04
 tags: ["python", "web", "application", "web-app-from-scratch"]
-weight: 1
 ---
 
 This is the second post in my [web app from scratch] series.  If you
