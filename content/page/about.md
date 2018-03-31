@@ -16,9 +16,8 @@ Previously, I was a Principal Engineer at [Leadpages].  In my free
 time I contribute to and maintain various open source projects which
 you can find [here](/projects/) and on [my GitHub page][gh].
 
-I make and sell [Dramatiq], a distributed task processing framework
-for Python.  If you're fed up with Celery, you may want to check it
-out!
+I make [Dramatiq], a distributed task processing framework for Python.
+If you're fed up with Celery, you may want to check it out!
 
 If you want to get in touch, [email][em] me, or send me an
 [encrypted message][kb].  Find out about new posts by subscribing
