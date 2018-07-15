@@ -266,7 +266,7 @@ with socket.socket() as server_sock:
         print(f"New connection from {client_addr}.")
         with client_sock:
             for request_line in iter_lines(client_sock):
-                print(line)
+                print(request_line)
 
             client_sock.sendall(RESPONSE)
 ```
