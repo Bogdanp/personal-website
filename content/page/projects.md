@@ -10,10 +10,10 @@ These are some of the web applications I've built in my spare time.
 | Project                       | Description                                  |
 | :---                          | :---                                         |
 | [Free Invoice Generator][fig] | Free invoicing software.                     |
-| [ValueAdded][valueadded.io]   | A VAT API for companies operating in the EU. |
+| [Remote Only][remoteonly]     | A remote job board.                          |
 
 [fig]: https://free-invoice-generator.com
-[valueadded.io]: https://valueadded.io
+[remoteonly]: https://remoteonly.io
 
 
 ## Current libraries and tools
@@ -23,19 +23,22 @@ This is the stuff I'm currently working on in the open.
 | Project                    | Description                                                           |
 | :---                       | :---                                                                  |
 | [anom][anom-py]            | An object mapper for Cloud Datastore for Python 3.6+.                 |
-| [apistar_cookiecutter]     | A cookiecutter for API Star apps.                                     |
 | [apistar_cors]             | CORS support for API Star apps.                                       |
+| [apistar_dramatiq]         | Dramatiq support for API Star apps.                                   |
 | [apistar_prometheus]       | Prometheus metrics for API Star apps.                                 |
 | [apistar_sentry]           | Sentry support for API Star apps.                                     |
+| [apistar_settings]         | A settings component for API Star apps.                               |
 | [dramatiq]                 | A distributed task processing library for Python 3.6+.                |
 | [dramatiq_sqs]             | An Amazon SQS broker for Dramatiq.                                    |
 | [falcon_sugar]             | A little sugar for Falcon applications.                               |
+| [fargate_scraper]          | A CLI tool that scrapes Fargate tasks to find Prometheus targets.     |
 | [firechannel]              | An almost-dropin replacement for the GAE channels API using Firebase. |
-| [hugs][hugs]               | A library that maps SQL expressions to Python fuctions.               |
-| [markii][markii]           | A development-mode error handler for Python web apps.                 |
+| [hugs]                     | A library that maps SQL expressions to Python fuctions.               |
+| [markii]                   | A development-mode error handler for Python web apps.                 |
+| [molten]                   | A modern API framework for Python 3.6+.                               |
 | [py-test.el][pytest]       | A Python test runner for Emacs.                                       |
 | [resource_pool]            | A generic thread-safe resource pool for Python.                       |
-| [valueadded][valueadded]   | A Python library for computing VAT.                                   |
+| [watchdog_gevent]          | A gevent-based observer for watchdog.                                 |
 
 
 ## Inactive libraries and tools
@@ -76,10 +79,11 @@ These are libraries and tools that I am no longer maintaining.
 
 [anom-py]: https://anom.defn.io
 [anom]: https://github.com/Bogdanp/anom
-[apistar_cookiecutter]: https://github.com/Bogdanp/apistar_cookiecutter
 [apistar_cors]: https://github.com/Bogdanp/apistar_cors
+[apistar_dramatiq]: https://github.com/Bogdanp/apistar_dramatiq
 [apistar_prometheus]: https://github.com/Bogdanp/apistar_prometheus
-[apistar_sentry]: https://github.com/Leadpages/apistar_sentry
+[apistar_sentry]: https://github.com/Bogdanp/apistar_sentry
+[apistar_settings]: https://github.com/Bogdanp/apistar_settings
 [ast]: https://github.com/Bogdanp/elm-ast
 [bc]: https://github.com/Bogdanp/browser-connect.vim
 [cedar-mode]: https://github.com/Bogdanp/cedar-mode
@@ -92,8 +96,9 @@ These are libraries and tools that I am no longer maintaining.
 [dramatiq_sqs]: https://github.com/Bogdanp/dramatiq_sqs
 [elmmode]: https://github.com/jcollard/elm-mode
 [falcon_sugar]: https://github.com/Bogdanp/falcon_sugar
-[firechannel]: https://github.com/LeadPages/firechannel
+[fargate_scraper]: https://github.com/Bogdanp/fargate_scraper
 [ff]: https://github.com/Bogdanp/ff
+[firechannel]: https://github.com/LeadPages/firechannel
 [generate]: https://github.com/Bogdanp/elm-generate
 [h2p]: https://github.com/Bogdanp/h2p
 [hugs]: https://github.com/Bogdanp/hugs
@@ -101,6 +106,7 @@ These are libraries and tools that I am no longer maintaining.
 [markii]: https://github.com/Bogdanp/markii
 [modviz]: https://github.com/Bogdanp/modviz
 [mold]: https://github.com/Bogdanp/mold
+[molten]: https://moltenframework.com
 [multiprom]: https://github.com/Bogdanp/multiprom
 [pico]: https://github.com/Bogdanp/pico
 [pyrepl]: https://github.com/Bogdanp/pyrepl.vim
@@ -114,6 +120,6 @@ These are libraries and tools that I am no longer maintaining.
 [tcopy]: https://github.com/Bogdanp/tcopy
 [time]: https://github.com/Bogdanp/elm-time
 [trio-redis]: https://github.com/Bogdanp/trio-redis
-[valueadded]: https://github.com/valueadded/valueadded-python
+[watchdog_gevent]: https://github.com/Bogdanp/watchdog_gevent
 [yes]: https://github.com/Bogdanp/yes.py
 [zed]: https://github.com/Bogdanp/zed
