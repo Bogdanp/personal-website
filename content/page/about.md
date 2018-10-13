@@ -19,7 +19,7 @@ you can find [here](/projects/) and on [my GitHub page][gh].
 I make [Dramatiq], a distributed task processing framework for Python.
 If you're fed up with Celery, you may want to check it out!
 
-I also make [molten], a modern API framework for Python 3.6 and up.
+I also make [molten], a modern web framework for Python 3.6 and up.
 
 If you want to get in touch, [email][em] me, or send me an
 [encrypted message][kb].  Find out about new posts by subscribing
