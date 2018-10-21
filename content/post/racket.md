@@ -5,7 +5,7 @@ date: 2018-10-21T17:00:00Z
 tags: ["racket"]
 ---
 
-I've been playing around with [Racket] every change I got since early
+I've been playing around with [Racket] every chance I got since early
 September of this year.  This post is going to serve as a sort of
 experience report of my foray into Racket so far.
 
