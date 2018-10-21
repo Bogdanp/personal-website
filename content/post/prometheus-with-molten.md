@@ -3,6 +3,7 @@ title: "Prometheus with Molten"
 description: "A short guide on how to export prom metrics from your Molten app."
 slug: prometheus-with-molten
 date: 2018-10-21
+tags: ["molten", "prometheus", "python"]
 ---
 
 [molten] has built-in support for exporting the following [Prometheus] metrics:
