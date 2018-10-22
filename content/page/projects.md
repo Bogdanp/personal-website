@@ -25,6 +25,7 @@ This is the stuff I'm currently working on in the open.
 | Project                | Description                                                           |
 | :---                   | :---                                                                  |
 | [anom]                 | An object mapper for Cloud Datastore for Python 3.6+.                 |
+| [cursive_re]           | Beautiful regular expressions for Python 3.6+.                        |
 | [dramatiq]             | A distributed task processing library for Python 3.6+.                |
 | [dramatiq_sqs]         | An Amazon SQS broker for Dramatiq.                                    |
 | [falcon_sugar]         | A little sugar for Falcon applications.                               |
@@ -98,6 +99,7 @@ These are libraries and tools that I am no longer maintaining.
 [cedar-mode]: https://github.com/Bogdanp/cedar-mode
 [cedar]: https://github.com/Bogdanp/cedar
 [crontab]: https://github.com/Bogdanp/crontab
+[cursive_re]: https://github.com/Bogdanp/cursive_re
 [dramatiq]: https://dramatiq.io
 [dramatiq_sqs]: https://github.com/Bogdanp/dramatiq_sqs
 [elm-ast]: https://github.com/Bogdanp/elm-ast
