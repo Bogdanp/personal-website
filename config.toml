@@ -42,6 +42,11 @@ googleAnalytics = "UA-54541558-2"
     weight = 2
 
 [[menu.main]]
+    name = "Talks I Like"
+    url = "/page/talks-i-like/"
+    weight = 3
+
+[[menu.main]]
     name = "About"
     url = "/page/about/"
-    weight = 3
+    weight = 4
