@@ -25,7 +25,7 @@ This is the stuff I'm currently working on in the open.
 | Project                | Description                                                           |
 | :---                   | :---                                                                  |
 | [anom]                 | An object mapper for Cloud Datastore for Python 3.6+.                 |
-| [cursive_re]           | Beautiful regular expressions for Python 3.6+.                        |
+| [cursive_re]           | Readable regular expressions for Python 3.6+.                         |
 | [dramatiq]             | A distributed task processing library for Python 3.6+.                |
 | [dramatiq_sqs]         | An Amazon SQS broker for Dramatiq.                                    |
 | [falcon_sugar]         | A little sugar for Falcon applications.                               |
