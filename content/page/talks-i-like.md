@@ -22,6 +22,7 @@ reminded of old ones.
 | [David Beazley]      | [Topics of Interest (Python Asyncio)]                    |
 | [Matthew Flatt]      | [Rebuilding Racket on Chez Scheme: An Experience Report] |
 | [Raymond Hettinger]  | [Super considered super!]                                |
+| [Rob Simmons]        | [Contracts For Getting More Programs Less Wrong]         |
 | [Simon Peyton Jones] | [Adventures With Types in Haskell]                       |
 | [Simon Peyton Jones] | [Haskell is Useless]                                     |
 | Zach Smith           | [Nim - A New Option for Optimizing Inner Loops]          |
@@ -73,6 +74,7 @@ reminded of old ones.
 [Boundaries]: https://www.destroyallsoftware.com/talks/boundaries
 [Bryan Cantrill]: http://dtrace.org/blogs/
 [Casey Muratori]: https://mollyrocket.com/
+[Contracts For Getting More Programs Less Wrong]: https://www.youtube.com/watch?v=lNITrPhl2_A
 [Daniel Patterson]: http://positiondev.com/
 [David Beazley]: http://dabeaz.com/
 [David Heinemeier Hansson]: http://david.heinemeierhansson.com/
@@ -96,6 +98,7 @@ reminded of old ones.
 [Python Concurrency From the Ground Up]: https://www.youtube.com/watch?v=MCs5OvhV9S4
 [Raymond Hettinger]: https://twitter.com/raymondh
 [Rebuilding Racket on Chez Scheme: An Experience Report]: https://www.youtube.com/watch?v=t09AJUK6IiM
+[Rob Simmons]: https://calculem.us/
 [Robert Lustig]: http://www.robertlustig.com/
 [Simon Peyton Jones]: https://www.microsoft.com/en-us/research/people/simonpj/
 [Startup School 2008]: https://www.youtube.com/watch?v=0CDXJ6bMkMY
