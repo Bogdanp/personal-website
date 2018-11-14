@@ -74,7 +74,9 @@ normally used to.
 ## Error Reporting
 
 This may just be because I'm not used to the error messages yet, but I
-find Racket's exception reporting hard to decipher.
+find Racket's exception reporting hard to decipher and I often run
+into errors that contain no information regarding *where* in the
+source code the error occurred.
 
 ## Lack of Docstrings
 
@@ -90,10 +92,10 @@ looking up a function's documentation easy enough.
 ## Unit Testing
 
 Racket's [rackunit] is lacking support for a few things I'd expect
-from such a library, principally there doesn't seem to be any built-in
-way to do set up and teardown (I've been using `dynamic-wind` for this
-purpose) and the facilities for grouping tests together feel rather
-flimsy.  I don't understand why `test-suite`s have to be run manually.
+from such a library.  There doesn't seem to be any built-in way to do
+set up and teardown (I've been using `dynamic-wind` for this purpose),
+the facilities for grouping tests together feel flimsy and I don't
+understand why `test-suite`s have to be run manually.
 
 
 [Racket]: https://racket-lang.org
