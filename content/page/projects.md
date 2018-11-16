@@ -22,24 +22,25 @@ These are some of the web applications I've built in my spare time.
 
 This is the stuff I'm currently working on in the open.
 
-| Project                | Description                                                           |
-| :---                   | :---                                                                  |
-| [anom]                 | An object mapper for Cloud Datastore for Python 3.6+.                 |
-| [component]            | Simple dependency injection for Racket.                               |
-| [cursive_re]           | Readable regular expressions for Python 3.6+.                         |
-| [dramatiq]             | A distributed task processing library for Python 3.6+.                |
-| [dramatiq_sqs]         | An Amazon SQS broker for Dramatiq.                                    |
-| [falcon_sugar]         | A little sugar for Falcon applications.                               |
-| [fargate_scraper]      | A CLI tool that scrapes Fargate tasks to find Prometheus targets.     |
-| [google-cloud]         | Google Cloud Platform support for Racket.                             |
-| [heater]               | A Python heatmapping library.                                         |
-| [hugs]                 | A library that maps SQL expressions to Python fuctions.               |
-| [markii]               | A development-mode error handler for Python web apps.                 |
-| [molten]               | A modern API framework for Python 3.6+.                               |
-| [py-test.el]           | A Python test runner for Emacs.                                       |
-| [resource_pool]        | A generic thread-safe resource pool for Python.                       |
-| [watchdog_gevent]      | A gevent-based observer for watchdog.                                 |
-| [web-app-from-scratch] | Supporting material for my "Web App From Scratch" blog series.        |
+| Project                | Description                                                       |
+| :---                   | :---                                                              |
+| [anom]                 | An object mapper for Cloud Datastore for Python 3.6+.             |
+| [component]            | Simple dependency injection for Racket.                           |
+| [cursive_re]           | Readable regular expressions for Python 3.6+.                     |
+| [dramatiq]             | A distributed task processing library for Python 3.6+.            |
+| [dramatiq_sqs]         | An Amazon SQS broker for Dramatiq.                                |
+| [falcon_sugar]         | A little sugar for Falcon applications.                           |
+| [fargate_scraper]      | A CLI tool that scrapes Fargate tasks to find Prometheus targets. |
+| [google-cloud]         | Google Cloud Platform support for Racket.                         |
+| [heater]               | A Python heatmapping library.                                     |
+| [hugs]                 | A library that maps SQL expressions to Python fuctions.           |
+| [markii]               | A development-mode error handler for Python web apps.             |
+| [molten]               | A modern API framework for Python 3.6+.                           |
+| [net-ip]               | Utilities for working with IP addresses and networks in Racket.   |
+| [py-test.el]           | A Python test runner for Emacs.                                   |
+| [resource_pool]        | A generic thread-safe resource pool for Python.                   |
+| [watchdog_gevent]      | A gevent-based observer for watchdog.                             |
+| [web-app-from-scratch] | Supporting material for my "Web App From Scratch" blog series.    |
 
 
 ## Inactive libraries and tools
@@ -127,6 +128,7 @@ These are libraries and tools that I am no longer maintaining.
 [mold]: https://github.com/Bogdanp/mold
 [molten]: https://moltenframework.com
 [multiprom]: https://github.com/Bogdanp/multiprom
+[net-ip]: https://github.com/Bogdanp/racket-net-ip
 [pico]: https://github.com/Bogdanp/pico
 [py-test.el]: https://github.com/Bogdanp/py-test.el
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
