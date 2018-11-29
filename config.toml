@@ -3,7 +3,6 @@ title = "defn.io"
 theme = "ghostwriter"
 languageCode = "en-us"
 copyright = "Bogdan Popa"
-googleAnalytics = "UA-54541558-2"
 
 [Author]
     name = "Bogdan Popa"
@@ -21,8 +20,6 @@ googleAnalytics = "UA-54541558-2"
     email = "bogdan@defn.io"
     opengraph = true
     shareTwitter = true
-    shareFacebook = true
-    shareGooglePlus = true
     shareLinkedIn = true
     dateFormat = "Mon, Jan 2, 2006"
     highlightJsUrl = ""
