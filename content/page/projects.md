@@ -31,6 +31,7 @@ This is the stuff I'm currently working on in the open.
 | [dramatiq_sqs]         | An Amazon SQS broker for Dramatiq.                                |
 | [falcon_sugar]         | A little sugar for Falcon applications.                           |
 | [fargate_scraper]      | A CLI tool that scrapes Fargate tasks to find Prometheus targets. |
+| [geoip]                | Geolocation for Racket based on MaxMind's GeoIP databases.        |
 | [google-cloud]         | Google Cloud Platform support for Racket.                         |
 | [heater]               | A Python heatmapping library.                                     |
 | [hugs]                 | A library that maps SQL expressions to Python fuctions.           |
@@ -118,8 +119,9 @@ These are libraries and tools that I am no longer maintaining.
 [fargate_scraper]: https://github.com/Bogdanp/fargate_scraper
 [ff]: https://github.com/Bogdanp/ff
 [firechannel]: https://github.com/LeadPages/firechannel
-[h2p]: https://github.com/Bogdanp/h2p
+[geoip]: https://github.com/Bogdanp/racket-geoip
 [google-cloud]: https://github.com/Bogdanp/google-cloud
+[h2p]: https://github.com/Bogdanp/h2p
 [heater]: https://github.com/Bogdanp/heater
 [hugs]: https://github.com/Bogdanp/hugs
 [ido-clever-match]: https://github.com/Bogdanp/ido-clever-match
