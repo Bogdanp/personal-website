@@ -23,6 +23,7 @@ reminded of old ones.
 | [Matthew Flatt]      | [Rebuilding Racket on Chez Scheme: An Experience Report] |
 | [Raymond Hettinger]  | [Super considered super!]                                |
 | [Rob Simmons]        | [Contracts For Getting More Programs Less Wrong]         |
+| [Robby Findler]      | [Racket: A Programming-Language Programming Language]    |
 | [Simon Peyton Jones] | [Adventures With Types in Haskell]                       |
 | [Simon Peyton Jones] | [Haskell is Useless]                                     |
 | Zach Smith           | [Nim - A New Option for Optimizing Inner Loops]          |
@@ -96,9 +97,11 @@ reminded of old ones.
 [Platform as a Reflection of Values: Joyent, Node.js, and Beyond]: https://vimeo.com/230142234
 [Principles of Technology Leadership]: https://www.youtube.com/watch?v=9QMGAtxUlAc
 [Python Concurrency From the Ground Up]: https://www.youtube.com/watch?v=MCs5OvhV9S4
+[Racket: A Programming-Language Programming Language]: https://www.youtube.com/watch?v=hFlIl0Zo234
 [Raymond Hettinger]: https://twitter.com/raymondh
 [Rebuilding Racket on Chez Scheme: An Experience Report]: https://www.youtube.com/watch?v=t09AJUK6IiM
 [Rob Simmons]: https://calculem.us/
+[Robby Findler]: https://www.eecs.northwestern.edu/~robby/
 [Robert Lustig]: http://www.robertlustig.com/
 [Simon Peyton Jones]: https://www.microsoft.com/en-us/research/people/simonpj/
 [Startup School 2008]: https://www.youtube.com/watch?v=0CDXJ6bMkMY
