@@ -40,6 +40,7 @@ reminded of old ones.
 | [Gary Bernhardt]  | [Boundaries]                                                      |
 | [Jon Moore]       | [Stop Rate Limiting! Capacity Management Done Right]              |
 | [Martin Thompson] | [Designing for Performance]                                       |
+| [Sandi Metz]      | [Polly Want a Message]                                            |
 | [Zach Tellman]    | [Everything Will Flow]                                            |
 | [engineerguy]     | [Why the other line is likely to move faster]                     |
 
@@ -95,6 +96,7 @@ reminded of old ones.
 [Mike Monteiro]: https://muledesign.com/
 [Nim - A New Option for Optimizing Inner Loops]: https://www.youtube.com/watch?v=IVgNVJdizHg
 [Platform as a Reflection of Values: Joyent, Node.js, and Beyond]: https://vimeo.com/230142234
+[Polly Want a Message]: https://www.deconstructconf.com/2018/sandi-metz-polly-want-a-message
 [Principles of Technology Leadership]: https://www.youtube.com/watch?v=9QMGAtxUlAc
 [Python Concurrency From the Ground Up]: https://www.youtube.com/watch?v=MCs5OvhV9S4
 [Racket: A Programming-Language Programming Language]: https://www.youtube.com/watch?v=hFlIl0Zo234
@@ -103,6 +105,7 @@ reminded of old ones.
 [Rob Simmons]: https://calculem.us/
 [Robby Findler]: https://www.eecs.northwestern.edu/~robby/
 [Robert Lustig]: http://www.robertlustig.com/
+[Sandi Metz]: https://www.sandimetz.com
 [Simon Peyton Jones]: https://www.microsoft.com/en-us/research/people/simonpj/
 [Startup School 2008]: https://www.youtube.com/watch?v=0CDXJ6bMkMY
 [Stop Rate Limiting! Capacity Management Done Right]: https://www.youtube.com/watch?v=m64SWl9bfvk
