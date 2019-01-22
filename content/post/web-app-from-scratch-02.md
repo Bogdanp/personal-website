@@ -508,7 +508,7 @@ def serve_file(sock: socket.socket, path: str) -> None:
 
             response = Response(status="200 OK", body=f)
             response.headers.add("content-type", content_type)
-            response.send(socket)
+            response.send(sock)
             return
     except FileNotFoundError:
         response = Response(status="404 Not Found", content="Not Found")
