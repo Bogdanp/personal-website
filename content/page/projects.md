@@ -39,6 +39,8 @@ This is the stuff I'm currently working on in the open.
 | [markii]               | A development-mode error handler for Python web apps.             |
 | [molten]               | A modern API framework for Python 3.6+.                           |
 | [net-ip]               | Utilities for working with IP addresses and networks in Racket.   |
+| [north]                | A database schema migration tool written in Racket.               |
+| [postmark-client]      | A [Postmark] client written in Racket.                            |
 | [py-test.el]           | A Python test runner for Emacs.                                   |
 | [resource_pool]        | A generic thread-safe resource pool for Python.                   |
 | [watchdog_gevent]      | A gevent-based observer for watchdog.                             |
@@ -133,7 +135,10 @@ These are libraries and tools that I am no longer maintaining.
 [molten]: https://moltenframework.com
 [multiprom]: https://github.com/Bogdanp/multiprom
 [net-ip]: https://github.com/Bogdanp/racket-net-ip
+[north]: https://github.com/Bogdanp/racket-north
 [pico]: https://github.com/Bogdanp/pico
+[postmark]: https://postmarkapp.com
+[postmark-client]: https://github.com/Bogdanp/racket-postmark
 [py-test.el]: https://github.com/Bogdanp/py-test.el
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
 [repos]: https://github.com/Bogdanp/repositories
