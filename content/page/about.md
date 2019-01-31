@@ -13,13 +13,9 @@ detection.
 
 I'm currently the CTO of [BlockFraud], a mobile fraud detection SaaS.
 Previously, I was a Principal Engineer at [Leadpages].  In my free
-time I contribute to and maintain various open source projects which
-you can find [here](/projects/) and on [my GitHub page][gh].
-
-I make [Dramatiq], a distributed task processing framework for Python.
-If you're fed up with Celery, you may want to check it out!
-
-I also make [molten], a modern web framework for Python 3.6 and up.
+time I contribute to and maintain [dramatiq], [molten] and a bunch of
+other OSS which you can find [here](/projects/) and on [my GitHub
+page][gh].
 
 If you want to get in touch, [email][em] me, or send me an
 [encrypted message][kb].  Find out about new posts by subscribing
@@ -29,6 +25,7 @@ to the [Atom][feed] feed or follow me on [Twitter][twitter].
 [Leadpages]: https://leadpages.net
 [Dramatiq]: https://dramatiq.io
 [molten]: https://moltenframework.com
+[oss]: https://moltenframework.com
 [gh]: https://github.com/Bogdanp
 [em]: mailto:bogdan@defn.io
 [kb]: https://keybase.io/bogdanp
