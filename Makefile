@@ -3,4 +3,4 @@ public: archetypes content data layouts static themes
 
 .PHONY: deploy
 deploy: public
-	gcloud app deploy --project defn-166408 app.yaml
+	rsync -r public/* defn@defn.io:~/www
