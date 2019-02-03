@@ -3,4 +3,4 @@ public: archetypes content data layouts static themes
 
 .PHONY: deploy
 deploy: public
-	rsync -r public/* defn@defn.io:~/www
+	rsync -avz --delete public/* defn@ssh.defn.io:~/www
