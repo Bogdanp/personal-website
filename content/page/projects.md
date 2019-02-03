@@ -10,11 +10,9 @@ These are some of the web applications I've built in my spare time.
 | Project                  | Description                                                                                     |
 | :---                     | :---                                                                                            |
 | [Free Invoice Generator] | Free invoicing software.                                                                        |
-| [Remote Only]            | A remote job board.                                                                             |
 | [Task Queues]            | A list of message brokers and task queues across many programming lanagues and implementations. |
 
 [Free Invoice Generator]: https://free-invoice-generator.com
-[Remote Only]: https://remoteonly.io
 [Task Queues]: https://taskqueues.com
 
 
