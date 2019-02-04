@@ -32,7 +32,7 @@ me go through about 20 dialogs before it finally let me delete the
 account)).  That was a time-consuming, but satisfying, process; sorta
 like spring cleaning.  In the end, I was able to switch about 130
 internet accounts to use my new e-mail address after a few hours of
-work.  There were only 5 instances where I couldn't either change my
+work.  There were only 5 instances where I could neither change my
 e-mail address or delete the account so, for all of those, I e-mailed
 support and I'm currently waiting to hear back.
 
