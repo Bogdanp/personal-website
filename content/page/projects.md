@@ -3,7 +3,7 @@ title: "Projects"
 slug: "projects"
 ---
 
-# SAAS
+# Websites and SaaS
 
 These are some of the web applications I've built in my spare time.
 
@@ -16,25 +16,20 @@ These are some of the web applications I've built in my spare time.
 [Task Queues]: https://taskqueues.com
 
 
-## Current libraries and tools
+## Libraries and Tools
 
-This is the stuff I'm currently working on in the open.
+This is the stuff I'm currently working on and actively maintaining in
+the open.
 
 | Project                | Description                                                       |
 | :---                   | :---                                                              |
-| [anom]                 | An object mapper for Cloud Datastore for Python 3.6+.             |
 | [component]            | Simple dependency injection for Racket.                           |
 | [cursive_re]           | Readable regular expressions for Python 3.6+.                     |
 | [dramatiq]             | A distributed task processing library for Python 3.6+.            |
 | [dramatiq_sqs]         | An Amazon SQS broker for Dramatiq.                                |
-| [falcon_sugar]         | A little sugar for Falcon applications.                           |
-| [fargate_scraper]      | A CLI tool that scrapes Fargate tasks to find Prometheus targets. |
 | [forms]                | A web form validation library for Racket.                         |
 | [geoip]                | Geolocation for Racket based on MaxMind's GeoIP databases.        |
-| [google-cloud]         | Google Cloud Platform support for Racket.                         |
-| [heater]               | A Python heatmapping library.                                     |
 | [hugs]                 | A library that maps SQL expressions to Python fuctions.           |
-| [markii]               | A development-mode error handler for Python web apps.             |
 | [molten]               | A modern API framework for Python 3.6+.                           |
 | [net-ip]               | Utilities for working with IP addresses and networks in Racket.   |
 | [north]                | A database schema migration tool written in Racket.               |
@@ -45,14 +40,18 @@ This is the stuff I'm currently working on in the open.
 | [web-app-from-scratch] | Supporting material for my "Web App From Scratch" blog series.    |
 
 
-## Inactive libraries and tools
+## Archive
 
-These are libraries and tools that I am no longer maintaining.
+These are libraries and tools that I am no longer actively
+maintaining.  Most of these are perfectly usable and don't require
+maintenance, but if you use them and run into problems I won't help
+much beyond maybe giving you some pointers.
 
 | Project              | Description                                                           |
 | :---                 | :---                                                                  |
 | [PyREPL]             | Run a Python interpreter inside Vim.                                  |
 | [RbREPL]             | Run a Ruby interpreter inside Vim.                                    |
+| [anom]               | An object mapper for Cloud Datastore for Python 3.6+.                 |
 | [anom-go]            | An object mapper for the AppEngine Datastore in Go.                   |
 | [apistar_cors]       | CORS support for API Star apps.                                       |
 | [apistar_dramatiq]   | Dramatiq support for API Star apps.                                   |
@@ -73,10 +72,14 @@ These are libraries and tools that I am no longer maintaining.
 | [elm-querystring]    | A library for working with querystrings in Elm.                       |
 | [elm-route]          | A type-safe routing library for Elm.                                  |
 | [elm-time]           | A pure Elm date and time library.                                     |
+| [falcon_sugar]       | A little sugar for Falcon applications.                               |
+| [fargate_scraper]    | A CLI tool that scrapes Fargate tasks to find Prometheus targets.     |
 | [ff]                 | A fuzzy-finder for the terminal.                                      |
 | [firechannel]        | An almost-dropin replacement for the GAE channels API using Firebase. |
 | [h2p]                | A Python interface to libwkhtmltox.                                   |
+| [heater]             | A Python heatmapping library.                                         |
 | [ido-clever-match]   | An alternative matcher for Emacs ido-mode.                            |
+| [markii]             | A development-mode error handler for Python web apps.                 |
 | [modviz]             | A module dependency graph visualizer for Python.                      |
 | [mold]               | A fast templating engine for Python.                                  |
 | [multiprom]          | A multiprocess-friendly Prometheus client for Python.                 |
@@ -122,7 +125,6 @@ These are libraries and tools that I am no longer maintaining.
 [firechannel]: https://github.com/LeadPages/firechannel
 [forms]: https://github.com/Bogdanp/racket-forms
 [geoip]: https://github.com/Bogdanp/racket-geoip
-[google-cloud]: https://github.com/Bogdanp/google-cloud
 [h2p]: https://github.com/Bogdanp/h2p
 [heater]: https://github.com/Bogdanp/heater
 [hugs]: https://github.com/Bogdanp/hugs
