@@ -14,7 +14,7 @@ detection.
 I'm currently the CTO of [BlockFraud], a mobile fraud detection SaaS.
 Previously, I was a Principal Engineer at [Leadpages].  In my free
 time I contribute to and maintain [dramatiq], [molten] and a bunch of
-other OSS which you can find [here](/projects/) and on [my GitHub
+other OSS which you can find [here](/page/projects/) and on [my GitHub
 page][gh].
 
 If you want to get in touch, [email][em] me, or send me an
