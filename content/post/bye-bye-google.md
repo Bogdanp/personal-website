@@ -2,7 +2,7 @@
 title: "Bye, Bye, Google"
 date: 2019-02-04T09:00:00+02:00
 slug: "bye-bye-google"
-tags: ["web"]
+tags: ["google", "web"]
 ---
 
 I spent this past weekend de-Google-ifying my life and, despite my
