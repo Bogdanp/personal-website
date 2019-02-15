@@ -20,6 +20,7 @@ reminded of old ones.
 | [David Beazley]      | [Discovering Python]                                     |
 | [David Beazley]      | [Python Concurrency From the Ground Up]                  |
 | [David Beazley]      | [Topics of Interest (Python Asyncio)]                    |
+| [Markus Winand]      | [Modern SQL]                                             |
 | [Matthew Flatt]      | [Rebuilding Racket on Chez Scheme: An Experience Report] |
 | [Raymond Hettinger]  | [Super considered super!]                                |
 | [Rob Simmons]        | [Contracts For Getting More Programs Less Wrong]         |
@@ -90,10 +91,12 @@ reminded of old ones.
 [Haskell is Useless]: https://www.youtube.com/watch?v=iSmkqocn0oQ
 [Immediate-Mode Graphical User Interfaces]: https://www.youtube.com/watch?v=Z1qyvQsjK5Y
 [Jon Moore]: https://twitter.com/jon_moore
+[Markus Winand]: https://use-the-index-luke.com/
 [Martin Thompson]: https://twitter.com/mjpt777
 [Matthew Flatt]: http://www.cs.utah.edu/~mflatt/
 [Michael Dearing]: https://twitter.com/mcgd
 [Mike Monteiro]: https://muledesign.com/
+[Modern SQL]: https://modern-sql.com/video
 [Nim - A New Option for Optimizing Inner Loops]: https://www.youtube.com/watch?v=IVgNVJdizHg
 [Platform as a Reflection of Values: Joyent, Node.js, and Beyond]: https://vimeo.com/230142234
 [Polly Want a Message]: https://www.deconstructconf.com/2018/sandi-metz-polly-want-a-message
