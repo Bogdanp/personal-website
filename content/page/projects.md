@@ -39,6 +39,15 @@ the open.
 | [watchdog_gevent]      | A gevent-based observer for watchdog.                             |
 | [web-app-from-scratch] | Supporting material for my "Web App From Scratch" blog series.    |
 
+If you would like to support my work on any of these projects, please
+consider either buying a Tidelift subscription for
+[dramatiq][tl_dramatiq] or [molten][tl_molten] or setting up a
+recurring donation via [liberapay].
+
+[tl_dramatiq]: https://tidelift.com/subscription/pkg/pypi-dramatiq?utm_source=pypi-dramatiq&utm_medium=referral&utm_campaign=blog
+[tl_molten]: https://tidelift.com/subscription/pkg/pypi-molten?utm_source=pypi-molten&utm_medium=referral&utm_campaign=blog
+[liberapay]: https://liberapay.com/bogdan
+
 
 ## Archive
 
