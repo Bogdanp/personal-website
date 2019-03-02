@@ -49,6 +49,7 @@ reminded of old ones.
 
 | Author                     | Talk                      |
 | :---                       | :---                      |
+| [Allen Holub]              | [#NoEstimates]            |
 | [David Heinemeier Hansson] | [Startup School 2008]     |
 | [Michael Dearing]          | [Executive Communication] |
 | [Mike Monteiro]            | [Fuck You, Pay Me]        |
@@ -68,11 +69,13 @@ reminded of old ones.
 | Randy Pausch    | [Achieving Your Childhood Dreams] |
 
 
+[#NoEstimates]: https://www.youtube.com/watch?v=QVBlnCTu9Ms
 [A Whole New World]: https://www.destroyallsoftware.com/talks/a-whole-new-world
 [Abstract Algebra and Distributed Data Processing]: https://www.youtube.com/watch?v=cMY1KVrJk0w
 [Achieving Your Childhood Dreams]: https://www.youtube.com/watch?v=ji5_MqicxSo
 [Adam Chlipala]: http://adam.chlipala.net/
 [Adventures With Types in Haskell]: https://www.youtube.com/watch?v=6COvD8oynmI
+[Allen Holub]: http://holub.com/
 [Avi Bryant]: https://twitter.com/avibryant
 [Boundaries]: https://www.destroyallsoftware.com/talks/boundaries
 [Bryan Cantrill]: http://dtrace.org/blogs/
