@@ -5,7 +5,7 @@ tags: ["security"]
 ---
 
 After hacking the [matrix.org](https://matrix.org) website today, the
-hacker opened a series of GitHub issues mentioning the flaws he
+attacker opened a series of GitHub issues mentioning the flaws he
 discovered.  In [one of those issues][issue], he mentions that
 "complete compromise could have been avoided if developers were
 prohibited from using [SSH agent forwarding]".
@@ -20,24 +20,24 @@ Here's what `man ssh_config` has to say about `ForwardAgent`:
 > enable them to authenticate using the identities loaded into the
 > agent.
 
-Put simply: if your jump box is compromised and you use SSH agent
+Simply put: if your jump box is compromised and you use SSH agent
 forwarding to connect to another machine through it, then you risk
 also compromising the target machine!
 
 Instead, you should use either `ProxyCommand` or `ProxyJump` (added in
 OpenSSH 7.3).  That way, ssh will forward the TCP connection to the
-target host via the jump box, meaning that the actual connection
-happens on your workstation and if someone on the jump box tries to
-MITM your connection, then you will be warned by the SSH command.
+target host via the jump box and the actual connection will be made on
+your workstation.  If someone on the jump box tries to MITM your
+connection, then you will be warned by ssh.
 
 Here's what a config file that uses `ProxyCommand` might look like:
 
 ```ssh-config
 Host bastion
-  Hostname bastion.example.com
+  HostName bastion.example.com
 
 Host target
-  Hostname target.example.internal
+  HostName target.example.internal
   Port 2222
   ProxyCommand ssh -W %h:%p bastion
 ```
@@ -46,10 +46,10 @@ And here's the equivalent config using `ProxyJump`:
 
 ```ssh-config
 Host bastion
-  Hostname bastion.example.com
+  HostName bastion.example.com
 
 Host target
-  Hostname target.example.internal
+  HostName target.example.internal
   Port 2222
   ProxyJump bastion
 ```
