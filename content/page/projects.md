@@ -21,23 +21,24 @@ These are some of the web applications I've built in my spare time.
 This is the stuff I'm currently working on and actively maintaining in
 the open.
 
-| Project                | Description                                                       |
-| :---                   | :---                                                              |
-| [component]            | Simple dependency injection for Racket.                           |
-| [cursive_re]           | Readable regular expressions for Python 3.6+.                     |
-| [dramatiq]             | A distributed task processing library for Python 3.6+.            |
-| [dramatiq_sqs]         | An Amazon SQS broker for Dramatiq.                                |
-| [forms]                | A web form validation library for Racket.                         |
-| [geoip]                | Geolocation for Racket based on MaxMind's GeoIP databases.        |
-| [hugs]                 | A library that maps SQL expressions to Python fuctions.           |
-| [molten]               | A modern API framework for Python 3.6+.                           |
-| [net-ip]               | Utilities for working with IP addresses and networks in Racket.   |
-| [north]                | A database schema migration tool written in Racket.               |
-| [postmark-client]      | A [Postmark] client written in Racket.                            |
-| [py-test.el]           | A Python test runner for Emacs.                                   |
-| [resource_pool]        | A generic thread-safe resource pool for Python.                   |
-| [watchdog_gevent]      | A gevent-based observer for watchdog.                             |
-| [web-app-from-scratch] | Supporting material for my "Web App From Scratch" blog series.    |
+| Project                 | Description                                                     |
+| :---                    | :---                                                            |
+| [component]             | Simple dependency injection for Racket.                         |
+| [cursive_re]            | Readable regular expressions for Python 3.6+.                   |
+| [dramatiq]              | A distributed task processing library for Python 3.6+.          |
+| [dramatiq_sqs]          | An Amazon SQS broker for Dramatiq.                              |
+| [forms]                 | A web form validation library for Racket.                       |
+| [geoip]                 | Geolocation for Racket based on MaxMind's GeoIP databases.      |
+| [hugs]                  | A library that maps SQL expressions to Python fuctions.         |
+| [molten]                | A modern API framework for Python 3.6+.                         |
+| [net-ip]                | Utilities for working with IP addresses and networks in Racket. |
+| [north]                 | A database schema migration tool written in Racket.             |
+| [postmark-client]       | A [Postmark] client written in Racket.                          |
+| [py-test.el]            | A Python test runner for Emacs.                                 |
+| [resource_pool]         | A generic thread-safe resource pool for Python.                 |
+| [twilio][racket-twilio] | A [Twilio] client for Racket.                                   |
+| [watchdog_gevent]       | A gevent-based observer for watchdog.                           |
+| [web-app-from-scratch]  | Supporting material for my "Web App From Scratch" blog series.  |
 
 If you would like to support my work on any of these projects, please
 consider either buying a Tidelift subscription for [dramatiq][tl_dramatiq]
@@ -149,11 +150,13 @@ much beyond maybe giving you some pointers.
 [postmark-client]: https://github.com/Bogdanp/racket-postmark
 [py-test.el]: https://github.com/Bogdanp/py-test.el
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
+[racket-twilio]: https://github.com/Bogdanp/racket-twilio/
 [repos]: https://github.com/Bogdanp/repositories
 [resource_pool]: https://github.com/Bogdanp/resource_pool
 [tcopy]: https://github.com/Bogdanp/tcopy
 [threadop]: https://github.com/Bogdanp/threadop
 [trio-redis]: https://github.com/Bogdanp/trio-redis
+[twilio]: https://twilio.com
 [watchdog_gevent]: https://github.com/Bogdanp/watchdog_gevent
 [web-app-from-scratch]: https://github.com/Bogdanp/web-app-from-scratch
 [yes.py]: https://github.com/Bogdanp/yes.py
