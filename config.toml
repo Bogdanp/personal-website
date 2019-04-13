@@ -1,6 +1,5 @@
 baseURL = "https://defn.io/"
 title = "defn.io"
-subtitle = "wat"
 theme = "terminal"
 languageCode = "en-us"
 copyright = "(c) 2015-2019 Bogdan Popa"
@@ -15,6 +14,7 @@ readOtherPosts = "Read other posts"
   tag = "tags"
 
 [Params]
+  subtitle = "Bogdan Popa's personal website where he mainly posts about Python and Racket.  Rarely in the 3rd person."
   contentTypeName = "post"
   themeColor = "red"
   fullWidthTheme = false
