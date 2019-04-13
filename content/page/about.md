@@ -1,6 +1,6 @@
 ---
 title: "Hi!"
-date: 2017-11-12T11:10:06+02:00
+date: 2015-05-29
 ---
 
 You've reached Bogdan Popa's personal website.  Welcome!

@@ -1,5 +1,6 @@
 ---
 title: "Podcast.__init__ interview"
+description: "I was on Tobias Macey's podcast to talk about Dramatiq."
 date: 2017-12-24
 tags: ["dramatiq", "interview", "podcast"]
 ---

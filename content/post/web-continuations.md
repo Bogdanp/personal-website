@@ -10,6 +10,8 @@ is that it supports the use of [continuation]s in a web context.  This
 is a feature I've only ever seen in Smalltalk's [Seaside] before,
 though Racket's version is more powerful.
 
+<!--more-->
+
 I've been leveraging continuations in an e-commerce application I've
 been building these past couple of months and I wanted to write down
 my thoughts.  Let's dive right in.

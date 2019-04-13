@@ -1,6 +1,6 @@
 ---
 title: "Announcing component"
-description: "Lifecycle management and DI for Racket apps"
+description: "Dependency injection for Racket."
 date: 2018-11-14T22:10:00+03:00
 slug: "ann-component"
 tags: ["announcements", "component", "racket"]

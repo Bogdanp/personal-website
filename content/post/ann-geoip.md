@@ -1,6 +1,6 @@
 ---
 title: "Announcing geoip"
-description: "Geolocation for Racket based on MaxMind's GeoIP databases"
+description: "Racket support for MaxMind's geolocation databases."
 date: 2018-11-29T13:00:00+03:00
 slug: "ann-geoip"
 tags: ["announcements", "geoip", "racket"]

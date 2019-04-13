@@ -10,6 +10,8 @@ decided to create and open source a [cookiecutter][cc] template that
 deals with all of the boilerplate required to set up one of these apps
 the way I like it.  The repository is available [here][repo].
 
+<!--more-->
+
 ## Quickstart
 
 To get started immediately:

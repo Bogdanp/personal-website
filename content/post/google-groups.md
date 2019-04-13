@@ -12,6 +12,8 @@ past couple of days felt unusually light so I went and looked at
 [racket-users] and, lo and behold, there were a bunch of new posts I
 hadn't received.
 
+<!--more-->
+
 I get it.  They want to avoid sending emails to an address that, from
 their perspective, no longer exists.  Makes sense, although they could
 certainly tell you that you're gonna be unsubscribed when you cancel,

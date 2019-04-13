@@ -9,6 +9,8 @@ I've been playing around with [Racket] every chance I got since early
 September of this year.  This post is going to serve as a sort of
 experience report of my foray into Racket so far.
 
+<!--more-->
+
 # Things I Like
 
 ## Editor Support

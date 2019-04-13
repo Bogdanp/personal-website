@@ -1,51 +1,47 @@
 baseURL = "https://defn.io/"
 title = "defn.io"
-theme = "ghostwriter"
+subtitle = "wat"
+theme = "terminal"
 languageCode = "en-us"
-copyright = "Bogdan Popa"
+copyright = "(c) 2015-2019 Bogdan Popa"
+menuMore = "Show more"
+readMore = "Read more"
+readOtherPosts = "Read other posts"
 
 [Author]
-    name = "Bogdan Popa"
+  name = "Bogdan Popa"
 
 [Taxonomies]
-    tag = "tags"
+  tag = "tags"
 
 [Params]
-    intro = false
-    headline = "My headline"
-    description = "My description"
-    github = "https://github.com/Bogdanp"
-    linkedin = "https://linkedin.com/in/popabogdanp/"
-    twitter = "https://twitter.com/Bogdanp"
-    email = "bogdan@defn.io"
-    opengraph = true
-    shareGooglePlus = false
-    shareFacebook = false
-    shareTwitter = true
-    shareLinkedIn = true
-    dateFormat = "Mon, Jan 2, 2006"
-    highlightJsUrl = ""
-    highlightJsLocalUrl = ""
+  contentTypeName = "post"
+  themeColor = "red"
+  fullWidthTheme = false
+  centerTheme = true
+
+[Params.logo]
+  logoText = "defn.io"
 
 [Permalinks]
-    post = "/:year/:month/:day/:filename/"
+  post = "/:year/:month/:day/:filename/"
 
 [[menu.main]]
-    name = "Posts"
-    url = "/"
-    weight = 1
+  name = "Posts"
+  url = "/"
+  weight = 1
 
 [[menu.main]]
-    name = "Projects"
-    url = "/page/projects/"
-    weight = 2
+  name = "Projects"
+  url = "/page/projects/"
+  weight = 2
 
 [[menu.main]]
-    name = "Talks I Like"
-    url = "/page/talks-i-like/"
-    weight = 3
+  name = "Talks I Like"
+  url = "/page/talks-i-like/"
+  weight = 3
 
 [[menu.main]]
-    name = "About"
-    url = "/page/about/"
-    weight = 4
+  name = "About"
+  url = "/page/about/"
+  weight = 4

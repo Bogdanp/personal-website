@@ -1,5 +1,6 @@
 ---
 title: "Announcing dramatiq_sqs"
+description: "SQS broker support for dramatiq."
 slug: "ann-dramatiq"
 date: 2018-03-27
 tags: ["announcements", "dramatiq", "python"]

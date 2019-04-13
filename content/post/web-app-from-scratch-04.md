@@ -7,6 +7,8 @@ tags: ["python", "web", "application", "web-app-from-scratch"]
 This is the fourth post in my [web app from scratch] series.  If you
 haven't read them yet, you should check out parts 1 through 3 first!
 
+<!--more-->
+
 [web app from scratch]: /tags/web-app-from-scratch/
 
 In this part we're going to cover building an `Application`
@@ -50,7 +52,7 @@ based on the request path.
 
 In `scratch/application.py` add the following:
 
-``` python
+```python
 from .request import Request
 from .response import Response
 
@@ -68,7 +70,7 @@ Let's remove the old server instantiation code from
 `scratch/server.py` -- delete everything from `wrap_auth` onward --
 and create a new CLI entrypoint for our package in `__main__.py`:
 
-``` python
+```python
 import sys
 
 from .application import Application
@@ -99,7 +101,7 @@ router's responsibility will be to map incoming request method, path
 pairs like `POST /users` or `GET /users/{user_id}` to request
 handlers.  Here's what it looks like (in `scratch/application.py`):
 
-``` python
+```python
 import re
 from collections import OrderedDict, defaultdict
 from functools import partial
@@ -161,7 +163,7 @@ straightforward.  We instantiate a router on application init, add a
 method to proxy adding routes and update our `__call__` method to look
 up and execute handlers when a request comes in:
 
-``` python
+```python
 class Application:
     def __init__(self) -> None:
         self.router = Router()
@@ -179,7 +181,7 @@ class Application:
 As an added bit of sugar, we're also going to define a `route`
 decorator on the `Application` class:
 
-``` python
+```python
     def route(
             self,
             path: str,
@@ -195,7 +197,7 @@ decorator on the `Application` class:
 With that all in place, we can go ahead and update our code in
 `__main__` to register handlers for various routes.
 
-``` python
+```python
 import functools
 import json
 import sys
@@ -274,26 +276,6 @@ out the full source code and follow along, you can find it
 [here][source].
 
 See ya next time!
-
-
-## Newsletter
-
-If you want to find out about new parts as they come out, you can
-subscribe to the newsletter for this series by filling the form below.
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}</style>
-<div id="mc_embed_signup">
-<form action="https://free-invoice-generator.us9.list-manage.com/subscribe/post?u=f6efb8a2c1d1bc993557d7aa5&amp;id=69ec006813" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-<div id="mc_embed_signup_scroll">
-<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f6efb8a2c1d1bc993557d7aa5_69ec006813" tabindex="-1" value=""></div>
-<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</div>
-</form>
-</div>
-<!--End mc_embed_signup-->
 
 
 [source]: https://github.com/Bogdanp/web-app-from-scratch/tree/part-04

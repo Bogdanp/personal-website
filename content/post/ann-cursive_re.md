@@ -1,6 +1,5 @@
 ---
 title: "Announcing cursive_re"
-description: "Readable regular expressions for Python 3.6+"
 date: 2018-10-22T12:04:55+03:00
 slug: "ann-cursive-re"
 tags: ["announcements", "cursive_re", "python"]
@@ -9,6 +8,8 @@ tags: ["announcements", "cursive_re", "python"]
 I released [cursive_re] today.  It's a *tiny* Python library made up
 of combinators that help you write regular expressions you can read
 and modify six months down the line.
+
+<!--more-->
 
 Here's what it looks like:
 

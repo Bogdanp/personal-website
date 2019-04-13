@@ -6,15 +6,19 @@ tags: ["google", "web"]
 ---
 
 I spent this past weekend de-Google-ifying my life and, despite my
-expectations, it wasn't *too hard* to do.  I started by moving all of
-my websites off of Google App Engine and onto a dedicated box that I
-had already owned.  That was straightforward enough.  Next, I removed
-any Google Analytics snippets from each of them and replaced those
-with my own analytics server that I had built a while back (it doesn't
-store any PII, only aggregate information (and very little of that,
-too)).  Afterwards, I replaced any Google Fonts that I had been using
-with system fonts and, finally, I moved the screencasts for [Dramatiq]
-and [molten] from YouTube to [peertube].
+expectations, it wasn't *too hard* to do.
+
+<!--more-->
+
+I started by moving all of my websites off of Google App Engine and
+onto a dedicated box that I had already owned.  That was
+straightforward enough.  Next, I removed any Google Analytics snippets
+from each of them and replaced those with my own analytics server that
+I had built a while back (it doesn't store any PII, only aggregate
+information (and very little of that, too)).  Afterwards, I replaced
+any Google Fonts that I had been using with system fonts and, finally,
+I moved the screencasts for [Dramatiq] and [molten] from YouTube to
+[peertube].
 
 Next, it was time for e-mail.  I had already been using [isync] to
 download all my mail so it was easy for me to switch my `@defn.io` and

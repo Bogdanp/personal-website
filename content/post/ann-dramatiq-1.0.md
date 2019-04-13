@@ -9,7 +9,9 @@ Today marks the 1.0 release of [dramatiq]!  With this release, the
 project has been re-licensed from AGPL to the much more permissive
 LGPL.  Check it out and let me know what you think!
 
-<iframe width="660" height="371" src="https://www.youtube-nocookie.com/embed/HJMtwRsQev4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<video src="https://media.defn.io/dramatiq.mp4" controls width="100%"></video>
+
+<!--more-->
 
 
 [dramatiq]: https://dramatiq.io

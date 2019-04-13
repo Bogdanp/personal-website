@@ -11,6 +11,8 @@ without once you embed it into your workflow.  It stands for
 does, some of the configuration options that come bundled with it and
 how you can enhance it further.
 
+<!--more-->
+
 # What it does
 Ido extends the built-in `find-file` and `switch-to-buffer` commands
 with interactive completion.  It displays all the items that are

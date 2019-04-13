@@ -5,11 +5,11 @@ date: 2017-11-12T20:12:43+02:00
 tags: ["django", "dramatiq", "python"]
 ---
 
-# Preface
-
 In this post I talk about how you can use [Django][django],
 [Dramatiq][dramatiq] and [h2p] to create a simple HTTP API that can
 turn any URL into a PDF.
+
+<!--more-->
 
 ## What is Dramatiq?
 
@@ -42,7 +42,7 @@ First things first, we're going to need a message broker.  Dramatiq
 currently works with [Redis] and [RabbitMQ], but for this post I'm
 going to use RabbitMQ.  To install it on macOS, you can run:
 
-``` bash
+```bash
 $ brew install rabbitmq
 ```
 
@@ -52,7 +52,7 @@ Next, we're going to create a new virtual environment and, inside of
 that environment, use [pipenv] to install all the prerequisite
 libraries:
 
-``` bash
+```bash
 $ pipenv install django djangorestframework django_dramatiq "dramatiq[rabbitmq, watch]" h2p
 ```
 
@@ -72,7 +72,7 @@ Finally, we need to configure `django_dramatiq` to use RabbitMQ.  In
 `pdfapi/settings.py`, add `django_dramatiq` and `rest_framework` to
 your `INSTALLED_APPS`:
 
-``` python
+```python
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -88,7 +88,7 @@ INSTALLED_APPS = [
 
 And configure the broker in the same file:
 
-``` python
+```python
 DRAMATIQ_BROKER = {
     "BROKER": "dramatiq.brokers.rabbitmq.RabbitmqBroker",
     "OPTIONS": {
@@ -108,7 +108,7 @@ DRAMATIQ_BROKER = {
 Let's run the migrations and then the server to make sure everything's
 working so far:
 
-``` bash
+```bash
 $ python manage.py migrate
 $ python manage.py runserver
 ```
@@ -117,7 +117,7 @@ If you visit http://127.0.0.1:8000, you should now see the familiar
 "Congratulations on your first Django-powered page" view.  Kill the
 server and create a new app called `pdfs`:
 
-``` bash
+```bash
 $ python manage.py startapp pdfs
 ```
 
@@ -137,7 +137,7 @@ poll `/v1/pdfs/{id}` to find out what the status of the task is.
 
 In `pdfs/models.py` declare the following model:
 
-``` python
+```python
 class PDF(models.Model):
     STATUS_PENDING = "pending"
     STATUS_FAILED = "failed"
@@ -169,14 +169,14 @@ We're going to skip the implementations of the `filename` and
 
 Build and run the migrations:
 
-``` bash
+```bash
 $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
 Then add a serializer for that model in `pdfs/serializers.py`:
 
-``` python
+```python
 from rest_framework import serializers
 
 from .models import PDF
@@ -199,7 +199,7 @@ validate incoming requests.
 
 In `pdfs/views.py` add the following views:
 
-``` python
+```python
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -231,7 +231,7 @@ def view_pdf(request, pk):
 
 And then hook them up in `pdfs/urls.py`:
 
-``` python
+```python
 from django.conf.urls import url
 
 from . import views
@@ -245,7 +245,7 @@ urlpatterns = [
 
 Add the `pdfs` app to `pdfapi/settings.py`:
 
-``` python
+```python
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -263,7 +263,7 @@ INSTALLED_APPS = [
 
 Finally, include the `pdfs` urls in `pdfapi/urls.py`:
 
-``` python
+```python
 from django.conf.urls import url, include
 from django.contrib import admin
 
@@ -285,7 +285,7 @@ state.  Let's fix that.
 
 In `pdfs/tasks.py` add the following task:
 
-``` python
+```python
 import dramatiq
 import h2p
 
@@ -323,7 +323,7 @@ We're passing the `filename` property of `PDF` to `h2p.generate_pdf`
 but we haven't implemented it yet so let's fill it and `pdf_url` in on
 the `PDF` model in `pdfs/models.py`:
 
-``` python
+```python
     @property
     def filename(self):
         return f"{settings.MEDIA_ROOT}{self.pk}.pdf"
@@ -336,7 +336,7 @@ the `PDF` model in `pdfs/models.py`:
 Don't forget to add `MEDIA_ROOT` and `MEDIA_URL` to
 `pdfapi/settings.py`:
 
-``` python
+```python
 MEDIA_ROOT = os.path.join(BASE_DIR, "files/")
 MEDIA_URL = "/media"
 ```
@@ -344,7 +344,7 @@ MEDIA_URL = "/media"
 Create the `files` folder and then add a static handler to
 `pdfapi/urls.py`:
 
-``` python
+```python
 from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
@@ -364,7 +364,7 @@ API that can submit and keep track of that work.  Let's hook them up!
 In the `create_pdf` view from `pdfs/views.py` change the
 `serializer.save()` call to:
 
-``` python
+```python
     if serializer.is_valid():
         pdf = serializer.save()
         generate_pdf.send(pdf.pk)
@@ -375,21 +375,21 @@ Now every time someone creates a `PDF` object using the API, we'll
 enqueue a `generate_pdf` task.  Spin up the API server and some
 Dramatiq workers and test it out.
 
-``` bash
+```bash
 $ python manage.py runserver
 $ python manage.py rundramatiq  # in a separate terminal window
 ```
 
 To test it out, send a create request using curl:
 
-``` bash
+```bash
 $ curl -d"source_url=http://example.com" http://127.0.0.1:8000/v1/pdfs/
 {"id":1,"source_url":"http://example.com","pdf_url":"/media/1.pdf","status":"pending"}
 ```
 
 Then poll using GET requests until it's ready:
 
-``` bash
+```bash
 $ curl http://127.0.0.1:8000/v1/pdfs/1
 {"id":1,"source_url":"http://example.com","pdf_url":"/media/1.pdf","status":"done"}
 ```

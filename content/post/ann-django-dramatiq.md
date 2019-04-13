@@ -1,6 +1,6 @@
 ---
 title: "Announcing django_dramatiq"
-description: "A Dramatiq integration for Django"
+description: "An app that integrates Django with Dramatiq."
 slug: "ann-django-dramatiq"
 date: 2017-11-05
 tags: ["announcements", "dramatiq", "django", "python"]

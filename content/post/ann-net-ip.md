@@ -1,6 +1,6 @@
 ---
 title: "Announcing net-ip"
-description: "Utils for working with IP addresses and networks in Racket"
+description: "Racket support for working with IP addresses and networks."
 date: 2018-11-16T14:00:00+03:00
 slug: "ann-net-ip"
 tags: ["announcements", "net-ip", "racket"]

@@ -8,6 +8,8 @@ This is the second post in my [web app from scratch] series.  If you
 haven't read it yet, you can find the [first part here].  You'll want
 to read that one first.
 
+<!--more-->
+
 [web app from scratch]: /tags/web-app-from-scratch/
 [first part here]: {{< ref "web-app-from-scratch-01.md" >}}
 
@@ -23,7 +25,7 @@ making it possible to store multiple values for a single header.  To
 do that, we're going to define a class called `Headers` that acts as a
 mapping from case-insensitive header names to lists of header values.
 
-``` python
+```python
 from collections import defaultdict
 
 
@@ -49,7 +51,7 @@ dict whose keys are lower-cased header names and whose values are
 lists of header values.  If we plug `Headers` into our `Request` class
 now, it should look something like this:
 
-``` python
+```python
 class Request(typing.NamedTuple):
     method: str
     path: str
@@ -92,7 +94,7 @@ a `BodyReader` class that will behave as a read-only file object so
 that users of the `Request` class can decide when and how much data
 they want to read from the request body.
 
-``` python
+```python
 class BodyReader(io.IOBase):
     def __init__(self, sock: socket.socket, *, buff: bytes = b"", bufsize: int = 16_384) -> None:
         self._sock = sock
@@ -121,7 +123,7 @@ into an in-memory buffer.  To understand why its buffer can be
 pre-filled (the `buff` parameter in the constructor), lets take
 another look at the `iter_lines` function we defined last time:
 
-``` python
+```python
 def iter_lines(sock: socket.socket, bufsize: int = 16_384) -> typing.Generator[bytes, None, bytes]:
     """Given a socket, read all the individual CRLF-separated lines
     and yield each one until an empty one is found.  Returns the
@@ -162,7 +164,7 @@ loop instead of a for loop so that we can capture the return value of
 the generator.  Once we have the return value, we can construct a body
 reader and pass that to the `Request` constructor.
 
-``` python
+```python
 class Request(typing.NamedTuple):
     method: str
     path: str
@@ -211,7 +213,7 @@ class Request(typing.NamedTuple):
 Now that we have a body reader, we can update our main server loop to
 read and print out incoming request bodies:
 
-``` python
+```python
     while True:
         client_sock, client_addr = server_sock.accept()
         print(f"Received connection from {client_addr}...")
@@ -249,7 +251,7 @@ let's move it, `BodyReader` and `iter_lines` into a module called
 
 `headers.py`:
 
-``` python
+```python
 import typing
 
 from collections import defaultdict
@@ -274,7 +276,7 @@ class Headers:
 
 `request.py`:
 
-``` python
+```python
 import io
 import socket
 import typing
@@ -397,7 +399,7 @@ determines whether or not it wants to process it.  Our server will
 accept all requests for now so we'll just make it send the client a
 `100 Continue` status every time it gets such an `Expect` header:
 
-``` python
+```python
     while True:
         client_sock, client_addr = server_sock.accept()
         print(f"Received connection from {client_addr}...")
@@ -438,7 +440,7 @@ of things a little more manageable.
 
 Back in `server.py`, let's define our `Response` class:
 
-``` python
+```python
 class Response:
     """An HTTP response.
 
@@ -482,7 +484,7 @@ the response body.  In addition to that, it knows how to write itself
 to a socket (rather, it will know, since we haven't implemented that
 part yet).  We can use this to rewrite `serve_file` and our main loop.
 
-``` python
+```python
 def serve_file(sock: socket.socket, path: str) -> None:
     """Given a socket and the relative path to a file (relative to
     SERVER_ROOT), send that file to the socket if it exists.  If the
@@ -556,7 +558,7 @@ with socket.socket() as server_sock:
 Before we can implement `Response.send`, we have to add a method to
 `Headers` that'll let us iterate over all the headers.
 
-``` python
+```python
 HeadersDict = typing.Dict[str, typing.List[str]]
 HeadersGenerator = typing.Generator[typing.Tuple[str, str], None, None]
 
@@ -585,7 +587,7 @@ class Headers:
 
 With this in place, we can now write `Response.send`:
 
-``` python
+```python
     def send(self, sock: socket.socket) -> None:
         """Write this response to a socket.
         """
@@ -628,7 +630,7 @@ own module, called `response.py`.
 
 At this point, our server loop in `server.py` is pretty short and sweet:
 
-``` python
+```python
 with socket.socket() as server_sock:
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_sock.bind((HOST, PORT))
@@ -668,7 +670,7 @@ with socket.socket() as server_sock:
 
 Let's wrap it in a class called `HTTPServer`:
 
-``` python
+```python
 class HTTPServer:
     def __init__(self, host="127.0.0.1", port=9000) -> None:
         self.host = host
@@ -727,7 +729,7 @@ the socket.
 Next, let's throw a little bit of concurrency into the mix by defining
 an `HTTPWorker` class.
 
-``` python
+```python
 class HTTPWorker(Thread):
     def __init__(self, connection_queue: Queue) -> None:
         super().__init__(daemon=True)
@@ -786,7 +788,7 @@ class HTTPWorker(Thread):
 HTTP workers are OS threads that wait for new connections to pop up on
 a queue and then act on them.  Let's plug workers into `HTTPServer`:
 
-``` python
+```python
 class HTTPServer:
     def __init__(self, host="127.0.0.1", port=9000, worker_count=16) -> None:
         self.host = host
@@ -829,7 +831,7 @@ queue so that the workers can pick them up and handle them.
 Just for fun, here's what running Apache Bench on the server yields
 on my machine:
 
-``` shell
+```
 $ ab -n 10000 -c 32 http://127.0.0.1:9000/
 This is ApacheBench, Version 2.3 <$Revision: 1807734 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -899,26 +901,6 @@ to check out the full source code and follow along, you can find it
 [here][source].
 
 See ya next time!
-
-
-## Newsletter
-
-If you want to find out about new parts as they come out, you can
-subscribe to the newsletter for this series by filling the form below.
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}</style>
-<div id="mc_embed_signup">
-<form action="https://free-invoice-generator.us9.list-manage.com/subscribe/post?u=f6efb8a2c1d1bc993557d7aa5&amp;id=69ec006813" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-<div id="mc_embed_signup_scroll">
-<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f6efb8a2c1d1bc993557d7aa5_69ec006813" tabindex="-1" value=""></div>
-<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</div>
-</form>
-</div>
-<!--End mc_embed_signup-->
 
 
 [source]: https://github.com/Bogdanp/web-app-from-scratch/tree/part-02

@@ -12,6 +12,8 @@ WSGI standard.
 
 Without further ado, let's get to it!
 
+<!--more-->
+
 # The web server
 
 To begin with, we're going to write the HTTP server that will power
@@ -37,7 +39,7 @@ file being requested, followed by another space, followed by the HTTP
 protocol version the client speaks and, finally, followed by a
 carriage return (`\r`) and a line feed (`\n`) character:
 
-``` shell
+```http
 GET /some-path HTTP/1.1\r\n
 ```
 
@@ -45,14 +47,14 @@ After the request line come zero or more header lines.  Each header
 line is made up of the header name, followed by a colon, followed by
 an optional value, followed by `\r\n`:
 
-``` shell
+```http
 Host: example.com\r\n
 Accept: text/html\r\n
 ```
 
 The end of the headers section is signaled by an empty line:
 
-``` shell
+```http
 \r\n
 ```
 
@@ -61,7 +63,7 @@ is sent to the server with the request.
 
 Putting it all together, here's a simple `GET` request:
 
-``` shell
+```http
 GET / HTTP/1.1\r\n
 Host: example.com\r\n
 Accept: text/html\r\n
@@ -70,7 +72,7 @@ Accept: text/html\r\n
 
 and here's a simple `POST` request with a body:
 
-``` shell
+```http
 POST / HTTP/1.1\r\n
 Host: example.com\r\n
 Accept: application/json\r\n
@@ -88,14 +90,14 @@ it is made up of the HTTP protocol version, followed by a space,
 followed by the response status code, followed by another space, then
 the status code reason, followed by `\r\n`:
 
-``` shell
+```http
 HTTP/1.1 200 OK\r\n
 ```
 
 After the status line come the response headers, then an empty line
 and then an optional response body:
 
-``` shell
+```http
 HTTP/1.1 200 OK\r\n
 Content-type: text/html\r\n
 Content-length: 15\r\n
@@ -112,7 +114,7 @@ that sends the same response regardless of the incoming request.
 To start out, we need to create a socket, bind it to an address and
 then start listening for connections.
 
-``` python
+```python
 import socket
 
 HOST = "127.0.0.1"
@@ -139,7 +141,7 @@ process incoming connections we need to call the `accept` method on
 our socket.  Doing so will block the process until a client connects
 to our server.
 
-``` python
+```python
 with socket.socket() as server_sock:
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_sock.bind((HOST, PORT))
@@ -154,7 +156,7 @@ Once we have a socket connection to the client, we can start to
 communicate with it.  Using the `sendall` method, let's send the
 connecting client an example response:
 
-``` python
+```python
 RESPONSE = b"""\
 HTTP/1.1 200 OK
 Content-type: text/html
@@ -179,7 +181,7 @@ favourite browser, it should render the string "Hello!".  Unfortunately,
 the server will exit after it sends the response so refreshing the
 page will fail.  Let's fix that:
 
-``` python
+```python
 RESPONSE = b"""\
 HTTP/1.1 200 OK
 Content-type: text/html
@@ -217,7 +219,7 @@ represented by a series of lines, each separated by `\r\n` characters,
 let's write a generator function that reads data from a socket and
 yields each individual line:
 
-``` python
+```python
 import typing
 
 
@@ -254,7 +256,7 @@ an empty line, it returns the extra data that it read.
 Using `iter_lines`, we can begin printing the requests we get from our
 clients:
 
-``` python
+```python
 with socket.socket() as server_sock:
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_sock.bind((HOST, PORT))
@@ -274,7 +276,7 @@ with socket.socket() as server_sock:
 If you run the server now and visit http://127.0.0.1:9000, you should
 see something like this in your console:
 
-``` shell
+```
 Received connection from ('127.0.0.1', 62086)...
 b'GET / HTTP/1.1'
 b'Host: localhost:9000'
@@ -289,7 +291,7 @@ b'Accept-Language: en-US,en;q=0.9,ro;q=0.8'
 
 Pretty neat!  Let's abstract over that data by defining a ``Request`` class:
 
-``` python
+```python
 import typing
 
 
@@ -306,7 +308,7 @@ reading request bodies for later.
 To encapsulate the logic needed to build up a request, we'll add a
 class method to `Request` called `from_socket`:
 
-``` python
+```python
 class Request(typing.NamedTuple):
     method: str
     path: str
@@ -348,7 +350,7 @@ it reads each individual header line and parses those.  Finally, it
 builds the `Request` object and returns it.  If we plug that into our
 server loop, it should look something like this:
 
-``` python
+```python
 with socket.socket() as server_sock:
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_sock.bind((HOST, PORT))
@@ -367,7 +369,7 @@ with socket.socket() as server_sock:
 If you connect to the server now, you should see lines like this one
 get printed out:
 
-``` shell
+```python
 Request(method='GET', path='/', headers={'host': 'localhost:9000', 'user-agent': 'curl/7.54.0', 'accept': '*/*'})
 ```
 
@@ -376,7 +378,7 @@ circumstances, the server might crash if given an invalid request
 right now.  To simulate this, you can use telnet to connect to the
 server and send it some bogus data:
 
-``` shell
+```
 ~> telnet 127.0.0.1 9000
 Trying 127.0.0.1...
 Connected to localhost.
@@ -387,7 +389,7 @@ Connection closed by foreign host.
 
 Sure enough, the server crashed:
 
-``` shell
+```
 Received connection from ('127.0.0.1', 62404)...
 Traceback (most recent call last):
   File "server.py", line 53, in parse
@@ -408,7 +410,7 @@ To handle these kinds of issues a little more gracefully, let's wrap
 the call to `from_socket` in a try-except block and send the client a
 "400 Bad Request" response when we get a malformed request:
 
-``` python
+```python
 BAD_REQUEST_RESPONSE = b"""\
 HTTP/1.1 400 Bad Request
 Content-type: text/plain
@@ -438,7 +440,7 @@ with socket.socket() as server_sock:
 If we try to break it now, our client will get a response back and the
 server will stay up:
 
-``` shell
+```
 ~> telnet 127.0.0.1 9000
 Trying 127.0.0.1...
 Connected to localhost.
@@ -454,7 +456,7 @@ Bad RequestConnection closed by foreign host.
 At this point we're ready to start implementing the file serving part,
 but first let's make our default response a "404 Not Found" response:
 
-``` python
+```python
 NOT_FOUND_RESPONSE = b"""\
 HTTP/1.1 404 Not Found
 Content-type: text/plain
@@ -486,7 +488,7 @@ with socket.socket() as server_sock:
 Additionally, let's add a "405 Method Not Allowed" response.  We're
 going to need it for when we get anything other than a `GET` request.
 
-``` python
+```python
 METHOD_NOT_ALLOWED_RESPONSE = b"""\
 HTTP/1.1 405 Method Not Allowed
 Content-type: text/plain
@@ -498,7 +500,7 @@ Method Not Allowed""".replace(b"\n", b"\r\n")
 Let's define a `SERVER_ROOT` constant to represent where the server
 should serve files from and a `serve_file` function.
 
-``` python
+```python
 import mimetypes
 import os
 import socket
@@ -561,7 +563,7 @@ found" response.
 If we add `serve_file` into the mix, our server loop should now look
 like this:
 
-``` python
+```python
 with socket.socket() as server_sock:
     server_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     server_sock.bind((HOST, PORT))
@@ -597,26 +599,6 @@ handle multiple concurrent connections.  If you'd like to check out
 the full source code and follow along, you can find it [here][source].
 
 See ya next time!
-
-
-## Newsletter
-
-If you'd like to find out about new parts as they come out, you can
-subscribe to the newsletter for this series by filling the form below.
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}</style>
-<div id="mc_embed_signup">
-<form action="https://free-invoice-generator.us9.list-manage.com/subscribe/post?u=f6efb8a2c1d1bc993557d7aa5&amp;id=69ec006813" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-<div id="mc_embed_signup_scroll">
-<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f6efb8a2c1d1bc993557d7aa5_69ec006813" tabindex="-1" value=""></div>
-<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</div>
-</form>
-</div>
-<!--End mc_embed_signup-->
 
 
 [RFC2616]: https://tools.ietf.org/html/rfc2616

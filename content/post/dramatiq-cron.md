@@ -8,6 +8,8 @@ tags: ["python", "cron", "dramatiq", "apscheduler"]
 Here's a quick way you can combine [Dramatiq] and [APScheduler] to
 automatically schedule tasks to execute at certain times.
 
+<!--more-->
+
 Install Dramatiq and APScheduler using [pipenv]:
 
     pipenv install dramatiq apscheduler

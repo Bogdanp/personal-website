@@ -10,6 +10,8 @@ lacking -- its source code, however, is high quality and easy to
 understand -- so it took me a little time to figure out a way to
 automatically track request and response metrics using Prometheus.
 
+<!--more-->
+
 # The Goal
 
 My goal was to globally track request durations, request counts and

@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-slug: "projects"
+date: 2015-05-29
 ---
 
 # Websites and SaaS

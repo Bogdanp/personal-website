@@ -1,6 +1,6 @@
 ---
 title: "Announcing dramatiq"
-description: "An alternative task procesisng library to Celery"
+description: "The Celery alternative you've always wanted."
 slug: "ann-dramatiq"
 date: 2017-06-29
 tags: ["announcements", "dramatiq", "python"]

@@ -19,6 +19,8 @@ You can see a working demo [here][demo] ([source][source]). Note that
 direct linking to routes in the demo does not work due to a limitation
 of Gihub Pages.
 
+<!--more-->
+
 ## Related work
 
 [elm-route-parser][erp] is another type safe route parsing library. In

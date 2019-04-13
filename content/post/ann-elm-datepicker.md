@@ -1,5 +1,6 @@
 ---
 title: Announcing elm-datepicker
+description: "A reusable date picker component."
 slug: "elm-datepicker-ann"
 date: 2016-06-01
 tags: ["announcements", "elm"]

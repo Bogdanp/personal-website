@@ -1,6 +1,6 @@
 ---
 title: "Prometheus with Molten"
-description: "A short guide on how to export prom metrics from your Molten app."
+description: "How you can leverage the built-in support for Prometheus in Molten."
 slug: prometheus-with-molten
 date: 2018-10-21
 tags: ["molten", "prometheus", "python"]

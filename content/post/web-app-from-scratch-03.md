@@ -8,6 +8,8 @@ This is the third post in my [web app from scratch] series.  If you
 haven't read them yet, you can find the [first part here] and the
 [second part here].  You'll want to read them first.
 
+<!--more-->
+
 [web app from scratch]: /tags/web-app-from-scratch/
 [first part here]: {{< ref "web-app-from-scratch-01.md" >}}
 [second part here]: {{< ref "web-app-from-scratch-02.md" >}}
@@ -30,7 +32,7 @@ handler is going to be a function that takes in a `Request` object and
 returns a `Response` object.  Expressed as a type, that looks like
 this:
 
-``` python
+```python
 HandlerT = Callable[[Request], Response]
 ```
 
@@ -40,7 +42,7 @@ host different applications at different paths.  In `HTTPServer`'s
 constructor, let's assign an empty list to the `handlers` instance
 variable.
 
-``` python
+```python
 class HTTPServer:
     def __init__(self, host="127.0.0.1", port=9000, worker_count=16) -> None:
         self.handlers = []
@@ -50,7 +52,7 @@ class HTTPServer:
 Next, let's add a method that we can use to add handlers to the
 handler list.  Call it `mount`.
 
-``` python
+```python
     def mount(self, path_prefix: str, handler: HandlerT) -> None:
         """Mount a request handler at a particular path.  Handler
         prefixes are tested in the order that they are added so the
@@ -63,7 +65,7 @@ Now we need to update the `HTTPWorker` class to take advantage of
 these handlers.  We need to make the workers' constructor take the
 handlers list as a parameter.
 
-``` python
+```python
 class HTTPWorker(Thread):
     def __init__(self, connection_queue: Queue, handlers: List[Tuple[str, HandlerT]]) -> None:
         super().__init__(daemon=True)
@@ -79,7 +81,7 @@ match the current path, then we'll return a 404 and if one of the
 handlers raises an exception then we'll return a 500 error to the
 client.
 
-``` python
+```python
     def handle_client(self, client_sock: socket.socket, client_addr: typing.Tuple[str, int]) -> None:
         with client_sock:
             try:
@@ -116,7 +118,7 @@ client.
 Lastly, we have to make sure we pass the handler list to the
 `HTTPWorker`s when we instantiate them in `serve_forever`.
 
-``` python
+```python
     def serve_forever(self) -> None:
         workers = []
         for _ in range(self.worker_count):
@@ -137,7 +139,7 @@ when we write a handler that serves static files.
 Since we haven't mounted any request handlers yet, our server will
 reply with a 404 to any incoming request.
 
-``` shell
+```
 ~> curl -v 127.0.0.1:9000
 * Rebuilt URL to: 127.0.0.1:9000/
 *   Trying 127.0.0.1...
@@ -157,7 +159,7 @@ Not Found
 
 Let's mount a request handler that always returns the same response.
 
-``` python
+```python
 def app(request: Request) -> Response:
   return Response(status="200 OK", content="Hello!")
 
@@ -173,7 +175,7 @@ To do this, we're going to update our old `serve_file` function and
 turn it into a function that takes the path to some folder on disk and
 returns a request handler that can serve files from that folder.
 
-``` python
+```python
 def serve_static(server_root: str) -> HandlerT:
     """Generate a request handler that serves file off of disk
     relative to server_root.
@@ -209,7 +211,7 @@ def serve_static(server_root: str) -> HandlerT:
 Finally, we're going to call serve static and mount the result under
 "/static" before we mount our application handler.
 
-``` python
+```python
 server = HTTPServer()
 server.mount("/static", serve_static("www")),
 server.mount("", app)
@@ -232,7 +234,7 @@ and itself generates a request handler is a middleware.
 Here's how we might write a middleware that ensures that all incoming
 requests have a valid `Authorization` header:
 
-``` python
+```python
 def wrap_auth(handler: HandlerT) -> HandlerT:
     def auth_handler(request: Request) -> Response:
         authorization = request.headers.get("authorization", "")
@@ -244,7 +246,7 @@ def wrap_auth(handler: HandlerT) -> HandlerT:
 
 To use it, we just pass it the app handler and mount the result.
 
-``` python
+```python
 server = HTTPServer()
 server.mount("/static", serve_static("www")),
 server.mount("", wrap_auth(app))
@@ -264,26 +266,6 @@ like to check out the full source code and follow along, you can find
 it [here][source].
 
 See ya next time!
-
-
-## Newsletter
-
-If you want to find out about new parts as they come out, you can
-subscribe to the newsletter for this series by filling the form below.
-
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}</style>
-<div id="mc_embed_signup">
-<form action="https://free-invoice-generator.us9.list-manage.com/subscribe/post?u=f6efb8a2c1d1bc993557d7aa5&amp;id=69ec006813" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-<div id="mc_embed_signup_scroll">
-<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f6efb8a2c1d1bc993557d7aa5_69ec006813" tabindex="-1" value=""></div>
-<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</div>
-</form>
-</div>
-<!--End mc_embed_signup-->
 
 
 [source]: https://github.com/Bogdanp/web-app-from-scratch/tree/part-03

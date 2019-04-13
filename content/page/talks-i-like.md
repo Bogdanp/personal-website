@@ -1,7 +1,6 @@
 ---
 title: "Talks I Like"
-date: 2018-10-22
-tags: ["talks"]
+date: 2015-05-29
 ---
 
 What follows is a list of talks I've watched or listened to over the

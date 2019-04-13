@@ -1,6 +1,5 @@
 ---
 title: "Announcing forms"
-description: "Web Form Validation for Racket"
 date: 2019-01-21T21:00:00+02:00
 slug: "ann-forms"
 tags: ["announcements", "forms", "racket"]

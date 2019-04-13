@@ -9,6 +9,8 @@ One of the things that I think Celery could be doing better out of the
 box is to provide support for automatically retrying tasks on failure
 (thereby forcing users to write idempotent tasks by default).
 
+<!--more-->
+
 Fortunately, you can achieve this using [signals], specifically the
 [task-failure] signal.  All you have to do is connect to it and call
 the `retry` method on your task:

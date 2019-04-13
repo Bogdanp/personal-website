@@ -8,7 +8,9 @@ After hacking the [matrix.org](https://matrix.org) website today, the
 attacker opened a series of GitHub issues mentioning the flaws he
 discovered.  In [one of those issues][issue], he mentions that
 "complete compromise could have been avoided if developers were
-prohibited from using [SSH agent forwarding]".
+prohibited from using [SSH agent forwarding]."
+
+<!--more-->
 
 Here's what `man ssh_config` has to say about `ForwardAgent`:
 

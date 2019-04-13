@@ -13,6 +13,8 @@ and the playlist for the recordings is [here][rec].
 If you want to get notified as soon as I jump on to start streaming,
 you can follow me on [Twitch].
 
+<!--more-->
+
 [Advent of Code]: https://adventofcode.com/
 [Racket]: https://racket-lang.org
 [code]: https://github.com/Bogdanp/racket-aoc-2018

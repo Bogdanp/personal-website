@@ -1,6 +1,6 @@
 ---
 title: "Announcing north"
-description: "Database Migrations in Racket"
+description: "A database migration tool written in Racket."
 date: 2019-01-31T07:00:00+02:00
 slug: "ann-north"
 tags: ["announcements", "north", "racket"]

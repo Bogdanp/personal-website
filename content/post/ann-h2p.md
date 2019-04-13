@@ -1,6 +1,5 @@
 ---
 title: "Announcing h2p"
-description: "A Python interface to libwkhtmltox"
 date: 2017-11-05
 tags: ["announcements", "python"]
 ---
@@ -8,6 +7,8 @@ tags: ["announcements", "python"]
 This past week I released [h2p][h2p], a simple python frontend to
 [libwkhtmltox][wk] that lets you generate PDF files from web pages
 without needing to spawn subprocesses.
+
+<!--more-->
 
 You can use pip or pipenv to install it:
 

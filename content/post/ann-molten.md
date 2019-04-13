@@ -1,6 +1,6 @@
 ---
 title: "Announcing Molten"
-description: "A modern framework for building APIs with Python"
+description: "A modern API framework for Python."
 slug: "ann-molten"
 date: 2018-06-23
 tags: ["announcements", "molten", "python"]
