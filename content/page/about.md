@@ -22,7 +22,7 @@ If you want to get in touch, [email][em] me, or send me an
 to the [Atom][feed] feed or follow me on [Twitter][twitter].
 
 [Matchacha]: https://www.matchacha.ro
-[BlockFraud]: https://blockfraud.com
+[BlockFraud]: http://blockfraud.com
 [Leadpages]: https://leadpages.net
 [Dramatiq]: https://dramatiq.io
 [molten]: https://moltenframework.com
