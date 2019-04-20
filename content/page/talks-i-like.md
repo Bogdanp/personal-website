@@ -41,6 +41,7 @@ reminded of old ones.
 | [Jon Moore]       | [Stop Rate Limiting! Capacity Management Done Right]              |
 | [Martin Thompson] | [Designing for Performance]                                       |
 | [Sandi Metz]      | [Polly Want a Message]                                            |
+| [Theo de Raadt]   | [Pledge: A new security technology in openbsd]                    |
 | [Zach Tellman]    | [Everything Will Flow]                                            |
 | [engineerguy]     | [Why the other line is likely to move faster]                     |
 
@@ -101,6 +102,7 @@ reminded of old ones.
 [Modern SQL]: https://modern-sql.com/video
 [Nim - A New Option for Optimizing Inner Loops]: https://www.youtube.com/watch?v=IVgNVJdizHg
 [Platform as a Reflection of Values: Joyent, Node.js, and Beyond]: https://vimeo.com/230142234
+[Pledge: A new security technology in openbsd]: https://www.youtube.com/watch?v=F_7S1eqKsFk
 [Polly Want a Message]: https://www.deconstructconf.com/2018/sandi-metz-polly-want-a-message
 [Principles of Technology Leadership]: https://www.youtube.com/watch?v=9QMGAtxUlAc
 [Python Concurrency From the Ground Up]: https://www.youtube.com/watch?v=MCs5OvhV9S4
@@ -117,6 +119,7 @@ reminded of old ones.
 [Sugar: The Bitter Truth]: https://www.youtube.com/watch?v=dBnniua6-oM
 [Super considered super!]: https://www.youtube.com/watch?v=EiOglTERPEo
 [The Summer of Rust]: https://www.youtube.com/watch?v=LjFM8vw3pbU
+[Theo de Raadt]: https://www.theos.com/deraadt/
 [Topics of Interest (Python Asyncio)]: https://www.youtube.com/watch?v=ZzfHjytDceU
 [Typed Routing With Continuations]: https://www.youtube.com/watch?v=tQI2JJwD_ZY
 [Ur/Web]: https://www.youtube.com/watch?v=8n5ubDe9FAA
