@@ -16,8 +16,8 @@ GitHub Actions revolves around the concept of "workflows" and
 checked-out repository and workflows describe which actions need to be
 executed when a particular [event] occurs.  During the execution of a
 workflow, all actions, including ones running in parallel, share the
-same physical code folder.  All of this stuff is declaratively
-specified using [HCL].
+same physical workspace.  All of this stuff is declaratively specified
+using [HCL].
 
 Here's an example workflow:
 
@@ -44,16 +44,15 @@ action "echo" {
 }
 ```
 
-What this is saying is that there is a workflow called "demo" that is
-executed whenever something is pushed to the repository.  That
-workflow's goal is to execute the "echo" action, which happens to
-depend on actions "make-a" and "make-b", respectively.  When the
-workflow is run, the runtime runs those two actions first and only
-runs the "echo" action if they both succeed.  In this particular
-example, each of the actions runs a shell command on top of the
-`alpine` docker image, but I could've picked any other image from
-Docker Hub or any existing GitHub Action repository.  [This
-page][docs] describes all of the various workflow configuration
+This is saying that there is a workflow called "demo" that is executed
+whenever anything is pushed to the repository.  That workflow's goal
+is to execute the "echo" action, which happens to depend on actions
+"make-a" and "make-b".  When the workflow is triggered, those two
+actions are run first and the "echo" action only runs after they both
+succeed.  In this particular example, each of the actions runs a shell
+command on top of the `alpine` docker image, but I could've picked any
+other image from Docker Hub or any existing GitHub Action repository.
+[This page][docs] describes all of the various workflow configuration
 options.
 
 If you save the above config in a file called `.github/main.workflow`
@@ -65,7 +64,8 @@ pipeline execute almost immediately and output:
     World
 
 We can leverage all of this to test a Racket package is by using Jack
-Firth's [racket] image:
+Firth's [racket] image (or you could roll your own and host it on
+Docker Hub yourself):
 
 ```hcl
 workflow "main" {
@@ -92,11 +92,11 @@ raco test testpackage/
 ```
 
 The script sets the working directory to `$GITHUB_WORKSPACE`, installs
-all the `testpackage`'s (our hypothetical package for the purposes of
+all of `testpackage`'s (a hypothetical package for the purposes of
 this article) dependencies and then runs its tests.
 
-And that's it!  With about 10 LOC we've put together a basic workflow
-that tests a package on every commit.
+That's all there is to it!  With about 12 LOC we've put together a
+basic workflow that tests a package on every commit.
 
 ## Gotchas & Limitations
 
@@ -111,12 +111,12 @@ workflow is invalid, but it won't point out exactly why.
 
 Finally, there's no built-in support for notifications.  When builds
 fail, you won't notice unless you visit the Actions tab.  For one of
-my (non-OSS) projects, I've set up a Telegram bot that I can use to
+my non-OSS projects, I've set up a Telegram bot that I can use to
 notify a particular channel whenever builds succeed or fail.  That
 works, but it's fairly ugly because there doesn't seem to be any way
-to conditionally execute actions (i.e. "if action `a` fails then run
-action `b`"), so you have to bundle the notification-handling code
-into the scripts you execute.
+to conditionally execute actions (i.e. things like "if action `a`
+fails then run action `b`"), so I had to bundle the
+notification-handling code into each of my action scripts.
 
 
 [HCL]: https://github.com/hashicorp/hcl
