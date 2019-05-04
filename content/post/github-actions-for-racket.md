@@ -11,6 +11,8 @@ free-as-in-beer, alternative to Travis CI.  For now, I've settled on
 because I saves me from creating yet another account with some other
 company.
 
+<!--more-->
+
 GitHub Actions revolves around the concept of "workflows" and
 "actions".  Actions execute arbitrary Docker containers on top of a
 checked-out repository and workflows describe which actions need to be
