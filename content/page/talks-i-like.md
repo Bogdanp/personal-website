@@ -63,10 +63,11 @@ reminded of old ones.
 
 ## Misc
 
-| Author          | Talk                              |
-| :---            | :---                              |
-| [Robert Lustig] | [Sugar: The Bitter Truth]         |
-| Randy Pausch    | [Achieving Your Childhood Dreams] |
+| Author                             | Talk                                      |
+| :---                               | :---                                      |
+| [Brian Kernighan] & [Ken Thompson] | [Brian Kernighan interviews Ken Thompson] |
+| [Robert Lustig]                    | [Sugar: The Bitter Truth]                 |
+| Randy Pausch                       | [Achieving Your Childhood Dreams]         |
 
 
 [#NoEstimates]: https://www.youtube.com/watch?v=QVBlnCTu9Ms
@@ -78,6 +79,8 @@ reminded of old ones.
 [Allen Holub]: http://holub.com/
 [Avi Bryant]: https://twitter.com/avibryant
 [Boundaries]: https://www.destroyallsoftware.com/talks/boundaries
+[Brian Kernighan interviews Ken Thompson]: https://www.youtube.com/watch?v=EY6q5dv_B-o#t=8m20s
+[Brian Kernighan]: https://www.cs.princeton.edu/~bwk/
 [Bryan Cantrill]: http://dtrace.org/blogs/
 [Casey Muratori]: https://mollyrocket.com/
 [Contracts For Getting More Programs Less Wrong]: https://www.youtube.com/watch?v=lNITrPhl2_A
@@ -94,6 +97,7 @@ reminded of old ones.
 [Haskell is Useless]: https://www.youtube.com/watch?v=iSmkqocn0oQ
 [Immediate-Mode Graphical User Interfaces]: https://www.youtube.com/watch?v=Z1qyvQsjK5Y
 [Jon Moore]: https://twitter.com/jon_moore
+[Ken Thompson]: https://en.wikipedia.org/wiki/Ken_Thompson
 [Markus Winand]: https://use-the-index-luke.com/
 [Martin Thompson]: https://twitter.com/mjpt777
 [Matthew Flatt]: http://www.cs.utah.edu/~mflatt/
