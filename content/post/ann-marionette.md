@@ -16,7 +16,7 @@ You can install it from the package server with:
     raco pkg install marionette
 
 And the docs should show up on the package server within the next
-cuouple of days.  In the mean time, you can run
+couple of days.  In the mean time, you can run
 
     raco docs marionette
 

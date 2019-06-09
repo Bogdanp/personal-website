@@ -21,24 +21,26 @@ These are some of the web applications I've built in my spare time.
 This is the stuff I'm currently working on and actively maintaining in
 the open.
 
-| Project                 | Description                                                     |
-| :---                    | :---                                                            |
-| [component]             | Simple dependency injection for Racket.                         |
-| [cursive_re]            | Readable regular expressions for Python 3.6+.                   |
-| [dramatiq]              | A distributed task processing library for Python 3.6+.          |
-| [dramatiq_sqs]          | An Amazon SQS broker for Dramatiq.                              |
-| [forms]                 | A web form validation library for Racket.                       |
-| [geoip]                 | Geolocation for Racket based on MaxMind's GeoIP databases.      |
-| [hugs]                  | A library that maps SQL expressions to Python fuctions.         |
-| [molten]                | A modern API framework for Python 3.6+.                         |
-| [net-ip]                | Utilities for working with IP addresses and networks in Racket. |
-| [north]                 | A database schema migration tool written in Racket.             |
-| [postmark-client]       | A [Postmark] client written in Racket.                          |
-| [py-test.el]            | A Python test runner for Emacs.                                 |
-| [resource_pool]         | A generic thread-safe resource pool for Python.                 |
-| [twilio][racket-twilio] | A [Twilio] client for Racket.                                   |
-| [watchdog_gevent]       | A gevent-based observer for watchdog.                           |
-| [web-app-from-scratch]  | Supporting material for my "Web App From Scratch" blog series.  |
+| Project                 | Description                                                                 |
+| :---                    | :---                                                                        |
+| [component]             | Simple dependency injection for Racket.                                     |
+| [cursive_re]            | Readable regular expressions for Python 3.6+.                               |
+| [dramatiq]              | A distributed task processing library for Python 3.6+.                      |
+| [dramatiq_sqs]          | An Amazon SQS broker for Dramatiq.                                          |
+| [forms]                 | A web form validation library for Racket.                                   |
+| [geoip]                 | Geolocation for Racket based on MaxMind's GeoIP databases.                  |
+| [hugs]                  | A library that maps SQL expressions to Python fuctions.                     |
+| [koyo]                  | A web development toolkit for Racket.                                       |
+| [marionette]            | A Racket library that lets you control Firefox via the Marionette Protocol. |
+| [molten]                | A modern API framework for Python 3.6+.                                     |
+| [net-ip]                | Utilities for working with IP addresses and networks in Racket.             |
+| [north]                 | A database schema migration tool written in Racket.                         |
+| [postmark-client]       | A [Postmark] client written in Racket.                                      |
+| [py-test.el]            | A Python test runner for Emacs.                                             |
+| [resource_pool]         | A generic thread-safe resource pool for Python.                             |
+| [twilio][racket-twilio] | A [Twilio] client for Racket.                                               |
+| [watchdog_gevent]       | A gevent-based observer for watchdog.                                       |
+| [web-app-from-scratch]  | Supporting material for my "Web App From Scratch" blog series.              |
 
 If you would like to support my work on any of these projects, please
 consider either buying a Tidelift subscription for [dramatiq][tl_dramatiq]
@@ -138,6 +140,8 @@ much beyond maybe giving you some pointers.
 [heater]: https://github.com/Bogdanp/heater
 [hugs]: https://github.com/Bogdanp/hugs
 [ido-clever-match]: https://github.com/Bogdanp/ido-clever-match
+[koyo]: https://github.com/Bogdanp/koyo
+[marionette]: https://github.com/Bogdanp/marionette
 [markii]: https://github.com/Bogdanp/markii
 [modviz]: https://github.com/Bogdanp/modviz
 [mold]: https://github.com/Bogdanp/mold
