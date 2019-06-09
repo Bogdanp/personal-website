@@ -1,4 +1,4 @@
-public: archetypes content data layouts static themes
+public: archetypes content data layouts themes
 	hugo
 
 .PHONY: deploy
