@@ -14,7 +14,7 @@ readOtherPosts = "Read other posts"
   tag = "tags"
 
 [Params]
-  subtitle = "Bogdan Popa's personal website where he mainly posts about Python and Racket.  Rarely in the 3rd person."
+  subtitle = "Bogdan Popa"
   contentTypeName = "post"
   themeColor = "red"
   fullWidthTheme = false
