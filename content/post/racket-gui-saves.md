@@ -194,9 +194,10 @@ To hook things up, we require `rsvg` then add a callback to the
 disk and display it on the `canvas`:
 
 ```racket
+
 (require rsvg)
 
-...
+;; ...
 
 (define list-box
   (new list-box%
