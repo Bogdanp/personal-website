@@ -5,9 +5,10 @@ slug: "ann-marionette"
 tags: ["announcements", "marionette", "racket"]
 ---
 
-I just released the first version of [marionette] (named after [the
-protocol] it implements), a Racket library that lets you remotely
-control the Firefox web browser.  Think "puppeteer", but for Firefox.
+I just released the first version of [marionette][marionette] (named
+after [the protocol] it implements), a Racket library that lets you
+remotely control the Firefox web browser.  Think "puppeteer", but for
+Firefox.
 
 <!--more-->
 
