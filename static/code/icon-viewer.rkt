@@ -5,7 +5,6 @@
          racket/cmdline
          racket/path
          racket/string
-         racket/system
          rsvg)
 
 (define folder-path

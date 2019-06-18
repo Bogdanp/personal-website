@@ -18,18 +18,15 @@ an excuse to play around with Racket's built-in GUI library!
 
 <!--more-->
 
-You can find the final code [here](/code/icon-viewer.rkt).
-
 
 ## Diving in
 
-`#lang racket/gui` combines all the bindings in `#lang racket` and the
-`racket/gui/base` and `racket/draw` libraries.
-
 The Racket GUI toolkit is a retained mode style API for building user
-interfaces.  This means that you instantiate objects representing the
-things that ought to be drawn on your screen and then the system draws
-them for you.
+interfaces, meaning that you work with it by instantiating objects
+that represent the things that ought to be drawn on your screen and
+then the system draws them for you and, in order to add custom
+behavior when the user interacts with those objects, you register
+callbacks that react to certain events.
 
 To render a window on the screen, all you have to do is:
 
@@ -56,9 +53,9 @@ need to know to make use of it in this context is:
 
 * class names conventionally have a `%` suffix,
 * interface names conventionally have a `<%>` suffix,
-* you instantiate (create objects from) a class by using the `new`
-  macro, giving it the name of the class you want to instantiate
-  followed by zero or more field values and
+* you instantiate a class by using the `new` macro, giving it the name
+  of the class you want to instantiate followed by zero or more field
+  values and
 * you send objects messages using the `send` macro.
 
 ### Laying things out
@@ -99,7 +96,8 @@ With the above in mind, we can go ahead and lay out our interface:
 ```
 
 Assigning a `parent` to a widget ensures that said widget renders
-within `parent`.  So, above, we have defined the following hierarchy:
+within said object.  So, above, we have defined the following
+hierarchy:
 
     window
     └── panel
@@ -107,9 +105,8 @@ within `parent`.  So, above, we have defined the following hierarchy:
         ├── list-box
         └── canvas
 
-The `panel` ensures that the other three widgets are laid out
-underneath one another in a single column and its children are
-fairly self-explanatory:
+The `panel` lays out its children underneath one another in a single
+column and its children should be fairly self-explanatory:
 
 * `search-box` is where we're going to type our search filters,
 * `list-box` is where we're going to list the filtered files and
@@ -121,8 +118,7 @@ identical to the one I showed at the beginning of this article.
 ### Adding behavior
 
 Despite looking like the screenshot, the code above doesn't implement
-any of the behavior of the final product yet.  So now it's time to add
-that.
+any of the behavior of the final product yet.  So let's add that!
 
 You may have noticed that the `list-box%` class takes a `choices`
 field.  Let's start there.
@@ -141,7 +137,7 @@ files in the current directory into a list:
 ```
 
 And then we can pass that list to the `list-box` when we instantiate
-it:
+it via the aforementioned `choices` field:
 
 ```racket
 (define list-box
@@ -154,11 +150,11 @@ it:
 Run the code from a folder that contains SVG files and you should now
 see those files being listed in the UI.
 
-Next, let's implement filtering.  When someone enters text into the
-`search-box`, we want the list of filenames to be narrowed down to
-only those filenames that contain the search string.  To do this, we
-can give the `search-box` a callback that it should execute whenever
-its contents change:
+On to filtering.  When someone enters text into the `search-box`, we
+want the list of filenames to be narrowed down to only those filenames
+that contain the search string.  To do this, we can give the
+`search-box` a callback that it should execute whenever its contents
+change:
 
 ```racket
 (define search-box
@@ -221,3 +217,5 @@ The [final version](/code/icon-viewer.rkt) is a little longer because
 I added support for debouncing and copying selected files elsewhere by
 double clicking on them, but it still clocks in at only about 100
 lines of code!
+
+You can find the final version of the code [here](/code/icon-viewer.rkt).
