@@ -26,6 +26,7 @@ the open.
 | [component]             | Simple dependency injection for Racket.                                     |
 | [cursive_re]            | Readable regular expressions for Python 3.6+.                               |
 | [dramatiq]              | A distributed task processing library for Python 3.6+.                      |
+| [dramatiq_dashboard]    | A monitoring UI for Dramatiq.                                               |
 | [dramatiq_sqs]          | An Amazon SQS broker for Dramatiq.                                          |
 | [forms]                 | A web form validation library for Racket.                                   |
 | [geoip]                 | Geolocation for Racket based on MaxMind's GeoIP databases.                  |
@@ -120,6 +121,7 @@ much beyond maybe giving you some pointers.
 [component]: https://github.com/Bogdanp/racket-component
 [cursive_re]: https://github.com/Bogdanp/cursive_re
 [dramatiq]: https://dramatiq.io
+[dramatiq_dashboard]: https://github.com/Bogdanp/dramatiq_dashboard
 [dramatiq_sqs]: https://github.com/Bogdanp/dramatiq_sqs
 [elm-ast]: https://github.com/Bogdanp/elm-ast
 [elm-combine]: https://github.com/Bogdanp/elm-combine
