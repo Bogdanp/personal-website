@@ -39,6 +39,7 @@ the open.
 | [postmark-client]       | A [Postmark] client written in Racket.                                      |
 | [py-test.el]            | A Python test runner for Emacs.                                             |
 | [resource_pool]         | A generic thread-safe resource pool for Python.                             |
+| [sentry][racket-sentry] | A [Sentry] SDK for Racket.                                                  |
 | [twilio][racket-twilio] | A [Twilio] client for Racket.                                               |
 | [watchdog_gevent]       | A gevent-based observer for watchdog.                                       |
 | [web-app-from-scratch]  | Supporting material for my "Web App From Scratch" blog series.              |
@@ -156,9 +157,11 @@ much beyond maybe giving you some pointers.
 [postmark-client]: https://github.com/Bogdanp/racket-postmark
 [py-test.el]: https://github.com/Bogdanp/py-test.el
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
+[racket-sentry]: https://github.com/Bogdanp/racket-sentry/
 [racket-twilio]: https://github.com/Bogdanp/racket-twilio/
 [repos]: https://github.com/Bogdanp/repositories
 [resource_pool]: https://github.com/Bogdanp/resource_pool
+[sentry]: https://sentry.io
 [tcopy]: https://github.com/Bogdanp/tcopy
 [threadop]: https://github.com/Bogdanp/threadop
 [trio-redis]: https://github.com/Bogdanp/trio-redis
