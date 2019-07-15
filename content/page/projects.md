@@ -25,6 +25,7 @@ the open.
 | :---                    | :---                                                                        |
 | [component]             | Simple dependency injection for Racket.                                     |
 | [cursive_re]            | Readable regular expressions for Python 3.6+.                               |
+| [deta]                  | A functional database mapper for Racket.                                    |
 | [dramatiq]              | A distributed task processing library for Python 3.6+.                      |
 | [dramatiq_dashboard]    | A monitoring UI for Dramatiq.                                               |
 | [dramatiq_sqs]          | An Amazon SQS broker for Dramatiq.                                          |
@@ -121,6 +122,7 @@ much beyond maybe giving you some pointers.
 [crontab]: https://github.com/Bogdanp/crontab
 [component]: https://github.com/Bogdanp/racket-component
 [cursive_re]: https://github.com/Bogdanp/cursive_re
+[deta]: https://github.com/Bogdanp/deta
 [dramatiq]: https://dramatiq.io
 [dramatiq_dashboard]: https://github.com/Bogdanp/dramatiq_dashboard
 [dramatiq_sqs]: https://github.com/Bogdanp/dramatiq_sqs
