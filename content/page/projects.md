@@ -39,6 +39,8 @@ the open.
 | [north]                 | A database schema migration tool written in Racket.                         |
 | [postmark-client]       | A [Postmark] client written in Racket.                                      |
 | [py-test.el]            | A Python test runner for Emacs.                                             |
+| [racket-redis]          | Fast, idiomatic bindings to Redis for Racket.                               |
+| [racket-sass]           | Bindings to libsass for Racket.                                             |
 | [resource_pool]         | A generic thread-safe resource pool for Python.                             |
 | [sentry][racket-sentry] | A [Sentry] SDK for Racket.                                                  |
 | [twilio][racket-twilio] | A [Twilio] client for Racket.                                               |
@@ -159,6 +161,8 @@ much beyond maybe giving you some pointers.
 [postmark-client]: https://github.com/Bogdanp/racket-postmark
 [py-test.el]: https://github.com/Bogdanp/py-test.el
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
+[racket-redis]: https://github.com/Bogdanp/racket-redis/
+[racket-sass]: https://github.com/Bogdanp/racket-sass/
 [racket-sentry]: https://github.com/Bogdanp/racket-sentry/
 [racket-twilio]: https://github.com/Bogdanp/racket-twilio/
 [repos]: https://github.com/Bogdanp/repositories
