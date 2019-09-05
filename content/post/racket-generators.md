@@ -354,7 +354,7 @@ Pretty cool, eh?
 Here's a video of me stepping through the `fib` example with a debugger:
 
 <center>
-  <video src="https://media.defn.io/generators-screencast.mp4" autoplay="false" controls="true" width="720px"></video>
+  <video src="https://media.defn.io/generators-screencast.mp4" controls="true" width="720px"></video>
 </center>
 
 P.S. This is actually pretty close to how the generator implementation
