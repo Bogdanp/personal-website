@@ -48,15 +48,14 @@ The very first time we call `next` on `fib`, all of the code within it
 runs and gets suspended at the `yield`, returning the first value.
 Every time we call `next` on it after that, it resumes execution after
 the `yield`, which happens to be in a `while` loop, so execution jumps
-to the top of the loop.  The variables `x` and `y`, are modified and
-the function `yield`s again, suspending itself and returning the new
-value for `y`.
+to the top of the loop.  `x` and `y` are modified and the function
+`yield`s again, suspending itself and returning the new value for `y`.
 
 This can go on and on until the machine runs out of memory.
 
 Another property of generators is that you can send values into them
-every time you resume them.  Here's a generator that computes the
-value of two numbers sent from the outside:
+every time they are resumed.  Here's a generator that computes the sum
+of two numbers sent from the outside:
 
 ```python
 def add():
@@ -85,25 +84,24 @@ generator than `next`, with the added benefit that it allows you to
 send values into the generator (whereas `next` always sends `None`).
 
 Above, I first call `send` with `None`, which signals to the generator
-that it can start.  Then I send it the value that should be assigned
-to `x`, followed by the value for `y`.  Once it hits the `return`
-statement, the generator raises `StopIteration` with the returned
-value.
+that it can start executing.  Then I send it the value that should be
+assigned to `x`, followed by the value for `y`.  Once it hits the
+`return` statement, the generator raises `StopIteration` with the
+returned value.
 
 
 ## Generators in Racket
 
-Racket also comes with built-in support for generators via the
-[racket/generator] module.  But what if it didn't?  Could we implement
-Python-like generators in the language itself?  The answer, of course,
-is "yes."
+Racket's standard library also comes with built-in support for
+generators via the [racket/generator] module.  But what if it didn't?
+Could we implement Python-like generators in the language itself?  The
+answer, of course, is "yes."
 
-Racket comes with an even more general mechanism for suspending and
-resuming computation, called [continuations].  In essence,
-continuations let you capture the execution of a program at a
-particular point as a function.  When applied, that function will
-cause the program flow to jump back to the point it refers to.  Here's
-an example:
+Racket comes with an even more general mechanism for capturing and
+resuming computation, called [continuations].  Continuations let you
+capture the execution of a program at a particular point as a
+function.  When applied, that function will cause the program flow to
+jump back to the point it refers to.  Here's an example:
 
 ```racket
 (+ 1
@@ -118,8 +116,8 @@ an example:
 `call/cc` captures the current continuation and passes it to another
 function -- in this case the lambda we created -- and, as mentioned
 above, when the continuation, `k`, is applied the program will jump to
-the spot that `call/cc` was itself applied at, effectively replacing
-it with the value passed into the continuation.
+the spot that `call/cc` was itself applied at, effectively "return"ing
+from it with the value passed into the continuation.
 
 So the above program:
 
@@ -179,8 +177,8 @@ continuations called "[delimited continuations]."  These types of
 continuations allow us to install "prompts", continuation frames
 associated with specific prompt tags, and then later on in the
 execution of the program, abort to the nearest enclosing prompt with a
-particular tag.  That's a little abstract so don't worry if it doesn't
-make sense yet.
+particular tag without needing to have a reference to the captured
+continuation.
 
 Here's an example where I install a prompt and then abort to it:
 
@@ -236,7 +234,7 @@ Followed by the `yield` function:
 
 `yield` looks up the value of the current yielder and then applies its
 arguments to that function.  The default value of `current-yielder`
-raises an error so that `yield` will fail if called outside of a
+raises an error so that `yield` will fail if applied outside of a
 generator.
 
 Next, we implement the `generator` function itself:
@@ -246,7 +244,7 @@ Next, we implement the `generator` function itself:
   (lambda _
     (define cont proc)
 
-    (define (generator . args)
+    (define (next . args)
       (call-with-continuation-prompt
        (lambda _
          (parameterize ([current-yielder yield])
@@ -263,12 +261,12 @@ Next, we implement the `generator` function itself:
                                                  (apply values args))))
        yield-tag))
 
-    generator))
+    next))
 ```
 
 This function takes another function, `proc`, as an argument and
 returns a function that will create a generator "instance" (really,
-it's just another function!) when called.
+it's just another function!) when applied.
 
 Let's break down what happens inside the generator "factory" that is
 created.  First, the original function is assigned to `cont`.  Next,
@@ -280,15 +278,15 @@ the current yielder to `yield`, which we'll talk about in a second,
 and returns the value of applying `cont` to its arguments.
 
 Next, the `yield` function that `next` references is defined.  When
-called, it captures its own continuation (essentially, the
-continuation of the place that it itself was called at), it then
-updates `cont` to point to that continuation and, finally, it aborts
-to the nearest prompt with the `yield-tag` (i.e. the place where the
-`next` function was called), passing a function that returns `yield`'s
-arguments to the continuation prompt handler that
-`call-with-continuation-prompt` installed.  Because we didn't pass a
-handler function to `call-with-continuation-prompt`, the default
-handler, which simply applies whatever argument it's given, is used.
+applied, it captures its own continuation (the continuation of the
+place that it itself was applied at), it then updates `cont` to point
+to that continuation and, finally, it aborts to the nearest prompt
+with the `yield-tag` (i.e. the place where the `next` function was
+applied), passing a function that returns `yield`'s arguments to the
+continuation prompt handler that `call-with-continuation-prompt`
+installed.  Because we didn't pass a handler function to
+`call-with-continuation-prompt`, the default handler, which applies
+whatever argument it's given, is used.
 
 Finally, the `next` function is returned from the "factory."
 
