@@ -103,7 +103,7 @@ capture the execution of a program at a particular point as a
 function.  When applied, that function will cause the program flow to
 jump back to the point it refers to.  Here's an example:
 
-```racket
+```scheme
 (+ 1
    (call/cc
     (lambda (k)
@@ -134,7 +134,7 @@ by this program.
 Here's another example, where we escape an infinite loop by way of a
 continuation:
 
-```racket
+```scheme
 (call/cc
  (lambda (k)
    (define (loop i)
@@ -155,7 +155,7 @@ Here we:
 
 Here's the same program with `k` renamed to `return`:
 
-```racket
+```scheme
 (call/cc
  (lambda (return)
    (define (loop i)
@@ -182,7 +182,7 @@ continuation.
 
 Here's an example where I install a prompt and then abort to it:
 
-```racket
+```scheme
 (define the-tag
   (make-continuation-prompt-tag))
 
@@ -215,14 +215,14 @@ continuation prompt it should jump to.
 
 With this in mind, we can define a prompt tag for our continuations:
 
-```racket
+```scheme
 (define yield-tag
   (make-continuation-prompt-tag))
 ```
 
 Followed by the `yield` function:
 
-```racket
+```scheme
 (define current-yielder
   (make-parameter
    (lambda _
@@ -239,7 +239,7 @@ generator.
 
 Next, we implement the `generator` function itself:
 
-```racket
+```scheme
 (define (generator proc)
   (lambda _
     (define cont proc)
@@ -295,7 +295,7 @@ implementation of generators.
 
 Here's the definition of our `fib` generator built using this function:
 
-```racket
+```scheme
 (define fib
   (generator
    (lambda ()
@@ -307,7 +307,7 @@ Here's the definition of our `fib` generator built using this function:
 
 and here it is in use:
 
-```racket
+```scheme
 > (define fibber (fib))
 > (fibber)
 1
@@ -327,7 +327,7 @@ and here it is in use:
 
 And here's the `add` generator:
 
-``` racket
+```scheme
 (define add
   (generator
    (lambda ()
@@ -337,7 +337,7 @@ And here's the `add` generator:
 
 in action:
 
-``` racket
+```scheme
 > (define adder (add))
 > (adder)
 "expecting x"

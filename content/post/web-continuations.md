@@ -18,7 +18,7 @@ my thoughts.  Let's dive right in.
 
 ## First, an Example
 
-``` racket
+```scheme
 #lang web-server/insta
 
 (define (render-counter counter)

@@ -30,7 +30,7 @@ callbacks that react to certain events.
 
 To render a window on the screen, all you have to do is:
 
-```racket
+```scheme
 #lang racket/gui
 
 (require racket/class)
@@ -62,7 +62,7 @@ need to know to make use of it in this context is:
 
 With the above in mind, we can go ahead and lay out our interface:
 
-```racket
+```scheme
 #lang racket/gui
 
 (require racket/class)
@@ -126,7 +126,7 @@ field.  Let's start there.
 At the top of the file, we can gather all of the names of the SVG
 files in the current directory into a list:
 
-```racket
+```scheme
 (define folder-path
   (current-directory))
 
@@ -139,7 +139,7 @@ files in the current directory into a list:
 And then we can pass that list to the `list-box` when we instantiate
 it via the aforementioned `choices` field:
 
-```racket
+```scheme
 (define list-box
   (new list-box%
        [parent panel]
@@ -156,7 +156,7 @@ that contain the search string.  To do this, we can give the
 `search-box` a callback that it should execute whenever its contents
 change:
 
-```racket
+```scheme
 (define search-box
   (new text-field%
        [parent panel]
@@ -189,7 +189,7 @@ To hook things up, we require `rsvg` then add a callback to the
 `list-box` so that, when an item is clicked, we can read the file from
 disk and display it on the `canvas`:
 
-```racket
+```scheme
 
 (require rsvg)
 
