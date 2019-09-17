@@ -37,6 +37,7 @@ reminded of old ones.
 | [Bryan Cantrill]  | [Principles of Technology Leadership]                             |
 | [Bryan Cantrill]  | [Zebras All the Way Down]                                         |
 | [Casey Muratori]  | [Immediate-Mode Graphical User Interfaces]                        |
+| [Emery Berger]    | [Performance Matters]                                             |
 | [Gary Bernhardt]  | [Boundaries]                                                      |
 | [Jon Moore]       | [Stop Rate Limiting! Capacity Management Done Right]              |
 | [Martin Thompson] | [Designing for Performance]                                       |
@@ -90,6 +91,7 @@ reminded of old ones.
 [Designing for Performance]: https://www.youtube.com/watch?v=03GsLxVdVzU
 [Die Threads]: https://www.youtube.com/watch?v=U66KuyD3T0M
 [Discovering Python]: https://www.youtube.com/watch?v=RZ4Sn-Y7AP8
+[Emery Berger]: https://emeryberger.com/
 [Everything Will Flow]: https://www.youtube.com/watch?v=1bNOO3xxMc0
 [Executive Communication]: https://www.heavybit.com/library/video/executive-communication/
 [Fuck You, Pay Me]: https://www.youtube.com/watch?v=jVkLVRt6c1U&index=34&list=LLHn3px69jb1bx5EOWyCIgFg&t=0s
@@ -105,6 +107,7 @@ reminded of old ones.
 [Mike Monteiro]: https://muledesign.com/
 [Modern SQL]: https://modern-sql.com/video
 [Nim - A New Option for Optimizing Inner Loops]: https://www.youtube.com/watch?v=IVgNVJdizHg
+[Performance Matters]: https://www.youtube.com/watch?v=r-TLSBdHe1A
 [Platform as a Reflection of Values: Joyent, Node.js, and Beyond]: https://vimeo.com/230142234
 [Pledge: A new security technology in openbsd]: https://www.youtube.com/watch?v=F_7S1eqKsFk
 [Polly Want a Message]: https://www.deconstructconf.com/2018/sandi-metz-polly-want-a-message
