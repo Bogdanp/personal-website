@@ -23,6 +23,7 @@ the open.
 
 | Project                 | Description                                                                 |
 | :---                    | :---                                                                        |
+| [chief]                 | A Procfile runner for Racket.                                               |
 | [component]             | Simple dependency injection for Racket.                                     |
 | [cursive_re]            | Readable regular expressions for Python 3.6+.                               |
 | [deta]                  | A functional database mapper for Racket.                                    |
@@ -121,6 +122,7 @@ much beyond maybe giving you some pointers.
 [browser-connect]: https://github.com/Bogdanp/browser-connect.vim
 [cedar-mode]: https://github.com/Bogdanp/cedar-mode
 [cedar]: https://github.com/Bogdanp/cedar
+[chief]: https://github.com/Bogdanp/racket-chief
 [crontab]: https://github.com/Bogdanp/crontab
 [component]: https://github.com/Bogdanp/racket-component
 [cursive_re]: https://github.com/Bogdanp/cursive_re
