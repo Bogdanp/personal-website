@@ -113,7 +113,8 @@ as one would like.  With [koyo], all it takes is
 
     $ raco koyo dist
 
-and all that really does is shell out to `raco exe` and then `raco dist`.
+and all that really does under the hood is shell out to `raco exe` and
+then `raco dist`.
 
 Production runtime errors (of which there has been exactly one so far,
 triggered by me, not one of my users) are sent to the SaaS version of
@@ -143,12 +144,12 @@ screenshots of a web page and compare them with old versions committed
 to the repo by shelling out to [ImageMagick].
 
 Error reporting during test runs or when I'm manually testing stuff is
-the most frustrating part of working with Racket.  I run the tests
-with `errortrace` turned on and the app as well, when I'm working on
-it locally, but I still find myself often scratching my head trying to
-figure out *where* some errors originate.  This is an area where
-Racket really needs to improve.  It absolutely has to be able to show
-the programmer where every error originated and that "where" can't be
+the most frustrating part of working with Racket.  I run the tests as
+well as the app (in local development mode) with `errortrace` turned
+on, but I still find myself often scratching my head trying to figure
+out *where* certain errors originate.  This is an area where Racket
+really needs to improve.  It absolutely has to be able to show the
+programmer where every error originated and that "where" can't be
 "somewhere inside this 20-line-long for-loop in file x.rkt, good
 luck!"
 
@@ -158,26 +159,29 @@ facilities for cleaning up imports, running tests and a macro stepper.
 
 Continuations are fantastic for rapid development.  I use them for
 small things like increasing/decreasing item quantities in the
-shopping cart, but I will eventually be moving off them as the site
-grows.  It's bad UX to have your URLs expire as a user because of a
-deployment.  At this stage, though, that's not a problem, and
+shopping cart and preserving state between the steps of the checkout
+process, but I will eventually be moving off them as the site grows
+because, from the user's perspective, it's bad UX to have URLs expire
+randomly just because a deployment happened to occur when you were
+browsing the site.  At this stage, though, that's not a problem, and
 continuation expiration is handled gracefully: the user is redirected
-to the original page they were on and shown a flash message.
+to the original page they were on before clicking the continuation
+link (or submitting the form, etc.) and shown a flash message.
 
-If you visited the website, you may have noticed how fast it is
-(assuming you live in Europe).  Part of that is because of how fast
+If you visited the website (and assuming you live in Europe), you may
+have noticed how fast it is.  Part of that is because of how fast
 Racket itself is, and part of it is me being judicious about what code
 runs on each page.  [koyo] has an instrumenting profiler and, in
 development mode, all pages render a little floating widget that I can
 expand to show a trace of all the instrumented places (inspired by
 [MiniProfiler]).
 
-I didn't find the lack of libraries a problem -- I just wrote whatever
-it was I needed at the time -- and the documentation for the stuff
-that does exist is pretty good.  Documentation for Racket itself tends
-to be great, though a bit "stuffy".  That's a challenge for someone
-who, like me, tends to skim a lot.  Much of it is in need of more code
-examples for people in a hurry.
+I didn't find the lack of libraries to be a problem -- I just wrote
+whatever it was I needed at the time -- and the documentation for the
+stuff that does exist is pretty good.  Documentation for Racket itself
+tends to be great, although a bit "stuffy".  That's a challenge for
+someone who, like me, tends to skim a lot.  I would like to see more
+code examples intended for people in a hurry.
 
 One area where I didn't build my own thing was I18n/L10n.  For that,
 the app relies on [SRFI-29].  I would have preferred to use the more
@@ -210,4 +214,4 @@ Overall, I'm really happy with my choice to use Racket so far!
 [pytest]: https://pytest.org/en/latest/
 [racket-mode]: https://racket-mode.com
 [rackunit]: https://docs.racket-lang.org/rackunit/api.html?q=rackunit
-[MiniProfiler]: https://racket-mode.com/
+[MiniProfiler]: https://miniprofiler.com/
