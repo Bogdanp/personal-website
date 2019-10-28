@@ -7,7 +7,7 @@ tags: ["racket"]
 
 Another Racket thing!  [redis-rkt] is a new Redis client for Racket
 that I've been working on these past few weeks.  Compared to the
-existing `redis` and `rackdis` pacakges, it:
+existing `redis` and `rackdis` packages, it:
 
 * is fully documented,
 * is safer due to strict use of contracts,
