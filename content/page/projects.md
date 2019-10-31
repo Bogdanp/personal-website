@@ -36,6 +36,7 @@ the open.
 | [koyo]                  | A web development toolkit for Racket.                                       |
 | [marionette]            | A Racket library that lets you control Firefox via the Marionette Protocol. |
 | [molten]                | A modern API framework for Python 3.6+.                                     |
+| [nemea]                 | A little Racket web application for tracking website analytics.             |
 | [net-ip]                | Utilities for working with IP addresses and networks in Racket.             |
 | [north]                 | A database schema migration tool written in Racket.                         |
 | [postmark-client]       | A [Postmark] client written in Racket.                                      |
@@ -148,6 +149,7 @@ much beyond maybe giving you some pointers.
 [mold]: https://github.com/Bogdanp/mold
 [molten]: https://moltenframework.com
 [multiprom]: https://github.com/Bogdanp/multiprom
+[nemea]: https://github.com/Bogdanp/nemea
 [net-ip]: https://github.com/Bogdanp/racket-net-ip
 [north]: https://github.com/Bogdanp/racket-north
 [pico]: https://github.com/Bogdanp/pico
