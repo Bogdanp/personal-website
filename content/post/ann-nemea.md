@@ -1,6 +1,6 @@
 ---
 title: "Announcing nemea"
-date: 2019-10-21T11:00:00+02:00
+date: 2019-10-31T11:00:00+02:00
 slug: "ann-nemea"
 tags: ["racket"]
 ---
