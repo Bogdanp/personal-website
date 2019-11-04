@@ -45,6 +45,7 @@ the open.
 | [racket-sass]           | Bindings to libsass for Racket.                                             |
 | [resource_pool]         | A generic thread-safe resource pool for Python.                             |
 | [sentry][racket-sentry] | A [Sentry] SDK for Racket.                                                  |
+| [setup-racket]          | A GitHub Action for installing Racket.                                      |
 | [twilio][racket-twilio] | A [Twilio] client for Racket.                                               |
 | [watchdog_gevent]       | A gevent-based observer for watchdog.                                       |
 | [web-app-from-scratch]  | Supporting material for my "Web App From Scratch" blog series.              |
@@ -164,6 +165,7 @@ much beyond maybe giving you some pointers.
 [repos]: https://github.com/Bogdanp/repositories
 [resource_pool]: https://github.com/Bogdanp/resource_pool
 [sentry]: https://sentry.io
+[setup-racket]: https://github.com/marketplace/actions/setup-racket-environment
 [tcopy]: https://github.com/Bogdanp/tcopy
 [threadop]: https://github.com/Bogdanp/threadop
 [trio-redis]: https://github.com/Bogdanp/trio-redis
