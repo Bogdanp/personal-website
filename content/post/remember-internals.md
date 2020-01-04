@@ -80,11 +80,12 @@ distribution.
 Unfortunately, the RPC approach breaks down on iOS where you're not
 allowed to run subprocesses.  An approach that could work there is
 building the app into a shared library, linking against it and doing
-the RPC in-process.  I think that approach could work, but Racket
+the RPC in-process.  ~~I think that approach could work, but Racket
 would have to be able to target `arm64` for that to be feasible.
 Fortunately, now that Racket is able to run on top of Chez Scheme,
 which already has backends for many platforms, including `arm32le`,
-that might be a possibility in the future.
+that might be a possibility in the future.~~  `myfreeweb` pointed out
+on [lobste.rs] that this is already supported!
 
 
 [remember]: https://gumroad.com/l/rememberapp
@@ -94,3 +95,4 @@ that might be a possibility in the future.
 [server]: https://github.com/Bogdanp/remember/blob/bfe3c0c56b59602852155247c37ef4243866c6ba/core/server.rkt#L15
 [poc]: https://gist.github.com/Bogdanp/3fa6dec42a9bd7fa4422e0e0cd1cd23b
 [DDHotKey]: https://github.com/davedelong/DDHotKey
+[lobste.rs]: https://lobste.rs/s/s4okil/native_applications_with_racket#c_etvpxp
