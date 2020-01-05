@@ -1,29 +1,35 @@
-baseURL = "https://defn.io/"
+theme = "even"
 title = "defn.io"
-theme = "terminal"
+baseURL = "https://defn.io/"
 languageCode = "en-us"
-copyright = "(c) 2015-2019 Bogdan Popa"
-menuMore = "Show more"
-readMore = "Read more"
-readOtherPosts = "Read other posts"
+defaultContentLanguage = "en"
 
-[Author]
+pygmentsOptions = "linenos=table"
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsCodefencesGuessSyntax = true
+
+[author]
   name = "Bogdan Popa"
 
 [Taxonomies]
   tag = "tags"
 
-[Params]
-  subtitle = "Bogdan Popa"
-  contentTypeName = "post"
-  themeColor = "red"
-  fullWidthTheme = false
-  centerTheme = true
+[params]
+  version = "4.x"
 
-[Params.logo]
-  logoText = "defn.io"
+  since = "2014"
+  gitRepo = "https://github.com/Bogdanp/personal-website"
 
-[Permalinks]
+  logoTitle = "defn.io"
+
+  archivePaginate = 25
+
+  [params.social]
+    a-twitter = "https://twitter.com/Bogdanp"
+    b-github = "https://github.com/Bogdanp"
+
+[permalinks]
   post = "/:year/:month/:day/:filename/"
 
 [[menu.main]]
@@ -45,3 +51,8 @@ readOtherPosts = "Read other posts"
   name = "About"
   url = "/page/about/"
   weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
