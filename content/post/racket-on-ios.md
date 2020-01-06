@@ -42,8 +42,7 @@ mkdir racket/src/build \
   && ../configure \
         --host=aarch64-apple-darwin \
         --enable-ios=iPhoneOS \
-        --enable-racket="$RACKET_SRC/racket/bin/racket" \
-        --enable-pthread=yes
+        --enable-racket="$RACKET_SRC/racket/bin/racket"
 ```
 
 This will configure the build to create objects that can run on a
@@ -52,9 +51,11 @@ the `host` to `x86_64-apple-darwin` and `enable-ios` from `iPhoneOS`
 to `iPhoneSimulator`.  For details on these flags, see the [cross
 compiling instructions][cross instructions] in the Racket repo.
 
-Although the instructions currently don't mention that `pthread`
+~~Although the instructions currently don't mention that `pthread`
 support is required when configuring the build, the code will fail to
-compile without it.
+compile without it.~~  Matthew Flatt pushed [a fix] for this today!
+
+[a fix]: https://github.com/racket/racket/commit/f0a63b59214d7885dc2d4872637e269eb38d5e49
 
 Next, run `make cgc && make install-cgc` to compile the code and the
 packages.  This builds the conservative GC variant of Racket.  I
