@@ -15,12 +15,12 @@ These are some of the native applications I've built.
 
 These are some of the web applications I've built in my spare time.
 
-| Project                  | Description                                                                                     |
-| :---                     | :---                                                                                            |
-| [Free Invoice Generator] | Free invoicing software.                                                                        |
-| [Task Queues]            | A list of message brokers and task queues across many programming lanagues and implementations. |
+| Project       | Description                                                                                     | Status |
+| :---          | :---                                                                                            | :---   |
+| ~~[FIG]~~     | Free invoicing software.                                                                        | `sold` |
+| [Task Queues] | A list of message brokers and task queues across many programming lanagues and implementations. |        |
 
-[Free Invoice Generator]: https://free-invoice-generator.com
+[FIG]: https://free-invoice-generator.com
 [Task Queues]: https://taskqueues.com
 
 
