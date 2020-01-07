@@ -99,12 +99,12 @@ file will be made available to the Swift code.  Inside the file add:
 Create a new C file called `Interop.c` and add
 
 ```c
-int _main(Scheme_Env *e, int argc, char *argv[]) {
+static int run(Scheme_Env *e, int argc, char *argv[]) {
     return 0;
 }
 
 void run_racket() {
-    scheme_main_setup(1, _main, 0, NULL);
+    scheme_main_setup(1, run, 0, NULL);
 }
 ```
 
@@ -146,11 +146,11 @@ Next, update `Interop.c` to include the resulting C file:
 #include "hello.c"
 ```
 
-And then update `_main` in that same file to initialize and run that
+And then update `run` in that same file to initialize and run that
 module:
 
 ```c
-int _main(Scheme_Env *e, int argc, char *argv[]) {
+static int run(Scheme_Env *e, int argc, char *argv[]) {
     Scheme_Object *a[2];
     declare_modules(e);
     a[0] = scheme_make_pair(scheme_intern_symbol("quote"),
