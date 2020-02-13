@@ -105,7 +105,7 @@ look like:
    #:listen-ip "127.0.0.1"
    #:port 8000))
 
-(with-handlers ([exn:break? (lambda ()
+(with-handlers ([exn:break? (lambda (e)
                               (stop))])
   (sync/enable-break never-evt))
 ```
