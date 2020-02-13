@@ -257,7 +257,7 @@ for this exact purpose.  The above code could be rewritten as:
 ### `dispatch-files`
 
 This dispatcher can be used to serve files off of the filesystem.  You
-can combine in with the other dispatchers to generate a server that
+can combine it with the other dispatchers to generate a server that
 can either serve files off of the filesystem or fall back to a
 servlet:
 
@@ -322,6 +322,136 @@ dispatcher that serves the home page and the end result is a web
 server that can serve static files from a directory and run dynamic
 Racket code!
 
+## Routing
+
+You could route requests by sequencing together multiple
+`dispatch-filter` dispatchers, but that wouldn't be very ergonomic.
+The web server provides the [`dispatch-rules`] macro as a convenient
+way to declare *servlets* -- not dispatchers! the overloading of terms
+here can be a bit confusing -- that perform different actions based on
+the request method and path.
+
+```racket
+#lang racket/base
+
+(require net/url
+         web-server/dispatch
+         (prefix-in files: web-server/dispatchers/dispatch-files)
+         (prefix-in filter: web-server/dispatchers/dispatch-filter)
+         (prefix-in sequencer: web-server/dispatchers/dispatch-sequencer)
+         web-server/dispatchers/filesystem-map
+         web-server/http
+         web-server/servlet-dispatch
+         web-server/web-server)
+
+(define (response/template . content)
+  (response/xexpr
+   `(html
+     (head
+      (link ([href "/static/screen.css"] [rel "stylesheet"])))
+     (body
+      ,@content))))
+
+(define (homepage req)
+  (response/template '(h1 "Home")))
+
+(define (blog req)
+  (response/template '(h1 "Blog")))
+
+(define-values (app reverse-uri)
+  (dispatch-rules
+   [("") homepage]
+   [("blog") blog]))
+
+(define url->path/static (make-url->path "static"))
+
+(define static-dispatcher
+  (files:make #:url->path (lambda (u)
+                            (url->path/static
+                             (struct-copy url u [path (cdr (url-path u))])))))
+
+(define stop
+  (serve
+   #:dispatch (sequencer:make
+               (filter:make #rx"^/static/" static-dispatcher)
+               (dispatch/servlet app))
+   #:listen-ip "127.0.0.1"
+   #:port 8000))
+
+(with-handlers ([exn:break? (lambda (e)
+                              (stop))])
+  (sync/enable-break never-evt))
+```
+
+Using `dispatch-rules` as I've done above produces two values: a
+servlet that maps requests made to `/` to the `homepage` servlet and
+requests made to `/blog` to the `blog` servlet, and a function that
+can produce reverse URIs when given either of those functions.
+
+Plugging that in via `dispatch/servlet` into the main servlet sequence
+gets you a server that can serve files off of disk and also
+dynamically dispatch requests to multiple servlets.
+
+One final tweak we might want to make here is to plug another servlet
+after the app servlet into the sequencer to handle requests to paths
+that don't exist:
+
+```racket
+#lang racket/base
+
+(require net/url
+         web-server/dispatch
+         (prefix-in files: web-server/dispatchers/dispatch-files)
+         (prefix-in filter: web-server/dispatchers/dispatch-filter)
+         (prefix-in sequencer: web-server/dispatchers/dispatch-sequencer)
+         web-server/dispatchers/filesystem-map
+         web-server/http
+         web-server/servlet-dispatch
+         web-server/web-server)
+
+(define (response/template . content)
+  (response/xexpr
+   `(html
+     (head
+      (link ([href "/static/screen.css"] [rel "stylesheet"])))
+     (body
+      ,@content))))
+
+(define (homepage req)
+  (response/template '(h1 "Home")))
+
+(define (blog req)
+  (response/template '(h1 "Blog")))
+
+(define (not-found req)
+  (response/template '(h1 "Not Found")))
+
+(define-values (app reverse-uri)
+  (dispatch-rules
+   [("") homepage]
+   [("blog") blog]))
+
+(define url->path/static (make-url->path "static"))
+
+(define static-dispatcher
+  (files:make #:url->path (lambda (u)
+                            (url->path/static
+                             (struct-copy url u [path (cdr (url-path u))])))))
+
+(define stop
+  (serve
+   #:dispatch (sequencer:make
+               (filter:make #rx"^/static/" static-dispatcher)
+               (dispatch/servlet app)
+               (dispatch/servlet not-found))
+   #:listen-ip "127.0.0.1"
+   #:port 8000))
+
+(with-handlers ([exn:break? (lambda (e)
+                              (stop))])
+  (sync/enable-break never-evt))
+```
+
 [web-server]: https://docs.racket-lang.org/web-server/index.html?q=web-server
 [`request`]: https://docs.racket-lang.org/web-server/http.html?q=request#%28def._%28%28lib._web-server%2Fhttp%2Frequest-structs..rkt%29._request%29%29
 [`response`]: https://docs.racket-lang.org/web-server/http.html?q=request#%28def._%28%28lib._web-server%2Fhttp%2Fresponse-structs..rkt%29._response%29%29
@@ -332,3 +462,4 @@ Racket code!
 [`web-server/dispatchers/dispatch-files`]: https://docs.racket-lang.org/web-server-internal/dispatch-files.html?q=dispatchers%2Ffile
 [`web-server/dispatchers/dispatch-filter`]:  https://docs.racket-lang.org/web-server-internal/dispatch-filter.html?q=dispatchers%2Ffile
 [`web-server/dispatchers/dispatch-sequencer`]: https://docs.racket-lang.org/web-server-internal/dispatch-sequencer.html?q=dispatchers%2Ffile
+[`dispatch-rules`]: https://docs.racket-lang.org/web-server/dispatch.html?q=dispatch-rules#%28form._%28%28lib._web-server%2Fdispatch..rkt%29._dispatch-rules%29%29
