@@ -51,6 +51,7 @@ the open.
 | [north]                 | A database schema migration tool written in Racket.                         |
 | [postmark-client]       | A [Postmark] client written in Racket.                                      |
 | [py-test.el]            | A Python test runner for Emacs.                                             |
+| [rackcheck]             | A property-based testing library for Racket with support for shrinking.     |
 | [racket-redis]          | Fast, idiomatic bindings to Redis for Racket.                               |
 | [racket-sass]           | Bindings to libsass for Racket.                                             |
 | [resource_pool]         | A generic thread-safe resource pool for Python.                             |
