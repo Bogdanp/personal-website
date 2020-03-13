@@ -317,5 +317,5 @@ is also very easy once you get the hang of this pattern.
 
 [rackcheck]: https://docs.racket-lang.org/rackcheck/index.html
 [rackcheck repo]: https://github.com/bogdanp/rackcheck/
-[example]: https://github.com/Bogdanp/rackcheck/blob/91f36a755044c0aeba37658b64b05afcfea9c7e0/examples/web-api.rkt
-[top]: https://github.com/Bogdanp/rackcheck/blob/91f36a755044c0aeba37658b64b05afcfea9c7e0/examples/web-api.rkt#L91
+[example]: https://github.com/Bogdanp/rackcheck/blob/53d52fefe3a3606ad6e07cf4440d4e7eb99cd7e6/examples/web-api.rkt
+[top]: https://github.com/Bogdanp/rackcheck/blob/53d52fefe3a3606ad6e07cf4440d4e7eb99cd7e6/examples/web-api.rkt#L91
