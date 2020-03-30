@@ -170,6 +170,7 @@ much beyond maybe giving you some pointers.
 [postmark-client]: https://github.com/Bogdanp/racket-postmark
 [py-test.el]: https://github.com/Bogdanp/py-test.el
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
+[rackcheck]: https://github.com/Bogdanp/rackcheck/
 [racket-redis]: https://github.com/Bogdanp/racket-redis/
 [racket-sass]: https://github.com/Bogdanp/racket-sass/
 [racket-sentry]: https://github.com/Bogdanp/racket-sentry/
