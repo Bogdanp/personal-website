@@ -30,10 +30,10 @@ Instead, I found that Postgres has a standard function called
 hex string so all I had to do was change my query into
 
 ```sql
-INSERT INTO the_table(uuid_column) VALUES(CAST(ENCODE($1, 'hex') AS UUID))
+INSERT INTO the_table(uuid_column) VALUES (CAST(ENCODE($1, 'hex') AS UUID))
 ```
 
-And that worked great!
+and that worked great!
 
 [spec]: https://github.com/Bogdanp/racket-buid/blob/5806054cbea5e69fae66a0b6d622752ace690afd/README.md#spec
 [db-lib]: https://github.com/racket/db/blob/3ce8e6b073cedc485011130d0d0c54475800c2a2/db-lib/db/util/postgresql.rkt#L110
