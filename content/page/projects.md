@@ -15,10 +15,10 @@ These are some of the native applications I've built.
 
 These are some of the web applications I've built in my spare time.
 
-| Project       | Description                                                                                     | Status |
-| :---          | :---                                                                                            | :---   |
-| [Task Queues] | A list of message brokers and task queues across many programming lanagues and implementations. |        |
-| [Try Racket]  | An online evaluation environment for Racket code.                                               |        |
+| Project       | Description                                                                                     |
+| :---          | :---                                                                                            |
+| [Task Queues] | A list of message brokers and task queues across many programming lanagues and implementations. |
+| [Try Racket]  | An online evaluation environment for Racket code.                                               |
 
 [Task Queues]: https://taskqueues.com
 [Try Racket]: https://try-racket.defn.io
