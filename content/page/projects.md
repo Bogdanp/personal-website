@@ -17,6 +17,7 @@ These are some of the web applications I've built in my spare time.
 
 | Project       | Description                                                                                     |
 | :---          | :---                                                                                            |
+| [Racksnaps]   | Daily snapshots of the official Racket package catalog.                                         |
 | [Task Queues] | A list of message brokers and task queues across many programming lanagues and implementations. |
 | [Try Racket]  | An online evaluation environment for Racket code.                                               |
 
@@ -173,6 +174,7 @@ much beyond maybe giving you some pointers.
 [racket-sass]: https://github.com/Bogdanp/racket-sass/
 [racket-sentry]: https://github.com/Bogdanp/racket-sentry/
 [racket-twilio]: https://github.com/Bogdanp/racket-twilio/
+[racksnaps]: https://racksnaps.defn.io
 [repos]: https://github.com/Bogdanp/repositories
 [resource_pool]: https://github.com/Bogdanp/resource_pool
 [sentry]: https://sentry.io
