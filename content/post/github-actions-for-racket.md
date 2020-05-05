@@ -5,6 +5,14 @@ slug: "github-actions-for-racket"
 tags: ["racket", "ci"]
 ---
 
+**This article is outdated as of 2020/05/05 because it refers to the
+previous implementation of GitHub Actions.  I've put together a newer
+version at [Using GitHub Actions to Test Racket Code (Revsied)] so you
+probably want to read that instead.**
+
+[Using GitHub Actions to Test Racket Code (Revsied)]: /2020/05/05/github-actions-for-racket-revised
+
+
 Like [Alex Harsányi][alex-hhh], I've been looking for a good,
 free-as-in-beer, alternative to Travis CI.  For now, I've settled on
 [GitHub Actions][actions] because using them is straightforward and
