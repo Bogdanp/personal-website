@@ -62,7 +62,7 @@ this:
 
 ```racket
 (define (send/back resp)
-  (abort-current-continuation servlet-prompt resp))
+  (abort-current-continuation servlet-prompt (lambda () resp)))
 ```
 
 Knowing that, consider the following request handler:
