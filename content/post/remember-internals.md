@@ -30,7 +30,7 @@ find Apple's documentation lackluster and Xcode is surprisingly buggy
 disk, which causes Xcode to fail silently, for example).  I wouldn't
 mind the documentation being bad if the core cocoa code was open
 source/source available; at least then I could look at the
-implementation to try and understand what's going on.  /rant
+implementation to try and understand what's going on.
 
 More importantly, I plan to support Windows and Linux which means that
 writing the core in a portable language is going to minimize the
@@ -41,7 +41,7 @@ implementations on each platform.
 
 The [Racket core][core] runs a custom JSONRPC [server] that listens
 for commands on `stdin` and sends responses on `stdout`.  Using
-Racket's `raco exe` and `raco distribute` commands, that core gets
+Racket's [`raco exe`] and [`raco distribute`] commands, that core gets
 built into a native executable and copied into the Swift app's
 resources folder.  The Swift application [runs the core][coms] as a
 subprocess on startup and communicates with it via pipes.
@@ -52,18 +52,17 @@ when entries are due.
 
 ### Notarization
 
-This gave me an actual migraine.  It took me a couple of hours to
-figure out how to get everything notarized.  I had to enable App
-Sandboxing for both the frontend and the core application, figure out
-which (via trial and error) entitlements were necessary, realize that
-I needed a separate set of entitlements for the core application and
-that the `com.apple.security.inherit` entitlement, for whatever
-reason, doesn't let the subprocess inherit its parents entitlements,
-meaning that I had to also explicitly assign the core application the
-"Allow JIT" and "Allow Unsigned Executable Memory" entitlements, else
-the process would get killed with a `SIGINT` and a red herring error
-message about how the executable doesn't have a valid bundle
-identifier.
+It took me a couple of hours to figure out how to get everything
+notarized.  I had to enable App Sandboxing for both the frontend and
+the core application, figure out via trial and error which
+entitlements were necessary, realize that I needed a separate set of
+entitlements for the core application and that the
+`com.apple.security.inherit` entitlement, for whatever reason, doesn't
+let the subprocess inherit its parents entitlements, meaning that I
+had to also explicitly assign the core application the "Allow JIT" and
+"Allow Unsigned Executable Memory" entitlements, else the process
+would get killed with a `SIGINT` and a red herring error message about
+how the executable doesn't have a valid bundle identifier.
 
 ### Would I do this again?
 
@@ -96,3 +95,5 @@ on [lobste.rs] that this is already supported!
 [poc]: https://gist.github.com/Bogdanp/3fa6dec42a9bd7fa4422e0e0cd1cd23b
 [DDHotKey]: https://github.com/davedelong/DDHotKey
 [lobste.rs]: https://lobste.rs/s/s4okil/native_applications_with_racket#c_etvpxp
+[`raco distribute`]: https://docs.racket-lang.org/raco/exe-dist.html?q=raco%20distribute
+[`raco exe`]: https://docs.racket-lang.org/raco/exe.html?q=raco%20exe
