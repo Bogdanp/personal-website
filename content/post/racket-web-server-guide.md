@@ -153,7 +153,7 @@ own dispatcher to run the `age` servlet instead of using
 `output-response` takes a [`connection`] and a [`response`] and
 serializes the response over the connection to the client end.
 
-This is equivalent to:
+This is equivalent[^1] to:
 
 ``` racket
 (define age-dispatcher (dispatch/servlet age))
@@ -452,6 +452,11 @@ that don't exist:
   (sync/enable-break never-evt))
 ```
 
+[^1]: I am simplifying things here for the purposes of this guide.
+    The `dispatch/servlet` function does some additional work to
+    support continuations.  See [Continuations in Racket's Web
+    Server][conts] for details.
+
 [web-server]: https://docs.racket-lang.org/web-server/index.html?q=web-server
 [`request`]: https://docs.racket-lang.org/web-server/http.html?q=request#%28def._%28%28lib._web-server%2Fhttp%2Frequest-structs..rkt%29._request%29%29
 [`response`]: https://docs.racket-lang.org/web-server/http.html?q=request#%28def._%28%28lib._web-server%2Fhttp%2Fresponse-structs..rkt%29._response%29%29
@@ -463,3 +468,4 @@ that don't exist:
 [`web-server/dispatchers/dispatch-filter`]:  https://docs.racket-lang.org/web-server-internal/dispatch-filter.html?q=dispatchers%2Ffile
 [`web-server/dispatchers/dispatch-sequencer`]: https://docs.racket-lang.org/web-server-internal/dispatch-sequencer.html?q=dispatchers%2Ffile
 [`dispatch-rules`]: https://docs.racket-lang.org/web-server/dispatch.html?q=dispatch-rules#%28form._%28%28lib._web-server%2Fdispatch..rkt%29._dispatch-rules%29%29
+[conts]: /2020/05/11/racket-web-server-internals/
