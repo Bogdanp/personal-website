@@ -51,11 +51,11 @@ servlet's handler to the request and writes the resulting response to
 the connection.  Before it applies the servlet handler, however, it
 sets up a continuation barrier so that continuations captured within
 the servlet cannot be resumed from outside of the request-response
-cycle.  This ensures that, for example, you can't pass a captured
-continuation to a background thread that calls it repeatedly, thus
-sending unexpected responses to the client.  After installing the
-continuation barrier, it installs a continuation prompt so that the
-various "web interaction" functions can abort to it.
+cycle.  This ensures that you can't resume such a continuation outside
+of the request-response cycle, when the client isn't prepared to
+receive a response.  After installing the continuation barrier, it
+installs a continuation prompt so that the various "web interaction"
+functions can abort to it.
 
 The simplest of the web interaction functions, `send/back`, looks like
 this:
