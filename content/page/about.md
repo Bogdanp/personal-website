@@ -17,9 +17,9 @@ Principal Engineer at [Leadpages].  In my free time I contribute to
 and maintain [dramatiq], [molten] and a bunch of other OSS which you
 can find [here](/page/projects/) and on [my GitHub page][gh].
 
-If you want to get in touch, [email][em] me, or send me an
-[encrypted message][kb].  Find out about new posts by subscribing
-to the [Atom][feed] feed or follow me on [Twitter][twitter].
+If you want to get in touch, [email][em] me.  Find out about new posts
+by subscribing to the [Atom][feed] feed or follow me on
+[Twitter][twitter].
 
 [Matchacha]: https://www.matchacha.ro
 [BlockFraud]: http://blockfraud.com
@@ -29,6 +29,5 @@ to the [Atom][feed] feed or follow me on [Twitter][twitter].
 [oss]: https://moltenframework.com
 [gh]: https://github.com/Bogdanp
 [em]: mailto:bogdan@defn.io
-[kb]: https://keybase.io/bogdanp
 [feed]: http://defn.io/index.xml
 [twitter]: https://twitter.com/bogdanp
