@@ -41,6 +41,7 @@ the open.
 | [dramatiq_sqs]          | An Amazon SQS broker for Dramatiq.                                          |
 | [forms]                 | A web form validation library for Racket.                                   |
 | [geoip]                 | Geolocation for Racket based on MaxMind's GeoIP databases.                  |
+| [http-easy]             | A high-level HTTP client for Racket.                                        |
 | [hugs]                  | A library that maps SQL expressions to Python fuctions.                     |
 | [koyo]                  | A web development toolkit for Racket.                                       |
 | [marionette]            | A Racket library that lets you control Firefox via the Marionette Protocol. |
@@ -152,6 +153,7 @@ much beyond maybe giving you some pointers.
 [geoip]: https://github.com/Bogdanp/racket-geoip
 [h2p]: https://github.com/Bogdanp/h2p
 [heater]: https://github.com/Bogdanp/heater
+[http-easy]: https://github.com/Bogdanp/http-easy
 [hugs]: https://github.com/Bogdanp/hugs
 [ido-clever-match]: https://github.com/Bogdanp/ido-clever-match
 [koyo]: https://github.com/Bogdanp/koyo
