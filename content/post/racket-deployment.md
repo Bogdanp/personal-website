@@ -117,7 +117,7 @@ copies to the destination servers.
 
 At this point you might be thinking "that's nice, but what about files
 needed by the app at run-time?"  Let's modify the app so it reads a
-file form disk then serves its contents on request:
+file from disk then serves its contents on request:
 
 ```racket
 #lang racket/base
