@@ -259,17 +259,10 @@ dist/
             └── exts
                 └── ert
                     ├── r0
-                    │   ├── error.css
                     │   └── example.txt
                     ├── r1
-                    │   ├── error.css
-                    │   ├── libcrypto.1.1.dylib
-                    │   └── libssl.1.1.dylib
+                    │   └── error.css
                     ├── r2
-                    │   ├── bundles
-                    │   │   ├── es
-                    │   │   │   └── srfi-19
-                    │   │   └── srfi-19
                     │   ├── libcrypto.1.1.dylib
                     │   └── libssl.1.1.dylib
                     └── r3
@@ -278,7 +271,7 @@ dist/
                             │   └── srfi-19
                             └── srfi-19
 
-18 directories, 16 files
+16 directories, 11 files
 ```
 
 If you want more information about how this all works, the links I
