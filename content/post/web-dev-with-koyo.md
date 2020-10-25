@@ -1,5 +1,5 @@
 ---
-title: "Web Development with Koyo"
+title: "Racket Web Development with Koyo"
 date: 2020-10-18T21:00:00+03:00
 slug: "web-dev-with-koyo"
 tags: ["racket", "koyo", "web"]
