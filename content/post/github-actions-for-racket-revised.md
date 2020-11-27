@@ -1,6 +1,7 @@
 ---
 title: "Using GitHub Actions to Test Racket Code (Revised)"
 date: 2020-05-05T10:00:00+03:00
+lastmod: 2020-11-27T10:55:00+02:00
 slug: "github-actions-for-racket-revised"
 tags: ["racket", "ci"]
 ---
