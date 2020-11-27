@@ -58,11 +58,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Install Racket
-        uses: Bogdanp/setup-racket@v0.8
+        uses: Bogdanp/setup-racket@v0.11
         with:
           architecture: 'x64'
           distribution: 'full'
-          version: '7.7'
+          version: '7.9'
       - name: Run Tests
         run: raco test main.rkt
 ```
@@ -78,7 +78,7 @@ all the subsequent actions will be in the root of the checked-out
 repository, unless otherwise specified within a step.
 
 The second step uses my own [Bogdanp/setup-racket] action to install
-Racket BC version 7.7 in the VM.  This adds the `racket` and `raco`
+Racket BC version 7.9 in the VM.  This adds the `racket` and `raco`
 executables to the `PATH`.
 
 Finally, the last step runs the tests in the `main.rkt` module.
@@ -114,7 +114,7 @@ won't be installed on the VM.  To work around this, you can update the
          with:
            architecture: 'x64'
            distribution: 'full'
-           version: '7.7'
+           version: '7.9'
 +          packages: 'rackcheck'
        - name: Run Tests
          run: raco test main.rkt
@@ -138,7 +138,7 @@ add another step to install your package into the VM:
          with:
            architecture: 'x64'
            distribution: 'full'
-           version: '7.7'
+           version: '7.9'
 +      - name: Install Package and its Dependencies
 +        run: raco pkg install --auto --batch
        - name: Run Tests
@@ -153,7 +153,7 @@ time you change your dependencies.
 
 At this point you might be fairly confident that your implementation
 of `fibs` is correct, but you want to guarantee that it works not only
-on Racket BC version 7.7, but also on Racket CS as well.  To do this,
+on Racket BC version 7.9, but also on Racket CS as well.  To do this,
 you can add a matrix [strategy] to your job, specifying that the job
 should be parameterized over the `racket-variant` values:
 
@@ -163,7 +163,7 @@ should be parameterized over the `racket-variant` values:
      runs-on: ubuntu-latest
 +    strategy:
 +      matrix:
-+        racket-variant: ['regular', 'CS']
++        racket-variant: ['BC, 'CS']
 +    name: Test on ${{ matrix.racket-variant }} Racket
      steps:
 ```
@@ -178,7 +178,7 @@ variant:
            architecture: 'x64'
            distribution: 'full'
 +          variant: ${{ matrix.racket-variant }}
-           version: '7.7'
+           version: '7.9'
 ```
 
 You can go one step further and also parameterize the versions of
@@ -190,8 +190,8 @@ Racket that you want your tests to run on:
      runs-on: ubuntu-latest
      strategy:
        matrix:
-         racket-variant: ['regular', 'CS']
-+        racket-version: ['7.6', '7.7']
+         racket-variant: ['BC, 'CS']
++        racket-version: ['7.8', '7.9']
      name: Test on ${{ matrix.racket-variant }} Racket
      steps:
 ```
@@ -209,7 +209,7 @@ And then plug that parameter into the install step, as before:
 ```
 
 Following these steps will make it so that every change you push will
-get tested against versions 7.6 and 7.7 of both variants of Racket.
+get tested against versions 7.8 and 7.9 of both variants of Racket.
 
 This only scratches the surface of what you can do with GH Actions so,
 if you're interested to learn more, I'd recommend reading through the
