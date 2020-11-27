@@ -6,9 +6,9 @@ tags: ["racket", "ci"]
 ---
 
 **This article is outdated as of 2020/05/05 because it refers to the
-previous implementation of GitHub Actions.  I've put together a newer
+previous implementation of GitHub Actions.  I've put together a revised
 version at [Using GitHub Actions to Test Racket Code (Revsied)] so you
-probably want to read that instead.**
+should read that instead.**
 
 [Using GitHub Actions to Test Racket Code (Revsied)]: /2020/05/05/github-actions-for-racket-revised
 
