@@ -9,6 +9,7 @@ These are some of the native applications I've built.
 
 | Project    | Description                                                             |
 | :---       | :---                                                                    |
+| [neko.app] | A tiny kitten follows your mouse cursor on macOS.                       |
 | [Remember] | A keyboard-driven application for stashing away distractions for later. |
 
 # Websites and SaaS
@@ -163,6 +164,7 @@ much beyond maybe giving you some pointers.
 [mold]: https://github.com/Bogdanp/mold
 [molten]: https://moltenframework.com
 [multiprom]: https://github.com/Bogdanp/multiprom
+[neko.app]: https://github.com/Bogdanp/neko
 [nemea]: https://github.com/Bogdanp/nemea
 [net-ip]: https://github.com/Bogdanp/racket-net-ip
 [north]: https://github.com/Bogdanp/racket-north
