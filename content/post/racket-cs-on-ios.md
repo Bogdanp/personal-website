@@ -11,6 +11,8 @@ I managed to get it working (with some [caveats]).  [Those
 changes][pr] have now been merged, so I figured I'd write another one
 of these guides while the information is still fresh in my head.
 
+<!--more-->
+
 
 ## Compile Racket for macOS and for iOS
 
