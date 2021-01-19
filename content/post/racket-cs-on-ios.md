@@ -8,8 +8,8 @@ tags: ["racket", "ios"]
 A couple of weeks ago, I started working on getting Racket CS to
 compile and run on iOS and, with a lot of guidance from Matthew Flatt,
 I managed to get it working (with some [caveats]).  [Those
-changes][pr] have now been merged, so I figured I'd write another one
-of these guides while the information is still fresh in my head.
+changes][pr] have now been merged, so I figured I'd write another [one
+of these guides][old] while the information is still fresh in my head.
 
 <!--more-->
 
@@ -206,6 +206,7 @@ fail with a "security" error that doesn't mention the root problem at
 all.
 
 [caveats]: https://github.com/racket/racket/blob/351c0047d6371e36cf422b4627e020d14e8853fe/racket/src/ChezScheme/c/segment.c#L578-L587
+[old]: /2020/01/05/racket-on-ios/
 [pr]: https://github.com/racket/racket/pull/3607
 [Racket repository]: https://github.com/racket/racket
 [build instructions]: https://github.com/racket/racket/blob/08fa24304ebf80a21ade32e8e59bb51b27af1dae/build.md#1-building-racket-from-source
