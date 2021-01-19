@@ -122,7 +122,7 @@ definitions for `racket_init` and `echo`
 #include <stdlib.h>
 
 int racket_init(const char *, const char *, const char *, const char *);
-void echo(char *);
+void echo(const char *);
 
 #endif
 ```
@@ -155,7 +155,7 @@ int racket_init(const char *petite_path,
     return 0;
 }
 
-void echo(char *message) {
+void echo(const char *message) {
     Sactivate_thread();
     ptr mod = Scons(Sstring_to_symbol("quote"), Scons(Sstring_to_symbol("main"), Snil));
     ptr echo_fn = Scar(racket_dynamic_require(mod, Sstring_to_symbol("echo")));
@@ -188,7 +188,7 @@ Upon successful initialization, you should be able to call the Racket `echo`
 function from Swift:
 
 ```swift
-echo("Hello from Racket!")
+echo("Hello".cString(using: .utf8))
 ```
 
 Compile and run the project on a device and you should see "Hello from
