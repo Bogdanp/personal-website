@@ -1,9 +1,13 @@
 ---
-title: "Running Racket on iOS"
+title: "Running Racket BC on iOS"
 date: 2020-01-05T20:00:00+02:00
 slug: "racket-on-ios"
 tags: ["racket", "ios"]
 ---
+
+**As of 2020-05-18, it is possible to [run Racket CS on iOS][new].**
+
+[new]: /2021/01/19/racket-cs-on-ios
 
 `/u/myfreeweb` pointed out to me in a [lobste.rs] thread yesterday
 that Racket compiles just fine on `aarch64` and that led me down a
