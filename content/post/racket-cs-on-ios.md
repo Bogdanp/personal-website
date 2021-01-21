@@ -188,7 +188,7 @@ Upon successful initialization, you should be able to call the Racket `echo`
 function from Swift:
 
 ```swift
-echo("Hello".cString(using: .utf8))
+echo("Hello from Racket!".cString(using: .utf8))
 ```
 
 Compile and run the project on a device and you should see "Hello from
