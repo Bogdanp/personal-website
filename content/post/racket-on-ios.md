@@ -5,7 +5,7 @@ slug: "racket-on-ios"
 tags: ["racket", "ios"]
 ---
 
-**As of 2020-05-18, it is possible to [run Racket CS on iOS][new].**
+**As of 2021-01-18, it is possible to [run Racket CS on iOS][new].**
 
 [new]: /2021/01/19/racket-cs-on-ios
 
