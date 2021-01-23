@@ -16,7 +16,7 @@ of these guides][old] while the information is still fresh in my head.
 
 ## Compile Racket for macOS and for iOS
 
-You need a recent version of Racket and it's associated fork of Chez
+You need a recent version of Racket and its associated fork of Chez
 Scheme built for your host machine in order to cross-compile things.
 To build both of them, clone the [Racket repository] and follow the
 [build instructions].  If you use the default `make` target, then
