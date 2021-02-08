@@ -16,45 +16,37 @@ of these guides][old] while the information is still fresh in my head.
 
 ## Compile Racket for macOS and for iOS
 
-You need a recent version of Racket and its associated fork of Chez
-Scheme built for your host machine in order to cross-compile things.
-To build both of them, clone the [Racket repository] and follow the
-[build instructions].  If you use the default `make` target, then
-you'll end up with a host Racket installation overlayed on top of the
-`racket/` directory in the repository and with a build of Chez Scheme
-at `racket/src/build/cs/c/`.
-
-Next, you can cross-compile Racket CS for iOS by making a new build
-directory within `racket/src/` and configuring a cross build by
-specifying a custom prefix (so that the `make install` step won't
-overwrite the host Racket installation), the target `host`
-architecture, a path to the iOS SDK (or the shorthand name "iPhoneOS")
-and the paths to the host Racket and Chez Scheme.
+To build Racket for iOS, clone the [Racket repository] and follow the
+cross-compilation instructions under "racket/src/README.txt". The
+easiest approach is to create a "build" directory under "racket/src",
+then configure the build from within that directory by running
 
 ```bash
-mkdir racket/src/build-ios \
-  && cd racket/src/build-ios \
-  && ../configure \
-    --prefix="$(pwd)/../../../racket-ios" \
-    --enable-macprefix \
-    --host=aarch64-apple-darwin \
-    --enable-ios=iPhoneOS \
-    --enable-racket="$(pwd)/../../bin/racket" \
-    --enable-scheme="$(pwd)/../build/cs/c" \
-  && make \
-  && make install
+../configure \
+  --host=aarch64-apple-darwin \
+  --enable-ios=iPhoneOS \
+  --enable-racket=auto
 ```
 
-After running the above series of commands, you should end up with a
-cross-compiled Racket installation at `racket-ios/` inside the source
-repository.
+and then
+
+```
+make && make install
+```
+
+to compile Racket and set up a distribution. After running this series
+of commands, you should end up with a cross-compiled Racket
+distribution at "racket/" inside the source repository. Additionally,
+under "racket/src/build/local/", you'll have a compiled version of
+Racket CS for your host machine. You'll use that version of Racket to
+cross-compile Racket sources for iOS.
 
 
 ## Cross-compile Racket modules for iOS
 
 I added a section on [how to cross-compile Racket
 modules][cross-section] to the "Inside Racket" docs so refer to that.
-In short, if you save the following module under `app.rkt` somewhere
+In short, if you save the following module under "app.rkt" somewhere
 
 ```racket
 #lang racket/base
@@ -68,28 +60,25 @@ In short, if you save the following module under `app.rkt` somewhere
 then you can run
 
 ```bash
-/path/to/racket/bin/racket \
-  --compile-any \
-  --compiled 'compiled_host:tarm64osx' \
-  --cross \
-  --cross-compiler tarm64osx /path/to/racket/racket-ios/lib \
-  --config /path/to/racket/racket-ios/etc \
-  --collects /path/to/racket/racket-ios/collects \
+/path/to/racket/src/build/local/cs/c/racketcs \
+  --cross-compiler tarm64osx /path/to/racket/racket/lib \
+  -MCR /path/to/racket/src/build/cs/c/compiled: \
+  -G /path/to/racket/racket/etc \
+  -X /path/to/racket/racket/collects \
   -l- \
   raco ctool --mods app.zo app.rkt
 ```
 
-to produce `app.zo`, a binary object containing the cross-compiled
+to produce "app.zo", a binary object containing the cross-compiled
 code for that module and all of its dependencies.
 
 
 ## Set up your XCode project
 
 To link against and use Racket CS within an XCode project, copy
-`racketcs.h`, `racketcsboot.h` and `chezscheme.h` from
-`racket-ios/include/` into a sub-directory of your project, then add
-that sub-directory to the "Header Search Paths" section under your
-project's "Build Settings" tab.
+"racketcs.h", "racketcsboot.h" and "chezscheme.h" from "racket/include/"
+into a sub-directory of your project, then add that sub-directory to the
+"Header Search Paths" section under your project's "Build Settings" tab.
 
 ![Headers](/img/racket-cs-on-ios-headers.png)
 
@@ -97,23 +86,23 @@ Then, disable Bitcode from the same section.
 
 ![Bitcode](/img/racket-cs-on-ios-bitcode.png)
 
-Next, copy `libracketcs.a`, `petite.boot`, `scheme.boot` and
-`racket.boot` from `racket-ios/lib` into a sub-directory of your
-project called `vendor/` and drag-and-drop the `vendor/` directory
-into your XCode project.  Then, instruct XCode to link `libracketcs.a`
-and `libiconv.tbd` with your code from the "Build Phases" tab.  You'll
-have to add `libracketcs.a` to your project using the "Add Other..."
+Next, copy "libracketcs.a", "petite.boot", "scheme.boot" and
+"racket.boot" from "racket/lib" into a sub-directory of your project
+called "vendor/" and drag-and-drop the "vendor/" directory into your
+XCode project. Then, instruct XCode to link "libracketcs.a" and
+"libiconv.tbd" with your code from the "Build Phases" tab. You'll
+have to add "libracketcs.a" to your project using the "Add Other..."
 sub-menu.
 
 ![Link](/img/racket-cs-on-ios-link.png)
 
-Next, add a new C source file called `vendor.c` and answer "yes" if
-prompted to create a bridging header for Swift.  I tend to re-name the
-bridging header to plain `bridge.h` because I don't like the name that
-XCode generates by default.  If you do this, you'll have to update the
-"Objective-C Bridging Header" setting in your "Build Settings" tab.
-From `bridge.h`, include `vendor.h` and inside `vendor.h` add
-definitions for `racket_init` and `echo`
+Next, add a new C source file called "vendor.c" and answer "yes" if
+prompted to create a bridging header for Swift. I tend to re-name the
+bridging header to plain "bridge.h" because I don't like the name that
+XCode generates by default. If you do this, you'll have to update the
+"Objective-C Bridging Header" setting in your "Build Settings" tab. From
+"bridge.h", include "vendor.h" and inside "vendor.h" add definitions for
+`racket_init` and `echo`
 
 ```c
 #ifndef vendor_h
@@ -166,9 +155,9 @@ void echo(const char *message) {
 
 Take a look at the [Inside Racket CS] documentation for details on the
 embedding interface of Racket CS.  The gist of `racket_init` is that
-it takes the paths to `petite.boot`, `scheme.boot`, `racket.boot` and
-`app.zo` as arguments in order to initialize Racket and then load the
-`app.zo` module, which you can do from the `AppDelegate`'s
+it takes the paths to "petite.boot", "scheme.boot", "racket.boot" and
+"app.zo" as arguments in order to initialize Racket and then load the
+"app.zo" module, which you can do from the `AppDelegate`'s
 `application(_:didFinishLaunchingWithOptions:)` method:
 
 ```swift
@@ -196,12 +185,12 @@ Racket!" get printed in your debug console.
 
 ### Some XCode gotchas
 
-If you copy `vendor/` into your project instead of creating "folder
+If you copy "vendor/" into your project instead of creating "folder
 references" when you drag-and-drop it, then code signing may fail with
 an ambiguous error.
 
 Avoid using symbolic links for any of your resources (like the stuff
-in `vendor/`).  Doing so makes copying the code over to the device
+in "vendor/").  Doing so makes copying the code over to the device
 fail with a "security" error that doesn't mention the root problem at
 all.
 
