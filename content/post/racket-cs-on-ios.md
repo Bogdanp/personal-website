@@ -5,6 +5,10 @@ slug: "racket-cs-on-ios"
 tags: ["racket", "ios"]
 ---
 
+**As of iOS 14.4, non-debugged builds (i.e. ones run outside of XCode)
+fail with a dynamic code signing error and there is no way to work
+around this at the moment.**
+
 A couple of weeks ago, I started working on getting Racket CS to
 compile and run on iOS and, with a lot of guidance from Matthew Flatt,
 I managed to get it working (with some [caveats]).  [Those
