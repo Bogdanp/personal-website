@@ -164,7 +164,7 @@ should be parameterized over the `racket-variant` values:
      runs-on: ubuntu-latest
 +    strategy:
 +      matrix:
-+        racket-variant: ['BC, 'CS']
++        racket-variant: ['BC', 'CS']
 +    name: Test on ${{ matrix.racket-variant }} Racket
      steps:
 ```
@@ -191,7 +191,7 @@ Racket that you want your tests to run on:
      runs-on: ubuntu-latest
      strategy:
        matrix:
-         racket-variant: ['BC, 'CS']
+         racket-variant: ['BC', 'CS']
 +        racket-version: ['7.8', '7.9']
      name: Test on ${{ matrix.racket-variant }} Racket
      steps:
