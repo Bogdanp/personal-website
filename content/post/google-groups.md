@@ -23,11 +23,13 @@ subscribed to for good measure.
 What annoys me, though, is how hard they make it for someone who
 doesn't have a Google account to join a Google Group.  If you visit a
 group and you're not logged in, there's no way for you to join via the
-UI that's presented to you.  This makes it seem like you can't join
-unless you create an account, but that's not the case!  If you append
-`/join` to any Google Group URL, you'll be presented with a modal
-dialog that you can use to subscribe.  So to join `racket-users`,
-you can visit [this URL].
+UI.  This makes it seem like you can't join unless you create an
+account, but that's not the case!  You can still join groups by
+sending an e-mail to `group-name+subscribe@googlegroups.com`.  For
+example, to join the `racket-users` group, you would send an e-mail to
+`racket-users+subscribe@googlegroups.com`.  If the group you want to
+join has spaces in its name, replace the spaces with dashes in the
+e-mail address.
 
 If you were wondering about how to join a group without a Google
 account, now you know!  And if you're considering starting a new
@@ -37,6 +39,5 @@ maybe use something like [groups.io] or [lists.sr.ht] instead.
 
 [delete your Google accounts]: /2019/02/04/bye-bye-google/
 [racket-users]: https://groups.google.com/forum/#!forum/racket-users
-[this URL]: https://groups.google.com/forum/#!forum/racket-users/join
 [groups.io]: https://groups.io/
 [lists.sr.ht]: https://lists.sr.ht/
