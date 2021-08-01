@@ -32,7 +32,7 @@ This is the stuff I'm currently working on and actively maintaining in
 the open.
 
 | Project                  | Description                                                                 |
-| :---                     | :---                                                                        |
+|:-------------------------|:----------------------------------------------------------------------------|
 | [chief]                  | A Procfile runner for Racket.                                               |
 | [component]              | Dependency injection for Racket.                                            |
 | [cursive_re]             | Readable regular expressions for Python 3.6+.                               |
@@ -42,6 +42,7 @@ the open.
 | [dramatiq_sqs]           | An Amazon SQS broker for Dramatiq.                                          |
 | [forms]                  | A web form validation library for Racket.                                   |
 | [geoip]                  | Geolocation for Racket based on MaxMind's GeoIP databases.                  |
+| [gui-easy]               | A declarative GUI library for Racket.                                       |
 | [http-easy]              | A high-level HTTP client for Racket.                                        |
 | [hugs]                   | A library that maps SQL expressions to Python fuctions.                     |
 | [koyo]                   | A web development toolkit for Racket.                                       |
@@ -156,9 +157,10 @@ much beyond maybe giving you some pointers.
 [firechannel]: https://github.com/LeadPages/firechannel
 [forms]: https://github.com/Bogdanp/racket-forms
 [geoip]: https://github.com/Bogdanp/racket-geoip
+[gui-easy]: https://github.com/Bogdanp/racket-gui-easy
 [h2p]: https://github.com/Bogdanp/h2p
 [heater]: https://github.com/Bogdanp/heater
-[http-easy]: https://github.com/Bogdanp/http-easy
+[http-easy]: https://github.com/Bogdanp/racket-http-easy
 [hugs]: https://github.com/Bogdanp/hugs
 [ido-clever-match]: https://github.com/Bogdanp/ido-clever-match
 [koyo]: https://github.com/Bogdanp/koyo
