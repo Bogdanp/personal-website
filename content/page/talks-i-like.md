@@ -65,7 +65,8 @@ reminded of old ones.
 ## Misc
 
 | Author                             | Talk                                      |
-| :---                               | :---                                      |
+|:-----------------------------------|:------------------------------------------|
+| [Bret Victor]                      | [Inventing on Principle]                  |
 | [Brian Kernighan] & [Ken Thompson] | [Brian Kernighan interviews Ken Thompson] |
 | [Robert Lustig]                    | [Sugar: The Bitter Truth]                 |
 | Randy Pausch                       | [Achieving Your Childhood Dreams]         |
@@ -80,6 +81,7 @@ reminded of old ones.
 [Allen Holub]: http://holub.com/
 [Avi Bryant]: https://twitter.com/avibryant
 [Boundaries]: https://www.destroyallsoftware.com/talks/boundaries
+[Bret Victor]: http://worrydream.com
 [Brian Kernighan interviews Ken Thompson]: https://www.youtube.com/watch?v=EY6q5dv_B-o#t=8m20s
 [Brian Kernighan]: https://www.cs.princeton.edu/~bwk/
 [Bryan Cantrill]: http://dtrace.org/blogs/
@@ -98,6 +100,7 @@ reminded of old ones.
 [Gary Bernhardt]: https://www.destroyallsoftware.com
 [Haskell is Useless]: https://www.youtube.com/watch?v=iSmkqocn0oQ
 [Immediate-Mode Graphical User Interfaces]: https://www.youtube.com/watch?v=Z1qyvQsjK5Y
+[Inventing on Principle]: https://www.youtube.com/watch?v=PUv66718DII
 [Jon Moore]: https://twitter.com/jon_moore
 [Ken Thompson]: https://en.wikipedia.org/wiki/Ken_Thompson
 [Markus Winand]: https://use-the-index-luke.com/
