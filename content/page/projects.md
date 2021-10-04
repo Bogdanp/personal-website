@@ -36,6 +36,7 @@ the open.
 | [chief]                  | A Procfile runner for Racket.                                               |
 | [component]              | Dependency injection for Racket.                                            |
 | [cursive_re]             | Readable regular expressions for Python 3.6+.                               |
+| [dbg]                    | A remote debugging/monitoring tool for Racket programs.                     |
 | [deta]                   | A functional database mapper for Racket.                                    |
 | [dramatiq]               | A distributed task processing library for Python 3.6+.                      |
 | [dramatiq_dashboard]     | A monitoring UI for Dramatiq.                                               |
@@ -138,6 +139,7 @@ much beyond maybe giving you some pointers.
 [component]: https://github.com/Bogdanp/racket-component
 [crontab]: https://github.com/Bogdanp/crontab
 [cursive_re]: https://github.com/Bogdanp/cursive_re
+[dbg]: https://github.com/Bogdanp/racket-dbg
 [deta]: https://github.com/Bogdanp/deta
 [dramatiq]: https://dramatiq.io
 [dramatiq_dashboard]: https://github.com/Bogdanp/dramatiq_dashboard
