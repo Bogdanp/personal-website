@@ -1,7 +1,7 @@
 ---
 title: "Using GitHub Actions to Test Racket Code (Revised)"
 date: 2020-05-05T10:00:00+03:00
-lastmod: 2020-11-27T10:55:00+02:00
+lastmod: 2021-10-31T08:00:00+03:00
 slug: "github-actions-for-racket-revised"
 tags: ["racket", "ci"]
 ---
@@ -9,11 +9,11 @@ tags: ["racket", "ci"]
 A little over a year ago, I [wrote][old] about how you could use the
 GitHub's new-at-the-time Actions feature to test Racket code.  A lot
 has changed since then, including the release of a completely revamped
-version of GitHub actions and so I thought it was time for an update.
+version of GitHub Actions and so I thought it was time for an update.
 
 ## A Basic Package
 
-Say you're working on a Racket package for computing Fibonacci
+Let's say you're working on a Racket package for computing Fibonacci
 sequences.  Your `main.rkt` module might look something like this:
 
 ```racket
@@ -59,11 +59,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - name: Install Racket
-        uses: Bogdanp/setup-racket@v0.11
+        uses: Bogdanp/setup-racket@v1.6.1
         with:
           architecture: 'x64'
           distribution: 'full'
-          version: '7.9'
+          version: '8.2'
       - name: Run Tests
         run: raco test main.rkt
 ```
@@ -79,7 +79,7 @@ all the subsequent actions will be in the root of the checked-out
 repository, unless otherwise specified within a step.
 
 The second step uses my own [Bogdanp/setup-racket] action to install
-Racket BC version 7.9 in the VM.  This adds the `racket` and `raco`
+Racket CS version 8.2 in the VM.  This adds the `racket` and `raco`
 executables to the `PATH`.
 
 Finally, the last step runs the tests in the `main.rkt` module.
@@ -111,11 +111,11 @@ won't be installed on the VM.  To work around this, you can update the
 
 ```diff
        - name: Install Racket
-         uses: Bogdanp/setup-racket@v0.8
+         uses: Bogdanp/setup-racket@v1.6.1
          with:
            architecture: 'x64'
            distribution: 'full'
-           version: '7.9'
+           version: '8.2'
 +          packages: 'rackcheck'
        - name: Run Tests
          run: raco test main.rkt
@@ -135,11 +135,11 @@ add another step to install your package into the VM:
 
 ```diff
        - name: Install Racket
-         uses: Bogdanp/setup-racket@v0.8
+         uses: Bogdanp/setup-racket@v1.6.1
          with:
            architecture: 'x64'
            distribution: 'full'
-           version: '7.9'
+           version: '8.2'
 +      - name: Install Package and its Dependencies
 +        run: raco pkg install --auto --batch
        - name: Run Tests
@@ -154,7 +154,7 @@ time you change your dependencies.
 
 At this point you might be fairly confident that your implementation
 of `fibs` is correct, but you want to guarantee that it works not only
-on Racket BC version 7.9, but also on Racket CS as well.  To do this,
+on Racket CS version 8.2, but also on Racket BC as well.  To do this,
 you can add a matrix [strategy] to your job, specifying that the job
 should be parameterized over the `racket-variant` values:
 
@@ -174,12 +174,12 @@ variant:
 
 ```diff
        - name: Install Racket
-         uses: Bogdanp/setup-racket@v0.8
+         uses: Bogdanp/setup-racket@v1.6.1
          with:
            architecture: 'x64'
            distribution: 'full'
 +          variant: ${{ matrix.racket-variant }}
-           version: '7.9'
+           version: '8.2'
 ```
 
 You can go one step further and also parameterize the versions of
@@ -192,7 +192,7 @@ Racket that you want your tests to run on:
      strategy:
        matrix:
          racket-variant: ['BC', 'CS']
-+        racket-version: ['7.8', '7.9']
++        racket-version: ['8.1', '8.2']
      name: Test on ${{ matrix.racket-variant }} Racket
      steps:
 ```
@@ -201,7 +201,7 @@ And then plug that parameter into the install step, as before:
 
 ```diff
        - name: Install Racket
-         uses: Bogdanp/setup-racket@v0.8
+         uses: Bogdanp/setup-racket@v1.6.1
          with:
            architecture: 'x64'
            distribution: 'full'
@@ -210,7 +210,7 @@ And then plug that parameter into the install step, as before:
 ```
 
 Following these steps will make it so that every change you push will
-get tested against versions 7.8 and 7.9 of both variants of Racket.
+get tested against versions 8.1 and 8.2 of both variants of Racket.
 
 This only scratches the surface of what you can do with GH Actions so,
 if you're interested to learn more, I'd recommend reading through the
