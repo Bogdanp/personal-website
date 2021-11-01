@@ -63,6 +63,7 @@ the open.
 | [sass]                   | Bindings to libsass for Racket.                                             |
 | [sentry][sentry-lib]     | A [Sentry] SDK for Racket.                                                  |
 | [setup-racket]           | A GitHub Action for installing Racket.                                      |
+| [smtp-server]            | An SMTP server implementation for Racket.                                                                            |
 | [twilio][twilio-lib]     | A [Twilio] client for Racket.                                               |
 | [wasm]                   | A WASM VM written in Racket.                                                |
 | [watchdog_gevent]        | A gevent-based observer for watchdog.                                       |
@@ -193,6 +194,7 @@ much beyond maybe giving you some pointers.
 [sentry-lib]: https://github.com/Bogdanp/racket-sentry/
 [sentry]: https://sentry.io
 [setup-racket]: https://github.com/marketplace/actions/setup-racket-environment
+[smtp-server]: https://github.com/Bogdanp/racket-smtp-server
 [tcopy]: https://github.com/Bogdanp/tcopy
 [threadop]: https://github.com/Bogdanp/threadop
 [trio-redis]: https://github.com/Bogdanp/trio-redis
