@@ -10,6 +10,8 @@ You can find a recording of the talk on [YouTube][talk] and a
 transcript below.  Day two of the conference is starting in a little
 under a couple of hours so [join us][con] if you like!
 
+<!--more-->
+
 # Transcript
 
 ## Declarative GUIs
