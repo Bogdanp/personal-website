@@ -134,6 +134,8 @@ views built into `gui-easy`.
 
 ## Demo
 
+<img src="/img/racketcon2021-slides/slide-11.jpg">
+
 Next, I will live-code a small GUI to give you a feel for what it's
 like to use the library in practice.
 
@@ -142,6 +144,8 @@ like to use the library in practice.
 </center>
 
 ## Thanks
+
+<img src="/img/racketcon2021-slides/slide-12.jpg">
 
 Thank you for attending my talk.  The [library][pkg] and its
 [documentation][docs] are available on the package server, and you can
