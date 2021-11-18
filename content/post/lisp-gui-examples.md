@@ -15,7 +15,7 @@ find my port [here][port].
 <!--more-->
 
 Porting the code was straightforward, but it uncovered a common
-problem with "bidirectional" [`input`]s: updating the field's value
+problem with bidirectional [`input`]s: updating the field's value
 observable on every change meant that the text (and cursor position)
 changed as the user typed because every change would trigger an update
 (and thus a re-rendering of the text) to the underlying text field.

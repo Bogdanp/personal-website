@@ -140,7 +140,7 @@ Next, I will live-code a small GUI to give you a feel for what it's
 like to use the library in practice.
 
 <center>
-  <em>[No transcript for the <a href="https://youtu.be/ZkReE9lyGbs?t=740">demo portion</a>, sorry!]</em>
+  <em>[No transcript for the <a href="https://www.youtube.com/watch?v=7uGJJmjcxzY#t=8m7s">demo portion</a>, sorry!]</em>
 </center>
 
 ## Thanks
@@ -157,7 +157,7 @@ Thanks!
 
 [con]: https://con.racket-lang.org/
 [gui-easy]: https://github.com/Bogdanp/racket-gui-easy
-[talk]: https://youtu.be/ZkReE9lyGbs?t=258
+[talk]: https://www.youtube.com/watch?v=7uGJJmjcxzY
 [pkg]: https://pkgd.racket-lang.org/pkgn/package/gui-easy
 [docs]: https://docs.racket-lang.org/gui-easy/index.html
 [examples]: https://github.com/Bogdanp/racket-gui-easy/tree/master/examples
