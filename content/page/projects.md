@@ -20,10 +20,8 @@ These are some of the web applications I've built in my spare time.
 | :---          | :---                                                                                            |
 | [Racksnaps]   | Daily snapshots of the official Racket package catalog.                                         |
 | [Task Queues] | A list of message brokers and task queues across many programming languages and implementations. |
-| [Try Racket]  | An online evaluation environment for Racket code.                                               |
 
 [Task Queues]: https://taskqueues.com
-[Try Racket]: https://try-racket.defn.io
 
 
 ## Libraries and Tools
