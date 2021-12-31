@@ -284,6 +284,7 @@ places:
 -                                 (for-each place-wait places))])
 +                                 (for-each place-wait places)
 +                                 (tcp-close listener))])
+-     (sync never-evt)))
 +     (let loop ([idx 0])
 +       (define pch (list-ref places idx))
 +       (define-values (in out)
