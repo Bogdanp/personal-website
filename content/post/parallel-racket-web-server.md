@@ -31,17 +31,17 @@ libraries, allocation segments, etc.) are shared between places.
 One approach to solving this problem might be to spawn multiple
 places, each running a web server bound to the same port.
 Unfortunately, it's not possible in Racket to re-use TCP ports
-(primarily because the cross-platform support for flags like
-`SO_REUSEPORT` is inconsistent).  Thankfully, the web server's `serve`
-function takes an optional `tcp@` argument.  We can leverage that
-argument to provide the server with a custom implementation of the
-[`tcp^`] signature.  So, our main place can spawn one place for every
-parallel web server that we want to run, then run a TCP server of its
-own, accept new connections, and send each connection to the web
-server places one by one.
+(primarily because not all platforms have an equivalent of Linux's
+`SO_REUSEPORT` flag).  Thankfully, the web server's `serve` function
+takes an optional `tcp@` argument.  We can leverage that argument to
+provide the server with a custom implementation of the [`tcp^`
+signature].  So, our main place can spawn one place for every parallel
+web server that we want to run, then run a TCP server of its own,
+accept new connections on that server, and send each connection to the
+web server places one by one.
 
-Take this minimal application, saved on my machine as `app.rkt`, for
-example:
+Take this minimal application -- saved on my machine as `app.rkt` --
+for example:
 
 ```racket
 #lang racket/base
@@ -292,15 +292,18 @@ places:
 +       (loop (modulo (add1 idx) num-places))))
 ```
 
-Now the main place spawns four places, each running a web server that
-accepts new connections via the custom TCP unit, then it launches a
-TCP server on port 8000 and dispatches incoming connections to the
-server places in round-robin order.
+Now the main place spawns four other places, each running a web server
+that accepts new connections via the custom TCP unit, then it launches
+a TCP server on port 8000 and dispatches incoming connections to the
+server places in round-robin order.  I used this approach earlier this
+week to improve the implementation of the [Racket TechEmpower
+benchmark][pr].
 
 You can find the final version of the code in this post [here][gist].
 
 [web server]: https://docs.racket-lang.org/web-server/index.html
 [Places]: https://docs.racket-lang.org/guide/parallelism.html#%28part._effective-places%29
-[`tcp^`]: https://docs.racket-lang.org/net/tcp.html#%28form._%28%28lib._net%2Ftcp-sig..rkt%29._tcp~5e%29%29
+[`tcp^` signature]: https://docs.racket-lang.org/net/tcp.html#%28form._%28%28lib._net%2Ftcp-sig..rkt%29._tcp~5e%29%29
 [unit]: https://docs.racket-lang.org/guide/units.html#%28tech._unit%29
+[pr]: https://github.com/TechEmpower/FrameworkBenchmarks/pull/7003
 [gist]: https://gist.github.com/Bogdanp/730ee19345d4f89d97c8be73739b7659
