@@ -162,7 +162,7 @@ Next, we can define our custom `tcp@` unit in `main.rkt`:
 +       (place-tcp-listener))
 +
 +     (define (tcp-listener? l)
-+       (place-tcp-listener l))
++       (place-tcp-listener? l))
 +
 +     (define (tcp-close _l)
 +       (void))
