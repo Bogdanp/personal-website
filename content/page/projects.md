@@ -31,6 +31,7 @@ the open.
 
 | Project                  | Description                                                                 |
 |:-------------------------|:----------------------------------------------------------------------------|
+| [binfmt]                 | A binary format parser-generator.                                           |
 | [chief]                  | A Procfile runner for Racket.                                               |
 | [component]              | Dependency injection for Racket.                                            |
 | [cursive_re]             | Readable regular expressions for Python 3.6+.                               |
@@ -61,7 +62,7 @@ the open.
 | [sass]                   | Bindings to libsass for Racket.                                             |
 | [sentry][sentry-lib]     | A [Sentry] SDK for Racket.                                                  |
 | [setup-racket]           | A GitHub Action for installing Racket.                                      |
-| [smtp-server]            | An SMTP server implementation for Racket.                                                                            |
+| [smtp-server]            | An SMTP server implementation for Racket.                                   |
 | [twilio][twilio-lib]     | A [Twilio] client for Racket.                                               |
 | [wasm]                   | A WASM VM written in Racket.                                                |
 | [watchdog_gevent]        | A gevent-based observer for watchdog.                                       |
@@ -131,6 +132,7 @@ much beyond maybe giving you some pointers.
 [apistar_request_id]: https://github.com/Bogdanp/apistar_request_id
 [apistar_sentry]: https://github.com/Bogdanp/apistar_sentry
 [apistar_settings]: https://github.com/Bogdanp/apistar_settings
+[binfmt]: https://github.com/Bogdanp/racket-binfmt
 [browser-connect]: https://github.com/Bogdanp/browser-connect.vim
 [cedar-mode]: https://github.com/Bogdanp/cedar-mode
 [cedar]: https://github.com/Bogdanp/cedar
