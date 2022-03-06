@@ -12,34 +12,35 @@ mobile analytics, device fingerprinting, landing page optimization,
 fraud detection and scaling databases and systems containing tens of
 terabytes of financial data.
 
-I built and operate [Matchacha], a Romanian e-commerce business that
-imports and sells Japanese green tea and I currently work part-time
-at [Nomics], where I run the API and the data ingestion platform. I'm
-also working with [Marc Kaufmann][Marc] on [congame], an experimental
-economics platform. Previously, I was the CTO of [BlockFraud], a mobile
-fraud detection SaaS, and, before that, I was a Principal Engineer at
-[Leadpages].
+For a while, I ran [Matchacha], a Romanian e-commerce business that
+imported and sold Japanese green tea.  I currently work at [Nomics],
+where I run the API and the data ingestion platform.  I'm also working
+with [Marc Kaufmann] on [congame], a platform for building & running
+economics studies.  Previously, I was the CTO of [BlockFraud], a
+mobile fraud detection SaaS, and, before that, I was a Principal
+Engineer at [Leadpages].
 
 In my free time, I like to contribute to the [Racket] programming
-language and ecosystem. I maintain [koyo], [dramatiq], [molten] and a
-bunch of other OSS which you can find on my [projects](/page/projects/)
-page and on [my GitHub profile][gh].
+language and ecosystem.  I maintain [koyo], [dramatiq], [molten] and a
+bunch of other OSS which you can find on my [projects] page and on [my
+GitHub profile][gh].
 
-If you want to get in touch, [email][em] me. Find out about new posts by
-subscribing to the [Atom][feed] feed or follow me on [Twitter][twitter].
+If you want to get in touch, [email] me. Find out about new posts by
+subscribing to the [Atom] feed or follow me on [Twitter].
 
-[Matchacha]: https://www.matchacha.ro
-[Nomics]: https://nomics.com
+[Atom]: http://defn.io/index.xml
 [BlockFraud]: http://blockfraud.com
-[Leadpages]: https://leadpages.net
-[Racket]: https://racket-lang.org
-[koyo]: https://koyoweb.org
 [Dramatiq]: https://dramatiq.io
+[Leadpages]: https://leadpages.com
+[Marc Kaufmann]: https://trichotomy.xyz/
+[Matchacha]: /2019/08/20/racket-ecommerce/
+[Nomics]: https://nomics.com
+[Racket]: https://racket-lang.org
+[Twitter]: https://twitter.com/bogdanp
+[congame]: https://github.com/MarcKaufmann/congame
+[email]: mailto:bogdan@defn.io
+[gh]: https://github.com/Bogdanp
+[koyo]: https://koyoweb.org
 [molten]: https://moltenframework.com
 [oss]: https://moltenframework.com
-[gh]: https://github.com/Bogdanp
-[em]: mailto:bogdan@defn.io
-[feed]: http://defn.io/index.xml
-[twitter]: https://twitter.com/bogdanp
-[Marc]: https://trichotomy.xyz/
-[congame]: https://github.com/MarcKaufmann/congame
+[projects]: /page/projects
