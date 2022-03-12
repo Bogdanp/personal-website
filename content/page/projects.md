@@ -55,7 +55,8 @@ the open.
 | [postmark][postmark-lib] | A [Postmark] client written in Racket.                                      |
 | [py-test.el]             | A Python test runner for Emacs.                                             |
 | [rackcheck]              | A property-based testing library for Racket with support for shrinking.     |
-| [redis]                  | Fast, idiomatic bindings to Redis for Racket.                               |
+| [racket-kafka]           | A Racket client for Apache Kafka.                                           |
+| [racket-redis]           | Fast, idiomatic bindings to Redis for Racket.                               |
 | [resource-pool]          | A generic resource pool for Racket.                                         |
 | [resource_pool]          | A generic resource pool for Python.                                         |
 | [review]                 | A linter for Racket.                                                        |
@@ -185,7 +186,8 @@ much beyond maybe giving you some pointers.
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
 [rackcheck]: https://github.com/Bogdanp/rackcheck/
 [racksnaps]: https://racksnaps.defn.io
-[redis]: https://github.com/Bogdanp/racket-redis/
+[racket-kafka]: https://github.com/Bogdanp/racket-kafka/
+[racket-redis]: https://github.com/Bogdanp/racket-redis/
 [repos]: https://github.com/Bogdanp/repositories
 [resource-pool]: https://github.com/Bogdanp/racket-resource-pool/
 [resource_pool]: https://github.com/Bogdanp/resource_pool
