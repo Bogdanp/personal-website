@@ -290,6 +290,8 @@ places:
 +       (define-values (in out)
 +         (tcp-accept listener))
 +       (place-channel-put pch `(accept ,in ,out))
++       (tcp-abandon-port out)
++       (tcp-abandon-port in)
 +       (loop (modulo (add1 idx) num-places))))
 ```
 
