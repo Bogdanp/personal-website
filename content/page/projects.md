@@ -34,6 +34,7 @@ the open.
 | [binfmt]                 | A binary format parser-generator.                                           |
 | [chief]                  | A Procfile runner for Racket.                                               |
 | [component]              | Dependency injection for Racket.                                            |
+| [crontab]                | Cron-like scheduling for Racket.                                            |
 | [cursive_re]             | Readable regular expressions for Python 3.6+.                               |
 | [dbg]                    | A remote debugging/monitoring tool for Racket programs.                     |
 | [deta]                   | A functional database mapper for Racket.                                    |
@@ -77,49 +78,49 @@ maintaining.  Most of these are perfectly usable and don't require
 maintenance, but if you use them and run into problems I won't help
 much beyond maybe giving you some pointers.
 
-| Project              | Description                                                           |
-| :---                 | :---                                                                  |
-| [PyREPL]             | Run a Python interpreter inside Vim.                                  |
-| [RbREPL]             | Run a Ruby interpreter inside Vim.                                    |
-| [anom-go]            | An object mapper for the AppEngine Datastore in Go.                   |
-| [anom]               | An object mapper for Cloud Datastore for Python 3.6+.                 |
-| [apistar_cors]       | CORS support for API Star apps.                                       |
-| [apistar_dramatiq]   | Dramatiq support for API Star apps.                                   |
-| [apistar_prometheus] | Prometheus metrics for API Star apps.                                 |
-| [apistar_request_id] | Request id generation and propagation for API Star.                   |
-| [apistar_sentry]     | Sentry support for API Star apps.                                     |
-| [apistar_settings]   | A settings component for API Star apps.                               |
-| [browser-connect]    | Live browser interaction for Vim.                                     |
-| [cedar-mode]         | Emacs mode for cedar.                                                 |
-| [cedar]              | A web service definition format and code generator.                   |
-| [crontab]            | A crontab spec parser for Scala.                                      |
-| [elm-ast]            | A parser for Elm in Elm.                                              |
-| [elm-combine]        | Parser combinators for Elm.                                           |
-| [elm-cookiecutter]   | A cookiecutter template for Elm apps.                                 |
-| [elm-datepicker]     | A reusable datepicker for Elm.                                        |
-| [elm-generate]       | Generators for Elm.                                                   |
-| [elm-mode]           | An Elm mode for EMACS.                                                |
-| [elm-querystring]    | A library for working with querystrings in Elm.                       |
-| [elm-route]          | A type-safe routing library for Elm.                                  |
-| [elm-time]           | A pure Elm date and time library.                                     |
-| [falcon_sugar]       | A little sugar for Falcon applications.                               |
-| [fargate_scraper]    | A CLI tool that scrapes Fargate tasks to find Prometheus targets.     |
-| [ff]                 | A fuzzy-finder for the terminal.                                      |
-| [firechannel]        | An almost-dropin replacement for the GAE channels API using Firebase. |
-| [h2p]                | A Python interface to libwkhtmltox.                                   |
-| [heater]             | A Python heatmapping library.                                         |
-| [ido-clever-match]   | An alternative matcher for Emacs ido-mode.                            |
-| [markii]             | A development-mode error handler for Python web apps.                 |
-| [modviz]             | A module dependency graph visualizer for Python.                      |
-| [mold]               | A fast templating engine for Python.                                  |
-| [multiprom]          | A multiprocess-friendly Prometheus client for Python.                 |
-| [pico]               | A minimal lisp interpreter written in Python.                         |
-| [quicksilver]        | A fast file finder for VIM.                                           |
-| [tcopy]              | A tail-call optimizing decorator for Python.                          |
-| [threadop]           | Adds a threading operator to Python.                                  |
-| [trio-redis]         | A trio-based Redis client for Python.                                 |
-| [yes.py]             | A fast implementation of `yes` in Python.                             |
-| [zed]                | A toy text editor.                                                    |
+| Project                  | Description                                                           |
+|:-------------------------|:----------------------------------------------------------------------|
+| [PyREPL]                 | Run a Python interpreter inside Vim.                                  |
+| [RbREPL]                 | Run a Ruby interpreter inside Vim.                                    |
+| [anom-go]                | An object mapper for the AppEngine Datastore in Go.                   |
+| [anom]                   | An object mapper for Cloud Datastore for Python 3.6+.                 |
+| [apistar_cors]           | CORS support for API Star apps.                                       |
+| [apistar_dramatiq]       | Dramatiq support for API Star apps.                                   |
+| [apistar_prometheus]     | Prometheus metrics for API Star apps.                                 |
+| [apistar_request_id]     | Request id generation and propagation for API Star.                   |
+| [apistar_sentry]         | Sentry support for API Star apps.                                     |
+| [apistar_settings]       | A settings component for API Star apps.                               |
+| [browser-connect]        | Live browser interaction for Vim.                                     |
+| [cedar-mode]             | Emacs mode for cedar.                                                 |
+| [cedar]                  | A web service definition format and code generator.                   |
+| [crontab][scala-crontab] | A crontab spec parser for Scala.                                      |
+| [elm-ast]                | A parser for Elm in Elm.                                              |
+| [elm-combine]            | Parser combinators for Elm.                                           |
+| [elm-cookiecutter]       | A cookiecutter template for Elm apps.                                 |
+| [elm-datepicker]         | A reusable datepicker for Elm.                                        |
+| [elm-generate]           | Generators for Elm.                                                   |
+| [elm-mode]               | An Elm mode for EMACS.                                                |
+| [elm-querystring]        | A library for working with querystrings in Elm.                       |
+| [elm-route]              | A type-safe routing library for Elm.                                  |
+| [elm-time]               | A pure Elm date and time library.                                     |
+| [falcon_sugar]           | A little sugar for Falcon applications.                               |
+| [fargate_scraper]        | A CLI tool that scrapes Fargate tasks to find Prometheus targets.     |
+| [ff]                     | A fuzzy-finder for the terminal.                                      |
+| [firechannel]            | An almost-dropin replacement for the GAE channels API using Firebase. |
+| [h2p]                    | A Python interface to libwkhtmltox.                                   |
+| [heater]                 | A Python heatmapping library.                                         |
+| [ido-clever-match]       | An alternative matcher for Emacs ido-mode.                            |
+| [markii]                 | A development-mode error handler for Python web apps.                 |
+| [modviz]                 | A module dependency graph visualizer for Python.                      |
+| [mold]                   | A fast templating engine for Python.                                  |
+| [multiprom]              | A multiprocess-friendly Prometheus client for Python.                 |
+| [pico]                   | A minimal lisp interpreter written in Python.                         |
+| [quicksilver]            | A fast file finder for VIM.                                           |
+| [tcopy]                  | A tail-call optimizing decorator for Python.                          |
+| [threadop]               | Adds a threading operator to Python.                                  |
+| [trio-redis]             | A trio-based Redis client for Python.                                 |
+| [yes.py]                 | A fast implementation of `yes` in Python.                             |
+| [zed]                    | A toy text editor.                                                    |
 
 
 [PyREPl]: https://github.com/Bogdanp/pyrepl.vim
@@ -139,7 +140,7 @@ much beyond maybe giving you some pointers.
 [cedar]: https://github.com/Bogdanp/cedar
 [chief]: https://github.com/Bogdanp/racket-chief
 [component]: https://github.com/Bogdanp/racket-component
-[crontab]: https://github.com/Bogdanp/crontab
+[crontab]: https://github.com/Bogdanp/racket-crontab
 [cursive_re]: https://github.com/Bogdanp/cursive_re
 [dbg]: https://github.com/Bogdanp/racket-dbg
 [deta]: https://github.com/Bogdanp/deta
@@ -193,6 +194,7 @@ much beyond maybe giving you some pointers.
 [resource_pool]: https://github.com/Bogdanp/resource_pool
 [review]: https://github.com/Bogdanp/racket-review/
 [sass]: https://github.com/Bogdanp/racket-sass/
+[scala-crontab]: https://github.com/Bogdanp/crontab
 [sentry-lib]: https://github.com/Bogdanp/racket-sentry/
 [sentry]: https://sentry.io
 [setup-racket]: https://github.com/marketplace/actions/setup-racket-environment
