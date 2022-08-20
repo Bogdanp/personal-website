@@ -186,9 +186,9 @@ much beyond maybe giving you some pointers.
 [py-test.el]: https://github.com/Bogdanp/py-test.el
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
 [rackcheck]: https://github.com/Bogdanp/rackcheck/
-[racksnaps]: https://racksnaps.defn.io
 [racket-kafka]: https://github.com/Bogdanp/racket-kafka/
 [racket-redis]: https://github.com/Bogdanp/racket-redis/
+[racksnaps]: https://racksnaps.defn.io
 [repos]: https://github.com/Bogdanp/repositories
 [resource-pool]: https://github.com/Bogdanp/racket-resource-pool/
 [resource_pool]: https://github.com/Bogdanp/resource_pool
