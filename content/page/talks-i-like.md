@@ -31,7 +31,7 @@ reminded of old ones.
 ## Software Engineering
 
 | Author            | Talk                                                              |
-| :---              | :---                                                              |
+|:------------------|:------------------------------------------------------------------|
 | [Avi Bryant]      | [Abstract Algebra and Distributed Data Processing]                |
 | [Bryan Cantrill]  | [Platform as a Reflection of Values: Joyent, Node.js, and Beyond] |
 | [Bryan Cantrill]  | [Principles of Technology Leadership]                             |
@@ -39,6 +39,7 @@ reminded of old ones.
 | [Casey Muratori]  | [Immediate-Mode Graphical User Interfaces]                        |
 | [Emery Berger]    | [Performance Matters]                                             |
 | [Gary Bernhardt]  | [Boundaries]                                                      |
+| [Jack Rusher]     | [Stop Writing Dead Programs]                                      |
 | [Jon Moore]       | [Stop Rate Limiting! Capacity Management Done Right]              |
 | [Martin Thompson] | [Designing for Performance]                                       |
 | [Sandi Metz]      | [Polly Want a Message]                                            |
@@ -101,6 +102,7 @@ reminded of old ones.
 [Haskell is Useless]: https://www.youtube.com/watch?v=iSmkqocn0oQ
 [Immediate-Mode Graphical User Interfaces]: https://www.youtube.com/watch?v=Z1qyvQsjK5Y
 [Inventing on Principle]: https://www.youtube.com/watch?v=PUv66718DII
+[Jack Rusher]: https://jackrusher.com/
 [Jon Moore]: https://twitter.com/jon_moore
 [Ken Thompson]: https://en.wikipedia.org/wiki/Ken_Thompson
 [Markus Winand]: https://use-the-index-luke.com/
@@ -126,6 +128,7 @@ reminded of old ones.
 [Simon Peyton Jones]: https://www.microsoft.com/en-us/research/people/simonpj/
 [Startup School 2008]: https://www.youtube.com/watch?v=0CDXJ6bMkMY
 [Stop Rate Limiting! Capacity Management Done Right]: https://www.youtube.com/watch?v=m64SWl9bfvk
+[Stop Writing Dead Programs]: https://www.youtube.com/watch?v=8Ab3ArE8W3s
 [Sugar: The Bitter Truth]: https://www.youtube.com/watch?v=dBnniua6-oM
 [Super considered super!]: https://www.youtube.com/watch?v=EiOglTERPEo
 [The Summer of Rust]: https://www.youtube.com/watch?v=LjFM8vw3pbU
