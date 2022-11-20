@@ -5,8 +5,8 @@ slug: "ann-racket-lua"
 tags: ["racket", "lang", "lua"]
 ---
 
-I'm currently working on a macOS app that's built with Racket and
-allows the user to write small scripts to process and filter some
+I'm currently working on [a macOS app][app] that's built with Racket
+and allows the user to write small scripts to process and filter some
 data.  While Racket is definitely _my_ preferred language and I could
 easily use it for these scripts, my target audience for this app would
 probably appreciate a more familiar language.  I decided to use [Lua].
@@ -41,3 +41,4 @@ a #lang for Racket.  Whoops.
 [code]: https://github.com/Bogdanp/racket-lua
 [docs]: https://docs.racket-lang.org/lua-manual@lua-lang/index.html
 [lure]: https://github.com/ShawSumma/lure
+[app]: /2022/11/20/ann-franz
