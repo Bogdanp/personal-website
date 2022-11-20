@@ -8,7 +8,8 @@ date: 2015-05-29
 These are some of the native applications I've built.
 
 | Project    | Description                                                             |
-| :---       | :---                                                                    |
+|:-----------|:------------------------------------------------------------------------|
+| [Franz]    | A macOS client for Apache Kafka.                                        |
 | [neko.app] | A tiny kitten follows your mouse cursor on macOS.                       |
 | [Remember] | A keyboard-driven application for stashing away distractions for later. |
 
@@ -57,6 +58,7 @@ the open.
 | [py-test.el]             | A Python test runner for Emacs.                                             |
 | [rackcheck]              | A property-based testing library for Racket with support for shrinking.     |
 | [racket-kafka]           | A Racket client for Apache Kafka.                                           |
+| [racket-lua]             | A Racket `#lang` implementation of Lua.                                     |
 | [racket-redis]           | Fast, idiomatic bindings to Redis for Racket.                               |
 | [resource-pool]          | A generic resource pool for Racket.                                         |
 | [resource_pool]          | A generic resource pool for Python.                                         |
@@ -123,6 +125,7 @@ much beyond maybe giving you some pointers.
 | [zed]                    | A toy text editor.                                                    |
 
 
+[Franz]: https://franz.defn.io/
 [PyREPl]: https://github.com/Bogdanp/pyrepl.vim
 [RbREPL]: https://github.com/Bogdanp/rbrepl.vim
 [Remember]: https://remember.defn.io/
@@ -187,6 +190,7 @@ much beyond maybe giving you some pointers.
 [quicksilver]: https://github.com/Bogdanp/quicksilver.vim
 [rackcheck]: https://github.com/Bogdanp/rackcheck/
 [racket-kafka]: https://github.com/Bogdanp/racket-kafka/
+[racket-lua]: https://github.com/Bogdanp/racket-lua/
 [racket-redis]: https://github.com/Bogdanp/racket-redis/
 [racksnaps]: https://racksnaps.defn.io
 [repos]: https://github.com/Bogdanp/repositories
