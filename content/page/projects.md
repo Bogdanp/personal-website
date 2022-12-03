@@ -32,6 +32,7 @@ the open.
 
 | Project                  | Description                                                                 |
 |:-------------------------|:----------------------------------------------------------------------------|
+| [avro]                   | A Racket implementation of the Apache Avro serialization format.            |
 | [binfmt]                 | A binary format parser-generator.                                           |
 | [chief]                  | A Procfile runner for Racket.                                               |
 | [component]              | Dependency injection for Racket.                                            |
@@ -48,6 +49,7 @@ the open.
 | [http-easy]              | A high-level HTTP client for Racket.                                        |
 | [hugs]                   | A library that maps SQL expressions to Python fuctions.                     |
 | [koyo]                   | A web development toolkit for Racket.                                       |
+| [lz4]                    | A pure-Racket decompressor for LZ4 data.                                    |
 | [marionette]             | A Racket library that lets you control Firefox via the Marionette Protocol. |
 | [molten]                 | A modern API framework for Python 3.6+.                                     |
 | [monotonic]              | Monotonic time for Racket.                                                  |
@@ -137,6 +139,7 @@ much beyond maybe giving you some pointers.
 [apistar_request_id]: https://github.com/Bogdanp/apistar_request_id
 [apistar_sentry]: https://github.com/Bogdanp/apistar_sentry
 [apistar_settings]: https://github.com/Bogdanp/apistar_settings
+[avro]: https://github.com/Bogdanp/racket-avro
 [binfmt]: https://github.com/Bogdanp/racket-binfmt
 [browser-connect]: https://github.com/Bogdanp/browser-connect.vim
 [cedar-mode]: https://github.com/Bogdanp/cedar-mode
@@ -172,6 +175,7 @@ much beyond maybe giving you some pointers.
 [hugs]: https://github.com/Bogdanp/hugs
 [ido-clever-match]: https://github.com/Bogdanp/ido-clever-match
 [koyo]: https://github.com/Bogdanp/koyo
+[lz4]: https://github.com/Bogdanp/racket-lz4
 [marionette]: https://github.com/Bogdanp/marionette
 [markii]: https://github.com/Bogdanp/markii
 [modviz]: https://github.com/Bogdanp/modviz
