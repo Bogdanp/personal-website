@@ -51,6 +51,7 @@ the open.
 | [koyo]                   | A web development toolkit for Racket.                                       |
 | [lz4]                    | A pure-Racket decompressor for LZ4 data.                                    |
 | [marionette]             | A Racket library that lets you control Firefox via the Marionette Protocol. |
+| [messagepack]            | An implementation of the MessagePack serialization format for Racket.       |
 | [molten]                 | A modern API framework for Python 3.6+.                                     |
 | [monotonic]              | Monotonic time for Racket.                                                  |
 | [nemea]                  | A little Racket web application for tracking website analytics.             |
@@ -178,6 +179,7 @@ much beyond maybe giving you some pointers.
 [lz4]: https://github.com/Bogdanp/racket-lz4
 [marionette]: https://github.com/Bogdanp/marionette
 [markii]: https://github.com/Bogdanp/markii
+[messagepack]: https://github.com/Bogdanp/racket-messagepack
 [modviz]: https://github.com/Bogdanp/modviz
 [mold]: https://github.com/Bogdanp/mold
 [molten]: https://moltenframework.com
