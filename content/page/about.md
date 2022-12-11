@@ -26,7 +26,8 @@ bunch of other OSS which you can find on my [projects] page and on [my
 GitHub profile][gh].
 
 If you want to get in touch, [email] me. Find out about new posts by
-subscribing to the [Atom] feed or follow me on [Twitter].
+subscribing to the [Atom] feed or follow me on [Twitter] or <a
+rel="me" href="https://types.pl/@bogdanp">Mastodon</a>.
 
 [Atom]: http://defn.io/index.xml
 [BlockFraud]: http://blockfraud.com
