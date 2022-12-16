@@ -26,7 +26,7 @@ pygmentsCodefencesGuessSyntax = true
   archivePaginate = 25
 
   [params.social]
-    a-twitter = "https://twitter.com/Bogdanp"
+    a-twitter = "https://types.pl/@bogdanp"
     b-github = "https://github.com/Bogdanp"
 
 [permalinks]
