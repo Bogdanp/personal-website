@@ -40,14 +40,15 @@ reminded of old ones.
 |:---------------------|:----------------------------------------------------------|
 | [Adam Chlipala]      | [Ur/Web]                                                  |
 | [Bryan Cantrill]     | [The Summer of Rust]                                      |
+| [Bryan O'Sullivan]   | [Running a Startup on Haskell]                            |
 | [Daniel Patterson]   | [Typed Routing with Continuations]                        |
 | [David Beazley]      | [Die Threads]                                             |
 | [David Beazley]      | [Discovering Python]                                      |
 | [David Beazley]      | [Python Concurrency From the Ground Up]                   |
 | [David Beazley]      | [Topics of Interest (Python Asyncio)]                     |
 | [Markus Winand]      | [Modern SQL]                                              |
-| [Matthew Flatt]      | [Rebuilding Racket on Chez Scheme: An Experience Report]  |
 | [Matthew Flatt]      | [A Dinosaur's Thoughts on Programming Language Evolution] |
+| [Matthew Flatt]      | [Rebuilding Racket on Chez Scheme: An Experience Report]  |
 | [Raymond Hettinger]  | [Super considered super!]                                 |
 | [Rob Simmons]        | [Contracts For Getting More Programs Less Wrong]          |
 | [Robby Findler]      | [Racket: A Programming-Language Programming Language]     |
@@ -115,6 +116,7 @@ reminded of old ones.
 [Brian Kernighan interviews Ken Thompson]: https://www.youtube.com/watch?v=EY6q5dv_B-o#t=8m20s
 [Brian Kernighan]: https://www.cs.princeton.edu/~bwk/
 [Bryan Cantrill]: http://dtrace.org/blogs/
+[Bryan O'Sullivan]: http://www.serpentine.com/blog/
 [Casey Muratori]: https://mollyrocket.com/
 [Contracts For Getting More Programs Less Wrong]: https://www.youtube.com/watch?v=lNITrPhl2_A
 [Daniel Patterson]: http://positiondev.com/
@@ -162,6 +164,7 @@ reminded of old ones.
 [Rob Simmons]: https://calculem.us/
 [Robby Findler]: https://www.eecs.northwestern.edu/~robby/
 [Robert Lustig]: http://www.robertlustig.com/
+[Running a Startup on Haskell]: https://www.youtube.com/watch?v=ZR3Jirqk6W8
 [Sandi Metz]: https://www.sandimetz.com
 [Simon Peyton Jones]: https://www.microsoft.com/en-us/research/people/simonpj/
 [Startup School 2008]: https://www.youtube.com/watch?v=0CDXJ6bMkMY
