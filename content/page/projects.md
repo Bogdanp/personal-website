@@ -56,6 +56,7 @@ the open.
 | [monotonic]              | Monotonic time for Racket.                                                  |
 | [nemea]                  | A little Racket web application for tracking website analytics.             |
 | [net-ip]                 | Utilities for working with IP addresses and networks in Racket.             |
+| [noise]                  | A Swift Package for embedding Racket inside applications.                   |
 | [north]                  | A database schema migration tool written in Racket.                         |
 | [postmark][postmark-lib] | A [Postmark] client written in Racket.                                      |
 | [py-test.el]             | A Python test runner for Emacs.                                             |
@@ -188,6 +189,7 @@ much beyond maybe giving you some pointers.
 [neko.app]: https://github.com/Bogdanp/neko
 [nemea]: https://github.com/Bogdanp/nemea
 [net-ip]: https://github.com/Bogdanp/racket-net-ip
+[noise]: https://github.com/Bogdanp/Noise
 [north]: https://github.com/Bogdanp/racket-north
 [pico]: https://github.com/Bogdanp/pico
 [postmark-lib]: https://github.com/Bogdanp/racket-postmark
