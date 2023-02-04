@@ -34,81 +34,54 @@ years that I've gotten a lot of use or enjoyment out of.  Expect this
 page to be updated somewhat regularly as I discover new talks and am
 reminded of old ones.
 
-## Programming Languages and Libraries
+| Author                             | Talk                                                              |
+|:-----------------------------------|:------------------------------------------------------------------|
+| [Adam Chlipala]                    | [Ur/Web]                                                          |
+| [Avi Bryant]                       | [Abstract Algebra and Distributed Data Processing]                |
+| [Bret Victor]                      | [Inventing on Principle]                                          |
+| [Brian Kernighan] & [Ken Thompson] | [Brian Kernighan interviews Ken Thompson]                         |
+| [Bryan Cantrill]                   | [Platform as a Reflection of Values: Joyent, Node.js, and Beyond] |
+| [Bryan Cantrill]                   | [Principles of Technology Leadership]                             |
+| [Bryan Cantrill]                   | [The Summer of Rust]                                              |
+| [Bryan Cantrill]                   | [Zebras All the Way Down]                                         |
+| [Bryan O'Sullivan]                 | [Running a Startup on Haskell]                                    |
+| [Casey Muratori]                   | [Immediate-Mode Graphical User Interfaces]                        |
+| [Daniel Patterson]                 | [Typed Routing with Continuations]                                |
+| [David Beazley]                    | [Die Threads]                                                     |
+| [David Beazley]                    | [Discovering Python]                                              |
+| [David Beazley]                    | [Python Concurrency From the Ground Up]                           |
+| [David Beazley]                    | [Topics of Interest (Python Asyncio)]                             |
+| [David Heinemeier Hansson]         | [Startup School 2008]                                             |
+| [Emery Berger]                     | [Performance Matters]                                             |
+| [Gary Bernhardt]                   | [A Whole New World]                                               |
+| [Gary Bernhardt]                   | [Boundaries]                                                      |
+| [Gary Bernhardt]                   | [Wat]                                                             |
+| [Jack Rusher]                      | [Stop Writing Dead Programs]                                      |
+| [Jon Moore]                        | [Stop Rate Limiting! Capacity Management Done Right]              |
+| [Markus Winand]                    | [Modern SQL]                                                      |
+| [Martin Thompson]                  | [Designing for Performance]                                       |
+| [Matthew Flatt]                    | [A Dinosaur's Thoughts on Programming Language Evolution]         |
+| [Matthew Flatt]                    | [Rebuilding Racket on Chez Scheme: An Experience Report]          |
+| [Michael Dearing]                  | [Executive Communication]                                         |
+| [Mike Monteiro]                    | [Fuck You, Pay Me]                                                |
+| Randy Pausch                       | [Achieving Your Childhood Dreams]                                 |
+| [Raymond Hettinger]                | [Super considered super!]                                         |
+| [Rob Simmons]                      | [Contracts For Getting More Programs Less Wrong]                  |
+| [Robby Findler]                    | [Racket: A Programming-Language Programming Language]             |
+| [Robert Lustig]                    | [Sugar: The Bitter Truth]                                         |
+| [Sandi Metz]                       | [Polly Want a Message]                                            |
+| [Simon Peyton Jones]               | [Adventures With Types in Haskell]                                |
+| [Simon Peyton Jones]               | [Haskell is Useless]                                              |
+| [Theo de Raadt]                    | [Pledge: A new security technology in openbsd]                    |
+| [Zach Tellman]                     | [Everything Will Flow]                                            |
+| [engineerguy]                      | [Why the other line is likely to move faster]                     |
 
-| Author               | Talk                                                      |
-|:---------------------|:----------------------------------------------------------|
-| [Adam Chlipala]      | [Ur/Web]                                                  |
-| [Bryan Cantrill]     | [The Summer of Rust]                                      |
-| [Bryan O'Sullivan]   | [Running a Startup on Haskell]                            |
-| [Daniel Patterson]   | [Typed Routing with Continuations]                        |
-| [David Beazley]      | [Die Threads]                                             |
-| [David Beazley]      | [Discovering Python]                                      |
-| [David Beazley]      | [Python Concurrency From the Ground Up]                   |
-| [David Beazley]      | [Topics of Interest (Python Asyncio)]                     |
-| [Markus Winand]      | [Modern SQL]                                              |
-| [Matthew Flatt]      | [A Dinosaur's Thoughts on Programming Language Evolution] |
-| [Matthew Flatt]      | [Rebuilding Racket on Chez Scheme: An Experience Report]  |
-| [Raymond Hettinger]  | [Super considered super!]                                 |
-| [Rob Simmons]        | [Contracts For Getting More Programs Less Wrong]          |
-| [Robby Findler]      | [Racket: A Programming-Language Programming Language]     |
-| [Simon Peyton Jones] | [Adventures With Types in Haskell]                        |
-| [Simon Peyton Jones] | [Haskell is Useless]                                      |
-| Zach Smith           | [Nim - A New Option for Optimizing Inner Loops]           |
-
-## Software Engineering
-
-| Author            | Talk                                                              |
-|:------------------|:------------------------------------------------------------------|
-| [Avi Bryant]      | [Abstract Algebra and Distributed Data Processing]                |
-| [Bryan Cantrill]  | [Platform as a Reflection of Values: Joyent, Node.js, and Beyond] |
-| [Bryan Cantrill]  | [Principles of Technology Leadership]                             |
-| [Bryan Cantrill]  | [Zebras All the Way Down]                                         |
-| [Casey Muratori]  | [Immediate-Mode Graphical User Interfaces]                        |
-| [Emery Berger]    | [Performance Matters]                                             |
-| [Gary Bernhardt]  | [Boundaries]                                                      |
-| [Jack Rusher]     | [Stop Writing Dead Programs]                                      |
-| [Jon Moore]       | [Stop Rate Limiting! Capacity Management Done Right]              |
-| [Martin Thompson] | [Designing for Performance]                                       |
-| [Sandi Metz]      | [Polly Want a Message]                                            |
-| [Theo de Raadt]   | [Pledge: A new security technology in openbsd]                    |
-| [Zach Tellman]    | [Everything Will Flow]                                            |
-| [engineerguy]     | [Why the other line is likely to move faster]                     |
-
-## Consulting/Business
-
-| Author                     | Talk                      |
-|:---------------------------|:--------------------------|
-| [Allen Holub]              | [#NoEstimates]            |
-| [David Heinemeier Hansson] | [Startup School 2008]     |
-| [Michael Dearing]          | [Executive Communication] |
-| [Mike Monteiro]            | [Fuck You, Pay Me]        |
-
-## Funny
-
-| Author           | Talk                |
-|:-----------------|:--------------------|
-| [Gary Bernhardt] | [A Whole New World] |
-| [Gary Bernhardt] | [Wat]               |
-
-## Misc
-
-| Author                             | Talk                                      |
-|:-----------------------------------|:------------------------------------------|
-| [Bret Victor]                      | [Inventing on Principle]                  |
-| [Brian Kernighan] & [Ken Thompson] | [Brian Kernighan interviews Ken Thompson] |
-| [Robert Lustig]                    | [Sugar: The Bitter Truth]                 |
-| Randy Pausch                       | [Achieving Your Childhood Dreams]         |
-
-
-[#NoEstimates]: https://www.youtube.com/watch?v=QVBlnCTu9Ms
 [A Dinosaur's Thoughts on Programming Language Evolution]: https://www.youtube.com/watch?v=Z9OYc1YYLT4
 [A Whole New World]: https://www.destroyallsoftware.com/talks/a-whole-new-world
 [Abstract Algebra and Distributed Data Processing]: https://www.youtube.com/watch?v=cMY1KVrJk0w
 [Achieving Your Childhood Dreams]: https://www.youtube.com/watch?v=ji5_MqicxSo
 [Adam Chlipala]: http://adam.chlipala.net/
 [Adventures With Types in Haskell]: https://www.youtube.com/watch?v=6COvD8oynmI
-[Allen Holub]: http://holub.com/
 [Async Tasks with Dramatiq]: https://www.youtube.com/watch?v=mrG9ZwLxb0g
 [Avi Bryant]: https://twitter.com/avibryant
 [Boundaries]: https://www.destroyallsoftware.com/talks/boundaries
@@ -145,7 +118,6 @@ reminded of old ones.
 [Michael Dearing]: https://twitter.com/mcgd
 [Mike Monteiro]: https://muledesign.com/
 [Modern SQL]: https://modern-sql.com/video
-[Nim - A New Option for Optimizing Inner Loops]: https://www.youtube.com/watch?v=IVgNVJdizHg
 [Noise]: https://github.com/Bogdanp/Noise
 [Performance Matters]: https://www.youtube.com/watch?v=r-TLSBdHe1A
 [Platform as a Reflection of Values: Joyent, Node.js, and Beyond]: https://vimeo.com/230142234
