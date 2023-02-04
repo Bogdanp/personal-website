@@ -1,7 +1,33 @@
 ---
-title: "Talks I Like"
+title: "Talks"
 date: 2015-05-29
+aliases: ["/page/talks-i-like/"]
 ---
+
+# Talks I've Given
+
+These are some of the talks I've given.
+
+| Talk                         | Year | Description                                                                                                       |
+|:-----------------------------|------|-------------------------------------------------------------------------------------------------------------------|
+| Native Apps with Racket      | 2023 | An upcoming talk I will be giving at this year's [Racketfest].                                                    |
+| [Declarative GUIs in Racket] | 2021 | A talk I gave at the eleventh [RacketCon] about a system for building native GUIs in Racket in a declarative way. |
+| [Racket for the Web]         | 2020 | A talk I gave at [Racketfest] 2020 about building an e-commerce business with Racket.  Not recorded.              |
+| [Async Tasks with Dramatiq]  | 2017 | An intro talk to [Dramatiq], my task processing library for Python.                                               |
+
+## Screencasts
+
+Occasionally, I like to record screencasts where I ramble about some
+thing I've done recently.  Some highlights:
+
+| Title                          | Year | Description                                                                                                           |
+|:-------------------------------|------|-----------------------------------------------------------------------------------------------------------------------|
+| [SwiftUI + Racket]             | 2022 | Showing off a very early version of [Noise] and how it can be used to embed Racket inside a native macOS application. |
+| [Resource Pool for Racket]     | 2021 | Live coding a generic resource pooling library for Racket.                                                            |
+| [Improvements in Koyo 0.9]     | 2021 | Showing off some improvements made in the 0.9 release of Koyo.                                                        |
+| [Redis Session Store for Koyo] | 2021 | Live coding a Redis-backed session store for Koyo.                                                                    |
+
+# Talks I Like
 
 What follows is a list of talks I've watched or listened to over the
 years that I've gotten a lot of use or enjoyment out of.  Expect this
@@ -10,23 +36,24 @@ reminded of old ones.
 
 ## Programming Languages and Libraries
 
-| Author               | Talk                                                     |
-| :---                 | :---                                                     |
-| [Adam Chlipala]      | [Ur/Web]                                                 |
-| [Bryan Cantrill]     | [The Summer of Rust]                                     |
-| [Daniel Patterson]   | [Typed Routing with Continuations]                       |
-| [David Beazley]      | [Die Threads]                                            |
-| [David Beazley]      | [Discovering Python]                                     |
-| [David Beazley]      | [Python Concurrency From the Ground Up]                  |
-| [David Beazley]      | [Topics of Interest (Python Asyncio)]                    |
-| [Markus Winand]      | [Modern SQL]                                             |
-| [Matthew Flatt]      | [Rebuilding Racket on Chez Scheme: An Experience Report] |
-| [Raymond Hettinger]  | [Super considered super!]                                |
-| [Rob Simmons]        | [Contracts For Getting More Programs Less Wrong]         |
-| [Robby Findler]      | [Racket: A Programming-Language Programming Language]    |
-| [Simon Peyton Jones] | [Adventures With Types in Haskell]                       |
-| [Simon Peyton Jones] | [Haskell is Useless]                                     |
-| Zach Smith           | [Nim - A New Option for Optimizing Inner Loops]          |
+| Author               | Talk                                                      |
+|:---------------------|:----------------------------------------------------------|
+| [Adam Chlipala]      | [Ur/Web]                                                  |
+| [Bryan Cantrill]     | [The Summer of Rust]                                      |
+| [Daniel Patterson]   | [Typed Routing with Continuations]                        |
+| [David Beazley]      | [Die Threads]                                             |
+| [David Beazley]      | [Discovering Python]                                      |
+| [David Beazley]      | [Python Concurrency From the Ground Up]                   |
+| [David Beazley]      | [Topics of Interest (Python Asyncio)]                     |
+| [Markus Winand]      | [Modern SQL]                                              |
+| [Matthew Flatt]      | [Rebuilding Racket on Chez Scheme: An Experience Report]  |
+| [Matthew Flatt]      | [A Dinosaur's Thoughts on Programming Language Evolution] |
+| [Raymond Hettinger]  | [Super considered super!]                                 |
+| [Rob Simmons]        | [Contracts For Getting More Programs Less Wrong]          |
+| [Robby Findler]      | [Racket: A Programming-Language Programming Language]     |
+| [Simon Peyton Jones] | [Adventures With Types in Haskell]                        |
+| [Simon Peyton Jones] | [Haskell is Useless]                                      |
+| Zach Smith           | [Nim - A New Option for Optimizing Inner Loops]           |
 
 ## Software Engineering
 
@@ -50,7 +77,7 @@ reminded of old ones.
 ## Consulting/Business
 
 | Author                     | Talk                      |
-| :---                       | :---                      |
+|:---------------------------|:--------------------------|
 | [Allen Holub]              | [#NoEstimates]            |
 | [David Heinemeier Hansson] | [Startup School 2008]     |
 | [Michael Dearing]          | [Executive Communication] |
@@ -59,7 +86,7 @@ reminded of old ones.
 ## Funny
 
 | Author           | Talk                |
-| :---             | :---                |
+|:-----------------|:--------------------|
 | [Gary Bernhardt] | [A Whole New World] |
 | [Gary Bernhardt] | [Wat]               |
 
@@ -74,12 +101,14 @@ reminded of old ones.
 
 
 [#NoEstimates]: https://www.youtube.com/watch?v=QVBlnCTu9Ms
+[A Dinosaur's Thoughts on Programming Language Evolution]: https://www.youtube.com/watch?v=Z9OYc1YYLT4
 [A Whole New World]: https://www.destroyallsoftware.com/talks/a-whole-new-world
 [Abstract Algebra and Distributed Data Processing]: https://www.youtube.com/watch?v=cMY1KVrJk0w
 [Achieving Your Childhood Dreams]: https://www.youtube.com/watch?v=ji5_MqicxSo
 [Adam Chlipala]: http://adam.chlipala.net/
 [Adventures With Types in Haskell]: https://www.youtube.com/watch?v=6COvD8oynmI
 [Allen Holub]: http://holub.com/
+[Async Tasks with Dramatiq]: https://www.youtube.com/watch?v=mrG9ZwLxb0g
 [Avi Bryant]: https://twitter.com/avibryant
 [Boundaries]: https://www.destroyallsoftware.com/talks/boundaries
 [Bret Victor]: http://worrydream.com
@@ -91,9 +120,11 @@ reminded of old ones.
 [Daniel Patterson]: http://positiondev.com/
 [David Beazley]: http://dabeaz.com/
 [David Heinemeier Hansson]: http://david.heinemeierhansson.com/
+[Declarative GUIs in Racket]: /2021/11/07/racketcon-talk-2021/
 [Designing for Performance]: https://www.youtube.com/watch?v=03GsLxVdVzU
 [Die Threads]: https://www.youtube.com/watch?v=U66KuyD3T0M
 [Discovering Python]: https://www.youtube.com/watch?v=RZ4Sn-Y7AP8
+[Dramatiq]: https://dramatiq.io
 [Emery Berger]: https://emeryberger.com/
 [Everything Will Flow]: https://www.youtube.com/watch?v=1bNOO3xxMc0
 [Executive Communication]: https://www.heavybit.com/library/video/executive-communication/
@@ -101,6 +132,7 @@ reminded of old ones.
 [Gary Bernhardt]: https://www.destroyallsoftware.com
 [Haskell is Useless]: https://www.youtube.com/watch?v=iSmkqocn0oQ
 [Immediate-Mode Graphical User Interfaces]: https://www.youtube.com/watch?v=Z1qyvQsjK5Y
+[Improvements in Koyo 0.9]: /2021/07/30/koyo-0.9/
 [Inventing on Principle]: https://www.youtube.com/watch?v=PUv66718DII
 [Jack Rusher]: https://jackrusher.com/
 [Jon Moore]: https://twitter.com/jon_moore
@@ -112,15 +144,21 @@ reminded of old ones.
 [Mike Monteiro]: https://muledesign.com/
 [Modern SQL]: https://modern-sql.com/video
 [Nim - A New Option for Optimizing Inner Loops]: https://www.youtube.com/watch?v=IVgNVJdizHg
+[Noise]: https://github.com/Bogdanp/Noise
 [Performance Matters]: https://www.youtube.com/watch?v=r-TLSBdHe1A
 [Platform as a Reflection of Values: Joyent, Node.js, and Beyond]: https://vimeo.com/230142234
 [Pledge: A new security technology in openbsd]: https://www.youtube.com/watch?v=F_7S1eqKsFk
 [Polly Want a Message]: https://www.deconstructconf.com/2018/sandi-metz-polly-want-a-message
 [Principles of Technology Leadership]: https://www.youtube.com/watch?v=9QMGAtxUlAc
 [Python Concurrency From the Ground Up]: https://www.youtube.com/watch?v=MCs5OvhV9S4
+[Racket for the Web]: https://github.com/Bogdanp/racketfest2020-talk
 [Racket: A Programming-Language Programming Language]: https://www.youtube.com/watch?v=hFlIl0Zo234
+[RacketCon]: https://con.racket-lang.org/
+[Racketfest]: https://racketfest.com
 [Raymond Hettinger]: https://twitter.com/raymondh
 [Rebuilding Racket on Chez Scheme: An Experience Report]: https://www.youtube.com/watch?v=t09AJUK6IiM
+[Redis Session Store for Koyo]: /2021/04/04/koyo-sessions-redis-screencast/
+[Resource Pool for Racket]: /2021/04/06/resource-pool-screencast/
 [Rob Simmons]: https://calculem.us/
 [Robby Findler]: https://www.eecs.northwestern.edu/~robby/
 [Robert Lustig]: http://www.robertlustig.com/
@@ -131,6 +169,7 @@ reminded of old ones.
 [Stop Writing Dead Programs]: https://www.youtube.com/watch?v=8Ab3ArE8W3s
 [Sugar: The Bitter Truth]: https://www.youtube.com/watch?v=dBnniua6-oM
 [Super considered super!]: https://www.youtube.com/watch?v=EiOglTERPEo
+[SwiftUI + Racket]: /2022/08/21/swiftui-plus-racket-screencast/
 [The Summer of Rust]: https://www.youtube.com/watch?v=LjFM8vw3pbU
 [Theo de Raadt]: https://www.theos.com/deraadt/
 [Topics of Interest (Python Asyncio)]: https://www.youtube.com/watch?v=ZzfHjytDceU

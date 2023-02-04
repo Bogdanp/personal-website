@@ -43,8 +43,8 @@ pygmentsCodefencesGuessSyntax = true
   weight = 2
 
 [[menu.main]]
-  name = "Talks I Like"
-  url = "/page/talks-i-like/"
+  name = "Talks"
+  url = "/page/talks/"
   weight = 3
 
 [[menu.main]]
