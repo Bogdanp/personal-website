@@ -5,8 +5,7 @@ slug: "this-is-fine"
 tags: ["packaging", "rust"]
 ---
 
-*This post is a dumb rant, but I needed to vent into the aether.
-Please skip it.*
+*This post is a dumb rant, but I needed to vent.*
 
 <!--more-->
 
@@ -636,7 +635,8 @@ Rust finishes building 35 minutes later, and now we're on to cargo
 ```
 
 Thankfully, cargo is relatively faster to build, and now we're ready
-to make progress on other things.  Now we also get a hint into what
+to make progress on other things.  Shout-out to the other Windows
+packages that were just brought in.  Now we also get a hint into what
 exactly brought Rust in:
 
 ```
@@ -986,10 +986,10 @@ The following ports are dependent on rust:
 
 The graph ends unexpectedly.  Probably some bug in MacPorts that I'm
 going to ignore for now.  Based on the earlier log, I can see
-`py310-cryptography` depends on `py310-setuptools-rust`, and
+`py310-cryptography` depends on `py310-setuptools-rust`[^1], and
 `py310-cryptography` is, in turn, depended on by `yubikey-manager`.  I
 also notice it brings in several `wasm-bindgen-*` packages, for what
-I'm sure are totally reasonable reasons[^1].
+I'm sure are totally reasonable reasons[^2].
 
 ```
 $ port info py310-cryptography
@@ -1002,7 +1002,12 @@ There's no moral to this story, except maybe avoid upgrading your
 software.  I think Rust is Good, but this sucks.
 
 
-[^1]: Vaguely, I remember something about some Rust packages that use
+[^1]: What we've got here is a cryptography package that transitively
+    depends on at least 393 other packages, every single one of which
+    is a potential attack vector.  Is this fine?  I don't know.
+    Maybe?
+
+[^2]: Vaguely, I remember something about some Rust packages that use
     Wasm to perform macro-expansion safely during builds, or something
     along those lines, so these may in fact be reasonable uses of
     these Wasm packages, by some definition of reasonable.  It feels
