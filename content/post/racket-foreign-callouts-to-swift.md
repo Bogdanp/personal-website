@@ -25,20 +25,20 @@ of the approach I describe in this post (specifically, commits
 ## Low Level Bits
 
 Swift has its own calling convention, but it supports declaring
-procedures as using the C calling convention via the `@convention(c)`
-annotation.  For example:
+procedures (but not closures) as using the C calling convention via
+the `@convention(c)` attribute.  For example:
 
 ```swift
 var add1: @convention(c) (Int) -> Int = { x in x + 1 }
 ```
 
-This annotation makes it so that you can transparently pass such
+This attribute makes it so that you can transparently pass such
 procedures around in places where you would normally store C function
 pointers.  In my case, though, I didn't want to have to write any C
 code to support this functionality.  Instead, I needed to be able to
-get the raw pointer address of the procedures so that I could
-serialize it and send it (over the aforementioned pipes) to the Racket
-side.  Thankfully, there is a way to do this in Swift, via
+get the raw pointer addresses of the procedures so that I could
+serialize them and send them (over the aforementioned pipes) to the
+Racket side.  Thankfully, there is a way to do this in Swift, via
 `unsafeBitCast`:
 
 ```swift
@@ -66,7 +66,7 @@ There's no direct way to convert an address to a pointer using the FFI
 library.  Instead, I have to allocate a bit of memory (•2), write the
 address to that memory (•3) and then read the address out as a foreign
 procedure (•4).  Additionally, I have to know what the signature of
-that procedure is (•1) to be able to call it later.
+that procedure is (•1) to be able to call it later. [^1]
 
 Putting these bits together, I came up with a small abstraction on
 [the Racket side][callout-box-impl] to wrap the FFI code needed to
@@ -197,13 +197,14 @@ small details simplified):
            (make-callout-box callout-type))
          (define info ;; •2
            (callout-info #f 'name args cbox))
-         (hash-set! callout-infos (next-callout-id!) info))]))
+         (hash-set! callout-infos (next-callout-id!) info) ;; •3
+         )]))
 ```
 
 Every use of `define-callout` expands to a definition of a procedure
 with the given name (•1) that delegates to the `do-callout` helper
 when it itself is called and a metadata definition for the callout
-that is registered with the global registry (•2).
+that is registered with the global registry (•2, •3).
 
 Finally, the RPC to install these callbacks that I mentioned at the
 end of the first section looks like this:
@@ -298,3 +299,10 @@ about above.
 [Noise]: https://github.com/Bogdanp/noise
 [`0a585be`]: https://github.com/Bogdanp/Noise/commit/0a585be4f7816144f4943a996b58fd27ab5e2d2e
 [`2f6c37e`]: https://github.com/Bogdanp/Noise/commit/2f6c37e0d26d13f84e1e68650c4bca76cae0bfae
+
+[^1]: [Sam Phillips] pointed out on the Racket Discord that there is
+    actually a helper for this in `ffi-lib`, namely [`cast`].  So this
+    `let` can be replaced with `(cast addr _intptr add1-type)`.
+
+[Sam Phillips]: https://github.com/samdphillips
+[`cast`]: https://docs.racket-lang.org/foreign/Miscellaneous_Support.html#%28def._%28%28lib._ffi%2Funsafe..rkt%29._cast%29%29
