@@ -30,51 +30,52 @@ These are some of the web applications I've built in my spare time.
 This is the stuff I'm currently working on and actively maintaining in
 the open.
 
-| Project                  | Description                                                                 |
-|:-------------------------|:----------------------------------------------------------------------------|
-| [avro]                   | A Racket implementation of the Apache Avro serialization format.            |
-| [binfmt]                 | A binary format parser-generator.                                           |
-| [chief]                  | A Procfile runner for Racket.                                               |
-| [component]              | Dependency injection for Racket.                                            |
-| [crontab]                | Cron-like scheduling for Racket.                                            |
-| [cursive_re]             | Readable regular expressions for Python 3.6+.                               |
-| [dbg]                    | A remote debugging/monitoring tool for Racket programs.                     |
-| [deta]                   | A functional database mapper for Racket.                                    |
-| [dramatiq]               | A distributed task processing library for Python 3.6+.                      |
-| [dramatiq_dashboard]     | A monitoring UI for Dramatiq.                                               |
-| [dramatiq_sqs]           | An Amazon SQS broker for Dramatiq.                                          |
-| [forms]                  | A web form validation library for Racket.                                   |
-| [geoip]                  | Geolocation for Racket based on MaxMind's GeoIP databases.                  |
-| [gui-easy]               | A declarative GUI library for Racket.                                       |
-| [http-easy]              | A high-level HTTP client for Racket.                                        |
-| [hugs]                   | A library that maps SQL expressions to Python fuctions.                     |
-| [koyo]                   | A web development toolkit for Racket.                                       |
-| [lz4]                    | A pure-Racket decompressor for LZ4 data.                                    |
-| [marionette]             | A Racket library that lets you control Firefox via the Marionette Protocol. |
-| [messagepack]            | An implementation of the MessagePack serialization format for Racket.       |
-| [molten]                 | A modern API framework for Python 3.6+.                                     |
-| [monotonic]              | Monotonic time for Racket.                                                  |
-| [nemea]                  | A little Racket web application for tracking website analytics.             |
-| [net-ip]                 | Utilities for working with IP addresses and networks in Racket.             |
-| [noise]                  | A Swift Package for embedding Racket inside applications.                   |
-| [north]                  | A database schema migration tool written in Racket.                         |
-| [postmark][postmark-lib] | A [Postmark] client written in Racket.                                      |
-| [py-test.el]             | A Python test runner for Emacs.                                             |
-| [rackcheck]              | A property-based testing library for Racket with support for shrinking.     |
-| [racket-kafka]           | A Racket client for Apache Kafka.                                           |
-| [racket-lua]             | A Racket `#lang` implementation of Lua.                                     |
-| [racket-redis]           | Fast, idiomatic bindings to Redis for Racket.                               |
-| [resource-pool]          | A generic resource pool for Racket.                                         |
-| [resource_pool]          | A generic resource pool for Python.                                         |
-| [review]                 | A linter for Racket.                                                        |
-| [sass]                   | Bindings to libsass for Racket.                                             |
-| [sentry][sentry-lib]     | A [Sentry] SDK for Racket.                                                  |
-| [setup-racket]           | A GitHub Action for installing Racket.                                      |
-| [smtp-server]            | An SMTP server implementation for Racket.                                   |
-| [twilio][twilio-lib]     | A [Twilio] client for Racket.                                               |
-| [wasm]                   | A WASM VM written in Racket.                                                |
-| [watchdog_gevent]        | A gevent-based observer for watchdog.                                       |
-| [web-app-from-scratch]   | Supporting material for my "Web App From Scratch" blog series.              |
+| Project                   | Description                                                                 |
+|:--------------------------|:----------------------------------------------------------------------------|
+| [avro]                    | A Racket implementation of the Apache Avro serialization format.            |
+| [binfmt]                  | A binary format parser-generator.                                           |
+| [chief]                   | A Procfile runner for Racket.                                               |
+| [component]               | Dependency injection for Racket.                                            |
+| [crontab]                 | Cron-like scheduling for Racket.                                            |
+| [cursive_re]              | Readable regular expressions for Python 3.6+.                               |
+| [dbg]                     | A remote debugging/monitoring tool for Racket programs.                     |
+| [deta]                    | A functional database mapper for Racket.                                    |
+| [dramatiq]                | A distributed task processing library for Python 3.6+.                      |
+| [dramatiq_dashboard]      | A monitoring UI for Dramatiq.                                               |
+| [dramatiq_sqs]            | An Amazon SQS broker for Dramatiq.                                          |
+| [forms]                   | A web form validation library for Racket.                                   |
+| [geoip]                   | Geolocation for Racket based on MaxMind's GeoIP databases.                  |
+| [gui-easy]                | A declarative GUI library for Racket.                                       |
+| [http-easy]               | A high-level HTTP client for Racket.                                        |
+| [hugs]                    | A library that maps SQL expressions to Python fuctions.                     |
+| [koyo]                    | A web development toolkit for Racket.                                       |
+| [lz4]                     | A pure-Racket decompressor for LZ4 data.                                    |
+| [marionette]              | A Racket library that lets you control Firefox via the Marionette Protocol. |
+| [messagepack]             | An implementation of the MessagePack serialization format for Racket.       |
+| [molten]                  | A modern API framework for Python 3.6+.                                     |
+| [monotonic]               | Monotonic time for Racket.                                                  |
+| [nemea]                   | A little Racket web application for tracking website analytics.             |
+| [net-ip]                  | Utilities for working with IP addresses and networks in Racket.             |
+| [noise]                   | A Swift Package for embedding Racket inside applications.                   |
+| [north]                   | A database schema migration tool written in Racket.                         |
+| [postmark][postmark-lib]  | A [Postmark] client written in Racket.                                      |
+| [py-test.el]              | A Python test runner for Emacs.                                             |
+| [rackcheck]               | A property-based testing library for Racket with support for shrinking.     |
+| [racket-kafka]            | A Racket client for Apache Kafka.                                           |
+| [racket-lua]              | A Racket `#lang` implementation of Lua.                                     |
+| [racket-protocol-buffers] | A Protocol Buffers implementation for Racket.                               |
+| [racket-redis]            | Fast, idiomatic bindings to Redis for Racket.                               |
+| [resource-pool]           | A generic resource pool for Racket.                                         |
+| [resource_pool]           | A generic resource pool for Python.                                         |
+| [review]                  | A linter for Racket.                                                        |
+| [sass]                    | Bindings to libsass for Racket.                                             |
+| [sentry][sentry-lib]      | A [Sentry] SDK for Racket.                                                  |
+| [setup-racket]            | A GitHub Action for installing Racket.                                      |
+| [smtp-server]             | An SMTP server implementation for Racket.                                   |
+| [twilio][twilio-lib]      | A [Twilio] client for Racket.                                               |
+| [wasm]                    | A WASM VM written in Racket.                                                |
+| [watchdog_gevent]         | A gevent-based observer for watchdog.                                       |
+| [web-app-from-scratch]    | Supporting material for my "Web App From Scratch" blog series.              |
 
 
 ## Archive
@@ -199,6 +200,7 @@ much beyond maybe giving you some pointers.
 [rackcheck]: https://github.com/Bogdanp/rackcheck/
 [racket-kafka]: https://github.com/Bogdanp/racket-kafka/
 [racket-lua]: https://github.com/Bogdanp/racket-lua/
+[racket-protocol-buffers]: https://github.com/Bogdanp/racket-protocol-buffers/
 [racket-redis]: https://github.com/Bogdanp/racket-redis/
 [racksnaps]: https://racksnaps.defn.io
 [repos]: https://github.com/Bogdanp/repositories
