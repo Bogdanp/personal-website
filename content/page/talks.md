@@ -10,7 +10,7 @@ These are some of the talks I've given.
 
 | Talk                         | Year | Description                                                                                                       |
 |:-----------------------------|------|-------------------------------------------------------------------------------------------------------------------|
-| Native Apps with Racket      | 2023 | An upcoming talk I will be giving at this year's [Racketfest].                                                    |
+| [Native Apps with Racket]    | 2023 | A talk I gave at [Racketfest] 2023 about building native desktop applications with Racket.                        |
 | [Declarative GUIs in Racket] | 2021 | A talk I gave at the eleventh [RacketCon] about a system for building native GUIs in Racket in a declarative way. |
 | [Racket for the Web]         | 2020 | A talk I gave at [Racketfest] 2020 about building an e-commerce business with Racket.  Not recorded.              |
 | [Async Tasks with Dramatiq]  | 2017 | An intro talk to [Dramatiq], my task processing library for Python.                                               |
@@ -118,6 +118,7 @@ reminded of old ones.
 [Michael Dearing]: https://twitter.com/mcgd
 [Mike Monteiro]: https://muledesign.com/
 [Modern SQL]: https://modern-sql.com/video
+[Native Apps with Racket]: /2023/03/19/racketfest-talk-2023/
 [Noise]: https://github.com/Bogdanp/Noise
 [Performance Matters]: https://www.youtube.com/watch?v=r-TLSBdHe1A
 [Platform as a Reflection of Values: Joyent, Node.js, and Beyond]: https://vimeo.com/230142234
