@@ -40,15 +40,19 @@ The 0th challenge is a basic echo server.
       (let loop ()
         (define-values (in out)
           (tcp-accept listener))
+        (define client-custodian
+          (make-custodian))
         (define client-thd
-          (thread
-           (lambda ()
-             (handle in out))))
+          (parameterize ([current-custodian client-custodian])
+            (thread
+             (lambda ()
+               (handle in out)))))
         (thread
          (lambda ()
            (sync client-thd)
            (close-output-port out)
-           (close-input-port in)))
+           (close-input-port in)
+           (custodian-shutdown-all client-custodian)))
         (loop))))
   (custodian-shutdown-all server-custodian)
   (tcp-close listener))
@@ -56,10 +60,12 @@ The 0th challenge is a basic echo server.
 
 All we have to do is start a TCP listener, then accept new connections
 in a loop.  For every new connection, we open a thread to handle it
-and a thread to close the connection after the handling thread is
-done.  On break (`SIGINT`, `SIGTERM`, or other signals), we terminate
-all running handler threads and their associated resources then close
-the TCP listener.
+and a thread to close the connection and shut down the client
+custodian after the handling thread is done.  Wrapping every client in
+a custodian ensures the handlers cannot leak resources (other threads,
+ports, etc.) after they exit.  On break (`SIGINT`, `SIGTERM`, or other
+signals), we terminate all running handler threads and their
+associated resources then close the TCP listener.
 
 The `handle` procedure reads data in up to 4096 byte chunks and writes
 it back to the client.  On `EOF`, `read-bytes` returns a special `EOF`
