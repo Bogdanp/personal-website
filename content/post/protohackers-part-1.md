@@ -38,21 +38,23 @@ The 0th challenge is a basic echo server.
   (with-handlers ([exn:break? void])
     (parameterize ([current-custodian server-custodian])
       (let loop ()
-        (define-values (in out)
-          (tcp-accept listener))
-        (define client-custodian
-          (make-custodian))
-        (define client-thd
-          (parameterize ([current-custodian client-custodian])
-            (thread
-             (lambda ()
-               (handle in out)))))
-        (thread
-         (lambda ()
-           (sync client-thd)
-           (close-output-port out)
-           (close-input-port in)
-           (custodian-shutdown-all client-custodian)))
+        (parameterize-break #f
+          (define-values (in out)
+            (tcp-accept/enable-break listener))
+          (define client-custodian
+            (make-custodian))
+          (define client-thd
+            (parameterize ([current-custodian client-custodian])
+              (thread
+               (lambda ()
+                 (break-enabled #t)
+                 (handle in out)))))
+          (thread
+           (lambda ()
+             (sync client-thd)
+             (close-output-port out)
+             (close-input-port in)
+             (custodian-shutdown-all client-custodian))))
         (loop))))
   (custodian-shutdown-all server-custodian)
   (tcp-close listener))
@@ -63,9 +65,11 @@ in a loop.  For every new connection, we open a thread to handle it
 and a thread to close the connection and shut down the client
 custodian after the handling thread is done.  Wrapping every client in
 a custodian ensures the handlers cannot leak resources (other threads,
-ports, etc.) after they exit.  On break (`SIGINT`, `SIGTERM`, or other
-signals), we terminate all running handler threads and their
-associated resources then close the TCP listener.
+ports, etc.) after they exit.  We disable breaks during connection
+setup so that an ill-timed break won't leave connections in a
+half-set-up state.  On break (`SIGINT`, `SIGTERM`, or other signals),
+we terminate all running handler threads and their associated
+resources then close the TCP listener.
 
 The `handle` procedure reads data in up to 4096 byte chunks and writes
 it back to the client.  On `EOF`, `read-bytes` returns a special `EOF`
@@ -119,19 +123,24 @@ checking.
 
 The TCP listening bits haven't changed from the first challenge, so
 I've elided them here.  The `handle` proc now reads one line at a time
-from the client and attempts to parse it as JSON value.  Any parsing
+from the client and attempts to parse it as a JSON value.  Any parsing
 error, as well as any validation error causes the handler to exit the
 loop and close the connection after writing a message to the client.
-Well-formed messages validated in the first match clause and every
+Well-formed messages are validated in the first match clause and every
 valid request is followed by a valid response and a newline.
 
 Note that `read-line` will happily buffer data in memory until it sees
 a linefeed character, meaning an adversarial client could easily crash
 this server by sending it a very long stream of non-linefeed
-characters.  Also note how the error handlers are set up outside the
-loop.  The body of the `with-handlers` form is not in tail position,
-so if we'd have set up the handlers inside the loop, we'd be creating
-unnecessary frames on every iteration, increasing memory consumption.
+characters[^1].  Also note how the error handlers are set up outside
+the loop.  The body of the `with-handlers` form is not in tail
+position, so if we'd have set up the handlers inside the loop, we'd be
+creating unnecessary frames on every iteration, increasing memory
+consumption.
+
+[^1]: Ryan Culpepper pointed out on the Racket Discord that we could
+    combine `read-line` with `make-limited-input-port` in order to
+    limit the amount of data `read-line` will buffer in memory.
 
 ## 2: Means to an End
 
@@ -299,12 +308,12 @@ pattern I use when implementing stateful actors in Racket, stolen from
 [this paper][kill safe].
 
 The room is itself a sort of server.  It receives messages via the
-`room-ch` and each message is expected to have a channel on which
-responses can be sent along with a negative acknowledgement `evt`.
-For every message it receives, it updates its internal state and
-responds to whatever requests it can, or removes any requests whose
-negative acknowledgement event is ready for synchronization
-(i.e. abandoned requests).  The `make-room-evt` procedure generates a
+`room-ch` where each message is expected to have a channel on which
+responses can be sent, and a negative acknowledgement `evt`.  For
+every message it receives, it updates its internal state and responds
+to whatever requests it can, or removes any requests whose negative
+acknowledgement event is ready for synchronization (i.e. requests that
+have been abandoned ).  The `make-room-evt` procedure generates a
 synchronizable event that sends a request to the room and receives a
 response when synchronized.
 
