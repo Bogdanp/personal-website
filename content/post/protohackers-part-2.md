@@ -2,14 +2,17 @@
 title: "Protohackers Challenge in Racket Part 2"
 date: 2023-03-26T07:15:00+03:00
 slug: "protohackers-part-2"
-tags: ["racket", "network", "concurrency"]
+tags: ["racket", "network", "concurrency", "protohackers"]
 ---
 
 I'm currently stuck waiting for a flight, so I figured I'd pick up
-where I left [yesterday] and implement a couple more of the
+where I left off [yesterday] [^1] and implement a couple more of the
 [Protohackers] challenges.
 
 [yesterday]: /2023/03/25/protohackers-part-1/
+
+[^1]: I wrote this post last Sunday, but only published it today
+    (Wednesday, March 26) after tweaking the post and solutions a bit.
 
 <!--more-->
 

@@ -2,7 +2,7 @@
 title: "Protohackers Challenge in Racket Part 1"
 date: 2023-03-25T12:23:00+03:00
 slug: "protohackers-part-1"
-tags: ["racket", "network", "concurrency"]
+tags: ["racket", "network", "concurrency", "protohackers"]
 ---
 
 Someone on the Racket Discord recently mentioned the [Protohackers]
