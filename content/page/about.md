@@ -13,14 +13,14 @@ detection and scaling databases and systems containing hundreds of
 terabytes of financial data.
 
 For a while, I ran [Matchacha], a Romanian e-commerce business that
-imported and sold Japanese green tea.  I'm currently developing
-[Franz], a native desktop client for Apache Kafka.  To keep the lights
-on, I'm contracting for [Intuit], where I work on _redacted_ and I'm
-also working with [Marc Kaufmann] on [congame], a platform for
-building & running economics studies.  Previously, I ran the API and
-data ingestion platform for [Nomics], I was the CTO of [BlockFraud], a
-mobile fraud detection SaaS, and, I was a Principal Engineer at
-[Leadpages].
+imported and sold Japanese green tea.  I'm currently working as a
+Principal Engineer at [ServiceBell] and developing [Franz], a native
+desktop client for Apache Kafka, in my spare time.  I'm also working
+with [Marc Kaufmann] on [congame], a platform for building & running
+economics studies.  Previously, I worked on _redacted_ at [Intuit], I
+ran the API and data ingestion platform for [Nomics], I was the CTO of
+[BlockFraud], a mobile fraud detection SaaS, and I was a Principal
+Engineer at [Leadpages].
 
 In my free time, I like to contribute to the [Racket] programming
 language and ecosystem.  I maintain [koyo], [dramatiq], [molten] and a
@@ -41,6 +41,7 @@ subscribing to the [Atom] feed or follow me on [Mastodon].
 [Matchacha]: /2019/08/20/racket-ecommerce/
 [Nomics]: https://nomics.com
 [Racket]: https://racket-lang.org
+[ServiceBell]: https://servicebell.com
 [congame]: https://github.com/MarcKaufmann/congame
 [email]: mailto:bogdan@defn.io
 [gh]: https://github.com/Bogdanp
