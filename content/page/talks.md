@@ -4,9 +4,13 @@ date: 2015-05-29
 aliases: ["/page/talks-i-like/"]
 ---
 
-# Talks I've Given
+# Publications
 
-These are some of the talks I've given.
+| Title                                                                                           | Venue                   |
+|:------------------------------------------------------------------------------------------------|:------------------------|
+| [Functional Shell and Reusable Components for Easy GUIs][funarch23-paper] <br/> Knoble and Popa | [FUNARCH 23][funarch23] |
+
+# Talks I've Given
 
 | Talk                         | Year | Description                                                                                                       |
 |:-----------------------------|------|-------------------------------------------------------------------------------------------------------------------|
@@ -16,9 +20,6 @@ These are some of the talks I've given.
 | [Async Tasks with Dramatiq]  | 2017 | An intro talk to [Dramatiq], my task processing library for Python.                                               |
 
 ## Screencasts
-
-Occasionally, I like to record screencasts where I ramble about some
-thing I've done recently.  Some highlights:
 
 | Title                          | Year | Description                                                                                                           |
 |:-------------------------------|------|-----------------------------------------------------------------------------------------------------------------------|
@@ -30,7 +31,7 @@ thing I've done recently.  Some highlights:
 # Talks I Like
 
 What follows is a list of talks I've watched or listened to over the
-years that I've gotten a lot of use or enjoyment out of.  Expect this
+years that I've gotten a lot of use or enjoyment out of. Expect this
 page to be updated somewhat regularly as I discover new talks and am
 reminded of old ones.
 
@@ -156,3 +157,5 @@ reminded of old ones.
 [Zach Tellman]: https://ideolalia.com/
 [Zebras All the Way Down]: https://www.youtube.com/watch?v=fE2KDzZaxvE
 [engineerguy]: https://www.youtube.com/channel/UC2bkHVIDjXS7sgrgjFtzOXQ
+[funarch23-paper]: /papers/fungui-funarch23.pdf
+[funarch23]: https://www.functional-architecture.org/events/funarch-2023/
