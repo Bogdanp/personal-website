@@ -5,25 +5,24 @@ date: 2015-05-29
 
 You've reached Bogdan Popa's personal website.  Welcome!
 
-I've been working as a professional software engineer for the past 14
-years. In that time span I have worked on a variety of problems
+I've been working as a professional software engineer for the past
+14 years. In that time span I have worked on a variety of problems
 ranging from low-level video streaming on mobile devices to real time
 analytics, device fingerprinting, landing page optimization, fraud
 detection and scaling databases and systems containing hundreds of
 terabytes of financial data.
 
 For a while, I ran [Matchacha], a Romanian e-commerce business that
-imported and sold Japanese green tea.  I'm currently working as a
+imported and sold Japanese green tea. I'm currently working as a
 Principal Engineer at [ServiceBell] and developing [Franz], a native
-desktop client for Apache Kafka, in my spare time.  I'm also working
+desktop client for Apache Kafka, in my spare time. I'm also working
 with [Marc Kaufmann] on [congame], a platform for building & running
-economics studies.  Previously, I worked on _redacted_ at [Intuit], I
+economics studies. Previously, I worked on _redacted_ at [Intuit], I
 ran the API and data ingestion platform for [Nomics], I was the CTO of
-[BlockFraud], a mobile fraud detection SaaS, and I was a Principal
-Engineer at [Leadpages].
+[BlockFraud], and I was a Principal Engineer at [Leadpages].
 
 In my free time, I like to contribute to the [Racket] programming
-language and ecosystem.  I maintain [koyo], [dramatiq], [molten] and a
+language and ecosystem. I maintain [koyo], [dramatiq], [molten] and a
 bunch of other OSS which you can find on my [projects] page and on [my
 GitHub profile][gh].
 
