@@ -10,20 +10,17 @@ now available for all to read on [on GitHub][source].
 
 <!--more-->
 
-One of my goals with writing my software in [Racket] is to help expand
-the Racket ecosystem. I try do that by making parts of the apps I write
+One of my goals with writing software in [Racket] is to help expand the
+Racket ecosystem. I try do that by making parts of the apps I write
 Open Source where possible[^1] and by making small contributions back
 to Racket itself. Additionally, I [sometimes][discuss] see new users
-ask for examples of real-world applications built with Racket so I try
-to make the source code of my own apps available as well where possible
-(see also [Nemea] and [Remember]). My hope is that folks interested in
-using Racket can get an idea of what using it in practice looks like by
-viewing this source code and I like the thought of letting my own users
-see what code they're running when they use my apps. Of course, in the
-latter case, I run the risk that some users won't pay for those apps at
-all, but I'm OK with that since I'm only interested in receiving money
-from those users who would like the support the continued development of
-these apps.
+ask for examples of real-world applications built with Racket so I've
+been trying to make the source code of my own apps available as well
+(where possible; see also [Nemea] and [Remember]). My hope is that folks
+interested in using Racket can get an idea of what using it in practice
+looks like by viewing the code for these apps and I like the thought
+of letting my own users see what code they're running when they use my
+apps.
 
 [^1]: In the process of writing Franz, I've written a [Kafka client],
     libraries for serializing and deserializing [Avro], [MessagePack]
